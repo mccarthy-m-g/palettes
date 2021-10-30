@@ -4,12 +4,12 @@
 \name{palettes-package}
 \alias{palettes}
 \alias{palettes-package}
-\title{palettes: What the Package Does (One Line, Title Case)}
+\title{palettes: Methods for Colours}
 \description{
 What the package does (one paragraph).
 }
 \author{
-\strong{Maintainer}: Michael McCarthy \email{first.last@example.com}
+\strong{Maintainer}: Michael McCarthy \email{m.mccarthy1624@gmail.com}
 
 }
 \keyword{internal}
