@@ -1,5 +1,3 @@
-
-
 #' @export
 vec_ptype2.palettes_color.palettes_color <- function(x, y, ...) new_color()
 #' @export
