@@ -7,7 +7,10 @@ color_style <- function(x) {
   style_function(x)
 }
 
+# FIXME: No formatting happens here so colours written as strings will
+# return as strings.
 pretty_color <- function(x) {
+  # TODO: Replace with purrr
   vapply(
     x,
     function(x) {
