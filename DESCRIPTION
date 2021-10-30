@@ -16,4 +16,6 @@ Imports:
     vctrs,
     crayon,
     methods,
-    glue
+    glue,
+    rlang,
+    purrr
