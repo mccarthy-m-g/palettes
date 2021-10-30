@@ -1,11 +1,20 @@
 x <- color(c("red", "#A2A0B8FF", NA, "gray62"))
 x
 
+x + x
+x + rev(x)
+color("red") + color("blue")
+
 str(x)
 data.frame(x)
 tibble::as_tibble(x)
 
 as_color("red")
+
+cat(pretty_color(x))
+cat(pretty_color(x + rev(x)))
+
+# -----------------------------------------------------------------------------
 
 # Mock-up print method. The challenge is in adding a line number to the output;
 # it also does not handle wrapping well when there are lots of colours.
