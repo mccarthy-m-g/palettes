@@ -1,5 +1,26 @@
 x <- color(c("red", "#A2A0B8FF", NA, "gray62"))
-x
+y <- color(c("red", "green", "blue"))
+xy <- palette(v1 = x, v2 = y)
+xy
+
+# Class ----
+class(x)
+class(xy)
+
+# Extract ----
+x[1]
+xy[1]
+xy[[1]]
+xy$v1
+
+# Equality ----
+x == x
+x == x[1]
+x[1] == y[1]
+
+xy == xy
+xy == xy[1]
+xy == color("red")
 
 # Coerce ----
 as_color("red")
@@ -8,6 +29,10 @@ as_color("red")
 str(x)
 data.frame(x)
 tibble::as_tibble(x)
+
+str(xy)
+data.frame(xy)
+tibble::as_tibble(xy)
 
 # Arithmetic ----
 x + x
@@ -26,6 +51,11 @@ pretty_color(x)
 
 cat(pretty_color(x))
 cat(pretty_color(x + rev(x)))
+
+# Plot ----
+colorspace::swatchplot(x)
+
+colorspace::swatchplot(xy)
 
 # -----------------------------------------------------------------------------
 
