@@ -53,9 +53,9 @@ cat(pretty_color(x))
 cat(pretty_color(x + rev(x)))
 
 # Plot ----
-colorspace::swatchplot(x)
+plot(x)
 
-colorspace::swatchplot(xy)
+plot(xy)
 
 # -----------------------------------------------------------------------------
 

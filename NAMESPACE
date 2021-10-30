@@ -2,6 +2,7 @@
 
 S3method(format,palettes_color)
 S3method(plot,palettes_color)
+S3method(plot,palettes_palette)
 S3method(vec_arith,palettes_color)
 S3method(vec_arith.palettes_color,palettes_color)
 S3method(vec_cast,character.palettes_color)
