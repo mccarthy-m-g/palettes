@@ -1,15 +1,28 @@
 x <- color(c("red", "#A2A0B8FF", NA, "gray62"))
 x
 
-x + x
-x + rev(x)
-color("red") + color("blue")
+# Coerce ----
+as_color("red")
 
+# Format ----
 str(x)
 data.frame(x)
 tibble::as_tibble(x)
 
-as_color("red")
+# Arithmetic ----
+x + x
+x + rev(x)
+color("red") + color("blue")
+
+# Math ----
+cumsum(x)
+sum(x)
+
+# Math functions not implemented will throw an error, as they should.
+try(mean(x))
+
+# Pretty ----
+pretty_color(x)
 
 cat(pretty_color(x))
 cat(pretty_color(x + rev(x)))
