@@ -1,9 +1,9 @@
 # for compatibility with the S4 system
 methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 
-#' `color` palettes
+#' `colour` palettes
 #'
-#' This creates a list of color vectors.
+#' This creates a list of colour vectors.
 #'
 #' @param ...
 #'  * For `pal_palette()`: A list of character vector of any of the three kinds of
@@ -12,12 +12,12 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #' @details
 #'
 #' Colours can be specified using either:
-#' - A color name (as listed by colors())
+#' - A colour name (as listed by colours())
 #' - a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
 #' - A positive integer i meaning `palette()[i]`.
 #'
 #' @return An S3 list of class `palettes_palette`.
-#' @seealso `pal_color()`
+#' @seealso `pal_colour()`
 #' @export
 #' @examples
 #' pal_palette(
@@ -26,10 +26,10 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #' )
 pal_palette <- function(...) {
   x <- list(...)
-  x <- lapply(x, vec_cast, pal_color())
+  x <- lapply(x, vec_cast, pal_colour())
   new_palette(x)
 }
 
 new_palette <- function(x) {
-  new_list_of(x, ptype = pal_color(), class = "palettes_palette")
+  new_list_of(x, ptype = pal_colour(), class = "palettes_palette")
 }

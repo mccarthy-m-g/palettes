@@ -1,18 +1,18 @@
 #' @export
-#' @method vec_math palettes_color
-vec_math.palettes_color <- function(.fn, .x, ...) {
+#' @method vec_math palettes_colour
+vec_math.palettes_colour <- function(.fn, .x, ...) {
   switch(
     .fn,
-    "cumsum" = color_cumsum(.x),
-    "sum"    = color_sum(.x),
+    "cumsum" = colour_cumsum(.x),
+    "sum"    = colour_sum(.x),
     NextMethod() # No `stop_unsupported` yet. See https://github.com/r-lib/vctrs/issues/1415
   )
 }
 
-color_cumsum <- function(.x) {
-  pal_color(purrr::accumulate(.x, `+`))
+colour_cumsum <- function(.x) {
+  pal_colour(purrr::accumulate(.x, `+`))
 }
 
-color_sum <- function(.x) {
-  utils::tail(color_cumsum(.x), n = 1)
+colour_sum <- function(.x) {
+  utils::tail(colour_cumsum(.x), n = 1)
 }

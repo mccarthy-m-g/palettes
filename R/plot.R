@@ -1,7 +1,7 @@
 # TODO: Decide on swatch appearance
 # TODO: Add accessibility check functions
 #' @export
-plot.palettes_color <- function(x, ...) {
+plot.palettes_colour <- function(x, ...) {
   colorspace::swatchplot(x, ..., off = 0)
 }
 

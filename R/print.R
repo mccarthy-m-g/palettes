@@ -1,22 +1,22 @@
 #' @export
-obj_print_data.palettes_color <- function(x, ...) {
+obj_print_data.palettes_colour <- function(x, ...) {
   if (vec_is_empty(x)) {
     return(invisible(x))
   }
 
-  out <- color_format_symbol(x)
+  out <- colour_format_symbol(x)
 
   cat(out, sep = "\n")
 
   invisible(x)
 }
 
-color_print <- function(x) {
+colour_print <- function(x) {
   obj_print(x)
   invisible(x)
 }
 
 #' @export
-print.palettes_color <- function(x, ...) {
-  color_print(x)
+print.palettes_colour <- function(x, ...) {
+  colour_print(x)
 }

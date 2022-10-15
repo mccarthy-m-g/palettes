@@ -1,7 +1,7 @@
-# color -----------------------------------------------------------------------
+# colour -----------------------------------------------------------------------
 
 #' @export
-format.palettes_color <- function(x, ...) {
+format.palettes_colour <- function(x, ...) {
   out <- rgb2col(col2rgb(vec_data(x), alpha = FALSE), alpha = FALSE)
   # It's important to keep NA in the vector!
   out[is.na(x)] <- NA
@@ -9,9 +9,9 @@ format.palettes_color <- function(x, ...) {
 }
 
 #' @export
-vec_ptype_full.palettes_color <- function(x, ...) "palettes_color"
+vec_ptype_full.palettes_colour <- function(x, ...) "palettes_colour"
 #' @export
-vec_ptype_abbr.palettes_color <- function(x, ...) "color"
+vec_ptype_abbr.palettes_colour <- function(x, ...) "colour"
 
 # palette ---------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 #' @export
-vec_ptype2.palettes_color.palettes_color <- function(x, y, ...) new_color()
+vec_ptype2.palettes_colour.palettes_colour <- function(x, y, ...) new_colour()
 #' @export
-vec_ptype2.palettes_color.character <- function(x, y, ...) character()
+vec_ptype2.palettes_colour.character <- function(x, y, ...) character()
 #' @export
-vec_ptype2.character.palettes_color <- function(x, y, ...) character()
+vec_ptype2.character.palettes_colour <- function(x, y, ...) character()

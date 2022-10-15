@@ -1,8 +1,8 @@
 #' @export
-vec_cast.palettes_color.palettes_color <- function(x, to, ...) x
+vec_cast.palettes_colour.palettes_colour <- function(x, to, ...) x
 
 #' @export
-vec_cast.palettes_color.character <- function(x, to, ...) pal_color(x)
+vec_cast.palettes_colour.character <- function(x, to, ...) pal_colour(x)
 
 #' @export
-vec_cast.character.palettes_color <- function(x, to, ...) vec_data(x)
+vec_cast.character.palettes_colour <- function(x, to, ...) vec_data(x)

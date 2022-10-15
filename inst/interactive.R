@@ -1,11 +1,11 @@
-options(buildtools.check = function(action) TRUE )
+# options(buildtools.check = function(action) TRUE )
 
-x <- pal_color(c("red", "#A2A0B8FF", NA, "gray62"))
+x <- pal_colour(c("red", "#A2A0B8FF", NA, "gray62"))
 x
-y <- pal_color(c("red", "green", "blue"))
+y <- pal_colour(c("red", "green", "blue"))
 xy <- pal_palette(v1 = x, v2 = y)
 xy
-tibble::tibble(pal_color(c("red", "#ffffff", NA)))
+tibble::tibble(pal_colour(c("red", "#ffffff", NA)))
 
 # Class ----
 class(x)
@@ -24,10 +24,10 @@ x[1] == y[1]
 
 xy == xy
 xy == xy[1]
-xy == pal_color("red")
+xy == pal_colour("red")
 
 # Coerce ----
-as_color("red")
+as_colour("red")
 
 # Format ----
 str(x)
@@ -41,14 +41,14 @@ tibble::as_tibble(xy)
 # Arithmetic ----
 x + x
 x + rev(x)
-pal_color("red") + pal_color("blue")
+pal_colour("red") + pal_colour("blue")
 
 
-pal_color("red") + pal_color("blue") + pal_color("green") # White
-pal_color("red") + pal_color("blue") # Purple
-pal_color("red") + pal_color("green") # Yellow
+pal_colour("red") + pal_colour("blue") + pal_colour("green") # White
+pal_colour("red") + pal_colour("blue") # Purple
+pal_colour("red") + pal_colour("green") # Yellow
 
-colorspace::mixcolor(0.5, colorspace::hex("#FF0000"), colorspace::hex("#0000FF"), "XYZ")
+colourspace::mixcolour(0.5, colourspace::hex("#FF0000"), colourspace::hex("#0000FF"), "XYZ")
 
 # Math ----
 cumsum(x)
@@ -58,10 +58,10 @@ sum(x)
 try(mean(x))
 
 # Pretty ----
-pretty_color(x)
+pretty_colour(x)
 
-cat(pretty_color(x))
-cat(pretty_color(x + rev(x)))
+cat(pretty_colour(x))
+cat(pretty_colour(x + rev(x)))
 
 # Plot ----
 plot(x)

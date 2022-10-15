@@ -2,7 +2,7 @@
 % Please edit documentation in R/palette.R
 \name{pal_palette}
 \alias{pal_palette}
-\title{\code{color} palettes}
+\title{\code{colour} palettes}
 \usage{
 pal_palette(...)
 }
@@ -16,12 +16,12 @@ R colour specifications.
 An S3 list of class \code{palettes_palette}.
 }
 \description{
-This creates a list of color vectors.
+This creates a list of colour vectors.
 }
 \details{
 Colours can be specified using either:
 \itemize{
-\item A color name (as listed by colors())
+\item A colour name (as listed by colours())
 \item a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
 \item A positive integer i meaning \code{palette()[i]}.
 }
@@ -33,5 +33,5 @@ pal_palette(
 )
 }
 \seealso{
-\code{pal_color()}
+\code{pal_colour()}
 }
