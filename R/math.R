@@ -14,5 +14,5 @@ color_cumsum <- function(.x) {
 }
 
 color_sum <- function(.x) {
-  tail(color_cumsum(.x), n = 1)
+  utils::tail(color_cumsum(.x), n = 1)
 }
