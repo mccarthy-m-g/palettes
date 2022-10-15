@@ -19,9 +19,9 @@ vec_arith.palettes_color.palettes_color <- function(op, x, y, ...) {
 color_plus <- function(x, y) {
   color_arith(x, y, color_plus_prismatic)
 }
-color_minus <- function(x, y) {
-  color_arith(x, y, color_minus_farver)
-}
+# color_minus <- function(x, y) {
+#   color_arith(x, y, color_minus_farver)
+# }
 
 color_arith <- function(x, y, fn) {
   if (!is_color(x) || !is_color(y)) {
