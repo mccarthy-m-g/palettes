@@ -7,7 +7,7 @@ methods::setOldClass(c("palettes_color", "vctrs_vctr"))
 #' printed, colours will be formatted as hexadecimal strings.
 #'
 #' @param x
-#'  * For `color()`: A character vector of any of the three kinds of R colour
+#'  * For `pal_color()`: A character vector of any of the three kinds of R colour
 #'   specifications.
 #'  * For `as_color()`: An object to be coerced.
 #'  * For `is_color()`: An object to test.
@@ -21,10 +21,10 @@ methods::setOldClass(c("palettes_color", "vctrs_vctr"))
 #' @return An S3 vector of class `palettes_color`.
 #' @export
 #' @examples
-#' color(c("red", "#00FF00", "blue"))
+#' pal_color(c("red", "#00FF00", "blue"))
 #' is_color(c("red", "#00FF00", "blue"))
 #' as_color("white")
-color <- function(x = character()) {
+pal_color <- function(x = character()) {
   x <- vec_cast(x, character())
   new_color(x)
 }
@@ -35,13 +35,13 @@ new_color <- function(x = character()) {
 }
 
 #' @export
-#' @rdname color
+#' @rdname pal_color
 is_color <- function(x) {
   inherits(x, "palettes_color")
 }
 
 #' @export
-#' @rdname color
+#' @rdname pal_color
 as_color <- function(x) {
   vec_cast(x, new_color())
 }

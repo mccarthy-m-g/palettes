@@ -1,7 +1,7 @@
 # format - can format() a color
 
     Code
-      format(color("black"))
+      format(pal_color("black"))
     Output
       [1] "#000000"
 

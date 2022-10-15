@@ -10,7 +10,7 @@ vec_math.palettes_color <- function(.fn, .x, ...) {
 }
 
 color_cumsum <- function(.x) {
-  color(purrr::accumulate(.x, `+`))
+  pal_color(purrr::accumulate(.x, `+`))
 }
 
 color_sum <- function(.x) {

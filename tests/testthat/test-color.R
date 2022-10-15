@@ -9,19 +9,19 @@ test_that("can convert color -> color", {
 # as.character()
 
 test_that("as.character() works", {
-  x <- color("black")
+  x <- pal_color("black")
   expect_identical(as.character(x), "black")
 })
 
 test_that("as.character() works with NA", {
-  expect_identical(as.character(color(NA)), NA_character_)
+  expect_identical(as.character(pal_color(NA)), NA_character_)
 })
 
 # ------------------------------------------------------------------------------
 # format()
 
 test_that("format - can format() a color", {
-  expect_snapshot(format(color("black")))
+  expect_snapshot(format(pal_color("black")))
 })
 
 # ------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ test_that("format - can format() a color", {
 # vec_ptype()
 
 test_that("ptype is correct", {
-  expect_identical(vec_ptype(color("black")), color(character()))
+  expect_identical(vec_ptype(pal_color("black")), pal_color(character()))
 })
 
 # ------------------------------------------------------------------------------

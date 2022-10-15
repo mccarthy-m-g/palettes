@@ -43,7 +43,7 @@ color_arith <- function(x, y, fn) {
     FUN.VALUE = character(1)
   )
 
-  color(fields)
+  pal_color(fields)
 }
 
 # TODO: Decide the function for adding colours; the current is just a proof of
