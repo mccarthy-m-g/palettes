@@ -1,21 +1,18 @@
-# FIXME: The string colour needs to be improved.
-color_style <- function(x) {
-  string <- crayon::make_style("white")
-  background <- crayon::make_style(x, bg = TRUE)
-  style_function <- crayon::combine_styles(string, background)
-
-  style_function(x)
+color_symbol <- function(x) {
+  style_box <- cli::make_ansi_style(x)
+  style_box(cli::symbol$bullet)
 }
 
-# FIXME: No formatting happens here so colours written as strings will
-# return as strings.
-pretty_color <- function(x) {
-  # TODO: Replace with purrr
+color_format_symbol <- function(x, ...) {
   vapply(
     x,
     function(x) {
       color_index <- !is.na(x)
-      if (color_index) color_style(x) else "<NA>     "
+      if (color_index) {
+        paste(color_symbol(x), format(x))
+      } else {
+        "       <NA>"
+      }
     },
     FUN.VALUE = character(1),
     USE.NAMES = FALSE
