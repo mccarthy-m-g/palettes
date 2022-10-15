@@ -45,3 +45,20 @@ is_colour <- function(x) {
 as_colour <- function(x) {
   vec_cast(x, new_colour())
 }
+
+# British to American spellings ----------------------------------------------
+
+#' @export
+#' @rdname pal_colour
+#' @usage NULL
+pal_color <- pal_colour
+
+#' @export
+#' @rdname pal_colour
+#' @usage NULL
+is_color <- is_colour
+
+#' @export
+#' @rdname pal_colour
+#' @usage NULL
+as_color <- as_colour

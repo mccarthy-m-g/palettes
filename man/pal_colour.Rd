@@ -4,6 +4,9 @@
 \alias{pal_colour}
 \alias{is_colour}
 \alias{as_colour}
+\alias{pal_color}
+\alias{is_color}
+\alias{as_color}
 \title{\code{colour} vector}
 \usage{
 pal_colour(x = character())
