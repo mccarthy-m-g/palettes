@@ -19,13 +19,13 @@
     <loc>https://mccarthy-m-g.github.io/palettes/news/index.html</loc>
   </url>
   <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/color.html</loc>
-  </url>
-  <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/palette.html</loc>
+    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_color.html</loc>
+  </url>
+  <url>
+    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_palette.html</loc>
   </url>
   <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-package.html</loc>
