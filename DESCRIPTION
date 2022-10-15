@@ -11,7 +11,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Imports: 
     vctrs,
     cli,
@@ -19,7 +19,11 @@ Imports:
     pillar,
     glue,
     rlang,
-    purrr
+    purrr,
+    colorspace,
+    prismatic
 Suggests:
-    pkgdown
+    pkgdown,
+    testthat (>= 3.0.0)
 URL: https://mccarthy-m-g.github.io/palettes/
+Config/testthat/edition: 3

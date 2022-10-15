@@ -16,13 +16,13 @@ methods::setOldClass(c("palettes_color", "vctrs_vctr"))
 #' Colours can be specified using either:
 #' - A color name (as listed by colors())
 #' - a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
-#' - A positive integer i meaning palette()[i].
+#' - A positive integer i meaning `palette()[i]`.
 #'
 #' @return An S3 vector of class `palettes_color`.
 #' @export
 #' @examples
-#' color(c("red", "#A2A0B8", "gray62"))
-#' is_color(c("#DA3A2C", "blue"))
+#' color(c("red", "#00FF00", "blue"))
+#' is_color(c("red", "#00FF00", "blue"))
 #' as_color("white")
 color <- function(x = character()) {
   x <- vec_cast(x, character())

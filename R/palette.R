@@ -14,7 +14,7 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #' Colours can be specified using either:
 #' - A color name (as listed by colors())
 #' - a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
-#' - A positive integer i meaning palette()[i].
+#' - A positive integer i meaning `palette()[i]`.
 #'
 #' @return An S3 list of class `palettes_palette`.
 #' @seealso `color()`

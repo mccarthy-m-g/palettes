@@ -23,7 +23,7 @@ Colours can be specified using either:
 \itemize{
 \item A color name (as listed by colors())
 \item a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
-\item A positive integer i meaning palette()\link{i}.
+\item A positive integer i meaning \code{palette()[i]}.
 }
 }
 \examples{
