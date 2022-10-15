@@ -2,7 +2,7 @@
 
 #' @export
 format.palettes_color <- function(x, ...) {
-  out <- rgb2col(col2rgb(vec_data(x), alpha = TRUE), alpha = TRUE)
+  out <- rgb2col(col2rgb(vec_data(x), alpha = FALSE), alpha = FALSE)
   # It's important to keep NA in the vector!
   out[is.na(x)] <- NA
   out

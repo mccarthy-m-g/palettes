@@ -11,7 +11,7 @@ color_format_symbol <- function(x, ...) {
       if (color_index) {
         paste(color_symbol(x), format(x))
       } else {
-        "       <NA>"
+        "     <NA>"
       }
     },
     FUN.VALUE = character(1),
