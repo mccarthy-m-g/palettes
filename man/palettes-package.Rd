@@ -8,6 +8,13 @@
 \description{
 What the package does (one paragraph).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://mccarthy-m-g.github.io/palettes/}
+}
+
+}
 \author{
 \strong{Maintainer}: Michael McCarthy \email{m.mccarthy1624@gmail.com}
 

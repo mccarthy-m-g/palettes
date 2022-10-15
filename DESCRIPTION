@@ -20,3 +20,6 @@ Imports:
     glue,
     rlang,
     purrr
+Suggests:
+    pkgdown
+URL: https://mccarthy-m-g.github.io/palettes/
