@@ -8,6 +8,7 @@ Authors@R:
            email = "m.mccarthy1624@gmail.com")
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+URL: https://mccarthy-m-g.github.io/palettes/
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -25,5 +26,6 @@ Imports:
 Suggests:
     pkgdown,
     testthat (>= 3.0.0)
-URL: https://mccarthy-m-g.github.io/palettes/
+Config/Needs/website:
+    asciicast
 Config/testthat/edition: 3

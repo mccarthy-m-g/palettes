@@ -1,17 +1,26 @@
 ---
 output: github_document
-editor_options: 
-  chunk_output_type: console
+always_allow_html: true
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r, include = FALSE, cache = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%",
+  cache = FALSE,
+  asciicast_theme = "pkgdown"
+)
+asciicast::init_knitr_engine(
+  startup = quote({
+    library(tibble)
+    library(palettes)
+    set.seed(1) }),
+  echo = TRUE,
+  echo_input = FALSE
 )
 ```
 
@@ -31,3 +40,53 @@ Install the development version from [GitHub](https://github.com/) with:
 # install.packages("remotes")
 remotes::install_github("mccarthy-m-g/palettes")
 ```
+
+## Usage
+
+```{r}
+library(tibble)
+library(palettes)
+```
+
+Colours can be specified by name (as listed by `grDevices::colours()`):
+
+```{asciicast pal-colour-character}
+pal_colour("red")
+```
+
+Or by hex code:
+
+```{asciicast pal-colour-hex}
+pal_colour("#FF0000")
+```
+
+Multiple colours can be specified at once as a character vector:
+
+```{asciicast pal-colour-vector}
+pal_colour(c("#FF0000", "blue", "green"))
+```
+
+Named colour palettes can be specified in the same way:
+
+```{asciicast pal-palette}
+pal_palette(
+  palette_1 = c("#FF0000", "blue", "green"),
+  palette_2 = c(c("yellow", "orange", "purple"))
+)
+```
+
+Colours also work in tibbles:
+
+```{asciicast tibble}
+tibble(
+  colours = pal_colour(c("#FF0000", "blue", "green"))
+)
+```
+
+## Documentation
+
+See at [`https://mccarthy-m-g.github.io/palettes/`](https://mccarthy-m-g.github.io/palettes/reference/index.html) and also in the installed package: `help(package = "palettes")`.
+
+## License
+
+MIT © Michael McCarthy
