@@ -48,7 +48,7 @@ pal_colour("red") + pal_colour("blue") + pal_colour("green") # White
 pal_colour("red") + pal_colour("blue") # Purple
 pal_colour("red") + pal_colour("green") # Yellow
 
-colourspace::mixcolour(0.5, colourspace::hex("#FF0000"), colourspace::hex("#0000FF"), "XYZ")
+colorspace::mixcolor(0.5, colorspace::hex("#FF0000"), colorspace::hex("#0000FF"), "XYZ")
 
 # Math ----
 cumsum(x)
