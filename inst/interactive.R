@@ -63,6 +63,21 @@ pretty_colour(x)
 cat(pretty_colour(x))
 cat(pretty_colour(x + rev(x)))
 
+# ggplot2 scales ----
+library(ggplot2)
+
+ggplot(mtcars, aes(wt, mpg, colour = as.factor(cyl))) +
+  geom_point(size = 3) +
+  scale_colour_palette_d(pal_palette(mypal = c("red", "blue", "green")))
+
+ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
+  geom_point(size = 3) +
+  scale_colour_palette_c(pal_palette(mypal = c("red", "blue", "green")))
+
+ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
+  geom_point(size = 3) +
+  scale_colour_palette_b(pal_palette(mypal = c("red", "blue", "green")))
+
 # Plot ----
 plot(x)
 

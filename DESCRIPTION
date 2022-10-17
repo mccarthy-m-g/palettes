@@ -22,7 +22,8 @@ Imports:
     rlang,
     purrr,
     colorspace,
-    prismatic
+    prismatic,
+    ggplot2
 Suggests:
     pkgdown,
     testthat (>= 3.0.0)

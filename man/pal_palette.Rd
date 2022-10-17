@@ -2,9 +2,12 @@
 % Please edit documentation in R/palette.R
 \name{pal_palette}
 \alias{pal_palette}
+\alias{is_palette}
 \title{\code{colour} palettes}
 \usage{
 pal_palette(...)
+
+is_palette(x)
 }
 \arguments{
 \item{...}{\itemize{

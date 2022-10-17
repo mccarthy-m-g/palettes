@@ -1,0 +1,134 @@
+#' Colour scales from palettes
+#'
+#' @param palette A colour palette of class `palettes_palette`.
+#' @param direction Sets the order of colours in the scale. If 1, the default,
+#'   colours are ordered from first to last If -1, the order of colours is
+#'   reversed.
+#' @param ... Other arguments passed on to `ggplot2::discrete_scale()`,
+#'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale` to control name,
+#'   limits, breaks, labels and so forth.
+#'
+#' @export
+#'
+#' @examples
+#'
+#' library(ggplot2)
+#'
+#' rgb_pal <- pal_palette(rgb = c("red", "green", "blue"))
+#'
+#' # Use palette_d with discrete data
+#' ggplot(mtcars, aes(wt, mpg, colour = as.factor(cyl))) +
+#'   geom_point(size = 3) +
+#'   scale_colour_palette_d(rgb_pal)
+#'
+#' # Use palette_c with continuous data
+#' ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
+#'   geom_point(size = 3) +
+#'   scale_colour_palette_c(rgb_pal)
+#'
+#' # Use palette_b to bin continuous data before mapping
+#' ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
+#'   geom_point(size = 3) +
+#'   scale_colour_palette_b(rgb_pal)
+scale_colour_palette_d <- function(palette, direction = 1, ...) {
+  scale_palette_d(aesthetics = "colour", palette, direction, ...)
+}
+
+#' @export
+#' @rdname scale_colour_palette_d
+scale_fill_palette_d <- function(palette, direction = 1, ...) {
+  scale_palette_d(aesthetics = "fill", palette, direction, ...)
+}
+
+#' @export
+#' @rdname scale_colour_palette_d
+scale_colour_palette_c <- function(palette, direction = 1, ...) {
+  scale_palette_c(aesthetics = "colour", palette, direction, ...)
+}
+
+#' @export
+#' @rdname scale_colour_palette_d
+scale_fill_palette_c <- function(palette, direction = 1, ...) {
+  scale_palette_c(aesthetics = "fill", palette, direction, ...)
+}
+
+#' @export
+#' @rdname scale_colour_palette_d
+scale_colour_palette_b <- function(palette, direction = 1, ...) {
+  scale_palette_b(aesthetics = "colour", palette, direction, ...)
+}
+
+#' @export
+#' @rdname scale_colour_palette_d
+scale_fill_palette_b <- function(palette, direction = 1, ...) {
+  scale_palette_b(aesthetics = "fill", palette, direction, ...)
+}
+
+scale_palette_d <- function(aesthetics, palette, direction = 1, ...) {
+
+  ggplot2::discrete_scale(
+    aesthetics = aesthetics,
+    scale_name = names(palette),
+    palette = scales::manual_pal(get_palette_colours(palette, direction)),
+    ...
+  )
+
+}
+
+scale_palette_c <- function(aesthetics, palette, direction = 1, ...) {
+
+  ggplot2::continuous_scale(
+    aesthetics = aesthetics,
+    scale_name = names(palette),
+    palette = scales::gradient_n_pal(get_palette_colours(palette, direction)),
+    guide = "colourbar",
+    ...
+  )
+
+}
+
+scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
+
+  ggplot2::binned_scale(
+    aesthetics = aesthetics,
+    scale_name = names(palette),
+    palette = scales::gradient_n_pal(get_palette_colours(palette, direction)),
+    guide = "coloursteps",
+    ...
+  )
+
+}
+
+# TODO: decide whether to turn this into a generator (n) function instead
+get_palette_colours <- function(palette, direction = 1) {
+
+  if (is_palette(palette) == TRUE) {
+    if (vec_size(palette) == 1) {
+      palette_colours <- as_colour(unname(unlist(palette)))
+      palette_colours <- if (direction >= 0) palette_colours else rev(palette_colours)
+      palette_colours
+    } else {
+      warning("Multiple palettes supplied, please only use one.")
+    }
+  } else {
+    warning("`palette` not of class `palettes_palette`.")
+  }
+
+}
+
+# British to American spellings ----------------------------------------------
+
+#' @export
+#' @rdname scale_colour_palette_d
+#' @usage NULL
+scale_color_palette_d <- scale_colour_palette_d
+
+#' @export
+#' @rdname scale_colour_palette_d
+#' @usage NULL
+scale_color_palette_c <- scale_colour_palette_c
+
+#' @export
+#' @rdname scale_colour_palette_d
+#' @usage NULL
+scale_color_palette_b <- scale_colour_palette_b

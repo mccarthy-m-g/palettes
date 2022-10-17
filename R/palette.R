@@ -33,3 +33,9 @@ pal_palette <- function(...) {
 new_palette <- function(x) {
   new_list_of(x, ptype = pal_colour(), class = "palettes_palette")
 }
+
+#' @export
+#' @rdname pal_palette
+is_palette <- function(x) {
+  inherits(x, "palettes_palette")
+}
