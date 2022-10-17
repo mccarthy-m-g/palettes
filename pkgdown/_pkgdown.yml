@@ -2,3 +2,14 @@ url: https://mccarthy-m-g.github.io/palettes/
 template:
   bootstrap: 5
 
+reference:
+- title: S3 classes
+  desc:
+  contents:
+  - pal_colour
+  - pal_palette
+
+- title: ggplot2 scales
+  desc:
+  contents:
+  - scale_colour_palette_d
