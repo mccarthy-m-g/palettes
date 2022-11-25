@@ -30,5 +30,5 @@ Suggests:
     testthat (>= 3.0.0),
     dplyr
 Config/Needs/website:
-    asciicast
+    asciicast (>= 2.2.1)
 Config/testthat/edition: 3
