@@ -27,7 +27,8 @@ Imports:
     tibble
 Suggests:
     pkgdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    dplyr
 Config/Needs/website:
     asciicast
 Config/testthat/edition: 3
