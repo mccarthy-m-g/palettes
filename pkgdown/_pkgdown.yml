@@ -9,6 +9,12 @@ reference:
   - pal_colour
   - pal_palette
 
+- title: S3 methods
+  desc:
+  contents:
+  - plot.palettes_colour
+  - as_tibble.palettes_colour
+
 - title: ggplot2 scales
   desc:
   contents:

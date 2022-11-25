@@ -1,11 +1,29 @@
 # TODO: Decide on swatch appearance
 # TODO: Add accessibility check functions
+#' Plot colour palette
+#'
+#' Plots a colour palette object.
+#'
+#' @param x An object of class `palettes_palette` or `palettes_colour`.
 #' @export
+#' @examples
+#' x <- pal_colour(c("red", "green", "blue"))
+#' plot(x)
+#'
+#' y <- pal_palette(my_pal = c("red", "green", "blue"))
+#' plot(y)
+#'
+#' z <- pal_palette(
+#'   pal1 = c("red", "green", "blue"),
+#'   pal2 = c("yellow", "orange", "purple")
+#' )
+#' plot(z)
 plot.palettes_colour <- function(x, ...) {
   plot_colour(x)
 }
 
 #' @export
+#' @rdname plot.palettes_colour
 plot.palettes_palette <- function(x, ...) {
   plot_palette(x)
 }
