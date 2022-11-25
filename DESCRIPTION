@@ -23,7 +23,8 @@ Imports:
     purrr,
     colorspace,
     prismatic,
-    ggplot2
+    ggplot2,
+    tibble
 Suggests:
     pkgdown,
     testthat (>= 3.0.0)
