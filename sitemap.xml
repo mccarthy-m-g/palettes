@@ -19,6 +19,9 @@
     <loc>https://mccarthy-m-g.github.io/palettes/news/index.html</loc>
   </url>
   <url>
+    <loc>https://mccarthy-m-g.github.io/palettes/reference/as_tibble.palettes_colour.html</loc>
+  </url>
+  <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/index.html</loc>
   </url>
   <url>
@@ -35,6 +38,9 @@
   </url>
   <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-vctrs.html</loc>
+  </url>
+  <url>
+    <loc>https://mccarthy-m-g.github.io/palettes/reference/plot.palettes_colour.html</loc>
   </url>
   <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html</loc>
