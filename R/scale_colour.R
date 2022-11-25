@@ -99,7 +99,8 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
 
 }
 
-# TODO: decide whether to turn this into a generator (n) function instead
+# TODO: decide whether to turn this into a generator (n) function instead, as in, e.g.,:
+# https://www.wjakethompson.com/blog/taylor/2021-11-11-taylor-ggplot2/
 get_palette_colours <- function(palette, direction = 1) {
 
   if (is_palette(palette) == TRUE) {

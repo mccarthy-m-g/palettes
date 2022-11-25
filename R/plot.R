@@ -2,10 +2,74 @@
 # TODO: Add accessibility check functions
 #' @export
 plot.palettes_colour <- function(x, ...) {
-  colorspace::swatchplot(x, ..., off = 0)
+  plot_colour(x)
 }
 
 #' @export
 plot.palettes_palette <- function(x, ...) {
-  colorspace::swatchplot(x, ..., off = 0)
+  plot_palette(x)
+}
+
+plot_colour <- function(x) {
+
+  # FIXME: colours don't respect order
+  x |>
+    tibble::as_tibble() |>
+    ggplot2::ggplot(
+      mapping = ggplot2::aes(
+        x = as.factor(colour),
+        y = 1,
+        fill = as.factor(colour)
+      )
+    ) +
+    ggplot2::geom_col(width = 1) +
+    ggplot2::scale_fill_identity() +
+    ggplot2::coord_cartesian(expand = FALSE) +
+    ggplot2::theme_void() +
+    ggplot2::theme(
+      plot.margin = ggplot2::margin(0.5, 0.5, 0.5, 0.5, "lines"),
+      panel.spacing = ggplot2::unit(1, "lines"),
+      strip.text.x = ggplot2::element_text(
+        family = "serif",
+        size = 11,
+        margin = ggplot2::margin(0, 0, 0.5, 0, "lines")
+      )
+    )
+
+}
+
+plot_palette <- function(x) {
+
+  if (vec_size(x) == 1) {
+
+    cols <- get_palette_colours(x)
+    cols <- factor(cols, levels = cols)
+    cols_length <- vec_size(cols)
+
+    x |>
+      plot_colour() +
+      ggplot2::annotate(
+        "rect",
+        xmin = -Inf, xmax = Inf,
+        ymin = 0.4, ymax = 0.6,
+        fill = "white",
+        alpha = 0.8
+      ) +
+      ggplot2::annotate(
+        "text",
+        x = (cols_length + 1) / 2,
+        y = 0.5,
+        hjust = "inward",
+        vjust = "inward",
+        label = vec_names(x),
+        size = 10.55,
+        family = "serif"
+      )
+
+  } else {
+    x |>
+      plot_colour() +
+      ggplot2::facet_wrap(~ palette, scales = "free")
+  }
+
 }
