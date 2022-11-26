@@ -1,3 +1,24 @@
+#' Math functions
+#'
+#' These functions perform "math" on [pal_colour] vectors
+#' (or objects which can be coerced to them).
+#'
+#' @usage
+#' sum(x)
+#' cumsum(x)
+#'
+#' @param x A [pal_colour] vector or an object which can be coerced to one.
+#'
+#' @return A [pal_colour] vector.
+#' @name math
+#' @examples
+#' x <- pal_colour(c("red", "blue"))
+#' sum(x)
+#'
+#' x <- pal_colour(c("red", "blue", "yellow"))
+#' cumsum(x)
+NULL
+
 #' @export
 #' @method vec_math palettes_colour
 vec_math.palettes_colour <- function(.fn, .x, ...) {

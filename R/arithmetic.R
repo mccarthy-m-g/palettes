@@ -1,3 +1,22 @@
+#' Arithmetic operators
+#'
+#' These unary operators perform "arithmetic" on [pal_colour] vectors
+#' (or objects which can be coerced to them).
+#'
+#' @usage
+#' x + y
+#'
+#' @param x,y [pal_colour] vectors or objects which can be coerced to
+#' them.
+#'
+#' @return Unary `+` returns a [pal_colour] vector.
+#' @name arithmetic
+#' @examples
+#' x <- pal_colour("red")
+#' y <- pal_colour("blue")
+#' x + y
+NULL
+
 #' @export
 #' @method vec_arith palettes_colour
 vec_arith.palettes_colour <- function(op, x, y, ...) {

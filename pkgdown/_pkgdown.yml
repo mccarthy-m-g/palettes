@@ -19,3 +19,9 @@ reference:
   desc:
   contents:
   - scale_colour_palette_d
+
+- title: Arithmetic
+  desc:
+  contents:
+  - arithmetic
+  - math
