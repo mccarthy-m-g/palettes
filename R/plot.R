@@ -30,14 +30,13 @@ plot.palettes_palette <- function(x, ...) {
 
 plot_colour <- function(x) {
 
-  # FIXME: colours don't respect order
   x |>
     tibble::as_tibble() |>
     ggplot2::ggplot(
       mapping = ggplot2::aes(
-        x = as.factor(colour),
+        x = factor(colour, levels = make.unique(colour)),
         y = 1,
-        fill = as.factor(colour)
+        fill = factor(colour, levels = make.unique(colour))
       )
     ) +
     ggplot2::geom_col(width = 1) +
