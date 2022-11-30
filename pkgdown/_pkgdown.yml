@@ -8,6 +8,7 @@ reference:
   contents:
   - pal_colour
   - pal_palette
+  - pal_brewer
 
 - title: S3 methods
   desc:
