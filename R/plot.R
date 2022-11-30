@@ -30,15 +30,20 @@ plot.palettes_palette <- function(x, ...) {
 
 plot_colour <- function(x) {
 
-  x |>
-    tibble::as_tibble() |>
-    ggplot2::ggplot(
-      mapping = ggplot2::aes(
-        x = factor(colour, levels = make.unique(colour)),
-        y = 1,
-        fill = factor(colour, levels = make.unique(colour))
-      )
-    ) +
+  x <- tibble::as_tibble(x)
+  # When the same colour is repeated in a pal_colour() or pal_palette() object
+  # it needs a unique position identifier in order to be plotted in the same
+  # order as it appears in the vector.
+  x$position <- make.unique(x$colour)
+
+  ggplot2::ggplot(
+    x,
+    mapping = ggplot2::aes(
+      x = factor(position, levels = position),
+      y = 1,
+      fill = colour
+    )
+  ) +
     ggplot2::geom_col(width = 1) +
     ggplot2::scale_fill_identity() +
     ggplot2::coord_cartesian(expand = FALSE) +
