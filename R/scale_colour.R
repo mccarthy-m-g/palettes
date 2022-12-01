@@ -1,6 +1,6 @@
 #' Colour scales from palettes
 #'
-#' @param palette A colour palette of class `palettes_palette`.
+#' @param palette An object of class `palettes_palette` or `palettes_colour`.
 #' @param direction Sets the order of colours in the scale. If 1, the default,
 #'   colours are ordered from first to last If -1, the order of colours is
 #'   reversed.
@@ -101,19 +101,14 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
 
 # TODO: decide whether to turn this into a generator (n) function instead, as in, e.g.,:
 # https://www.wjakethompson.com/blog/taylor/2021-11-11-taylor-ggplot2/
-get_palette_colours <- function(palette, direction = 1) {
+get_palette_colours <- function(x, direction = 1) {
 
-  if (is_palette(palette) == TRUE) {
-    if (vec_size(palette) == 1) {
-      palette_colours <- as_colour(unname(unlist(palette)))
-      palette_colours <- if (direction >= 0) palette_colours else rev(palette_colours)
-      palette_colours
-    } else {
-      warning("Multiple palettes supplied, please only use one.")
-    }
-  } else {
-    warning("`palette` not of class `palettes_palette`.")
+  if (is_palette(x) & vec_size(x) > 1) {
+    warning("Multiple palettes supplied, only the first palette will be used.")
+    x <- vec_slice(x, 1)
   }
+  x <- as_colour(x)
+  pal_brewer(x, direction = direction)
 
 }
 

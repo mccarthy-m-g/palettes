@@ -25,7 +25,7 @@ scale_colour_palette_b(palette, direction = 1, ...)
 scale_fill_palette_b(palette, direction = 1, ...)
 }
 \arguments{
-\item{palette}{A colour palette of class \code{palettes_palette}.}
+\item{palette}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
 
 \item{direction}{Sets the order of colours in the scale. If 1, the default,
 colours are ordered from first to last If -1, the order of colours is
