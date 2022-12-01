@@ -4,6 +4,8 @@
 \alias{pal_colour}
 \alias{is_colour}
 \alias{as_colour}
+\alias{as_colour.default}
+\alias{as_colour.palettes_palette}
 \alias{pal_color}
 \alias{is_color}
 \alias{as_color}
@@ -13,7 +15,11 @@ pal_colour(x = character())
 
 is_colour(x)
 
-as_colour(x)
+as_colour(x, ...)
+
+\method{as_colour}{default}(x, ...)
+
+\method{as_colour}{palettes_palette}(x)
 }
 \arguments{
 \item{x}{\itemize{

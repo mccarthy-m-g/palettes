@@ -42,8 +42,21 @@ is_colour <- function(x) {
 
 #' @export
 #' @rdname pal_colour
-as_colour <- function(x) {
+as_colour <- function(x, ...) {
+  UseMethod("as_colour")
+}
+
+#' @export
+#' @rdname pal_colour
+as_colour.default <- function(x, ...) {
   vec_cast(x, new_colour())
+}
+
+#' @export
+#' @rdname pal_colour
+as_colour.palettes_palette <- function(x) {
+  value <- unname(unlist(x))
+  new_colour(value)
 }
 
 # British to American spellings ----------------------------------------------
