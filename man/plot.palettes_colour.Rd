@@ -5,12 +5,21 @@
 \alias{plot.palettes_palette}
 \title{Plot colour palette}
 \usage{
-\method{plot}{palettes_colour}(x, ...)
+\method{plot}{palettes_colour}(x, n = NULL, direction = 1, interpolate = c("linear", "spline"), ...)
 
-\method{plot}{palettes_palette}(x, ...)
+\method{plot}{palettes_palette}(x, n = NULL, direction = 1, interpolate = c("linear", "spline"), ...)
 }
 \arguments{
 \item{x}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+
+\item{n}{An integer specifying the number of colours to return.}
+
+\item{direction}{Sets the order of colours in the scale. If 1, the default,
+colours are ordered from first to last If -1, the order of colours is
+reversed.}
+
+\item{interpolate}{The interpolation method. Either "linear" (default) or
+"spline".}
 }
 \description{
 Plots a colour palette object.
