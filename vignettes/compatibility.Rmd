@@ -21,7 +21,7 @@ library(palettes)
 
 ## Overview
 
-Because palettes supports casting and coercion for colour vectors, it should be compatible with other colour packages and functions that accept or return colours as a character vector of `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`.
+Because palettes supports casting and coercion for colour vectors, it is generally compatible with other colour packages and functions that accept or return colours as a character vector of `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`.
 
 This vignette shows how to cast and coerce colour vectors with a select number of colour packages. We use the following colour vector for demonstration.
 
