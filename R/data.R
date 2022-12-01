@@ -24,3 +24,23 @@
 #' protanopia, and tritanopia. Use `names(met_palettes_a11y)` to return all
 #' palette names.
 "met_palettes_a11y"
+
+#' Viridis palettes
+#'
+#' Colourblind accessible palettes that are perceptually uniform in both colour
+#' and black-and-white.
+#'
+#' @format ## `viridis_palettes`
+#' An object of class `palettes_palette`. All colours in each palette are
+#' distinguishible with deuteranopia, protanopia, and tritanopia. Use
+#' `names(met_palettes)` to return all palette names.
+#' @source <https://github.com/sjmgarnier/viridisLite>
+#' @author [Simon Garnier](https://github.com/sjmgarnier)
+#' @seealso `pal_palette()`, `pal_colour()`
+#' @examples
+#' # Get all palettes by name.
+#' names(viridis_palettes)
+#'
+#' # Plot all palettes.
+#' plot(viridis_palettes)
+"viridis_palettes"
