@@ -25,15 +25,27 @@ reversed.}
 Plots a colour palette object.
 }
 \examples{
+# Objects of class `palettes_colour` are plotted as swatches.
 x <- pal_colour(c("red", "green", "blue"))
 plot(x)
 
+# Objects of class `palettes_palette` with one palette are plotted with
+# the palette name spanned across the swatches.
 y <- pal_palette(my_pal = c("red", "green", "blue"))
 plot(y)
 
+# Objects of class `palettes_palette` with multiple palettes are faceted.
 z <- pal_palette(
   pal1 = c("red", "green", "blue"),
   pal2 = c("yellow", "orange", "purple")
 )
 plot(z)
+
+# Colours can also be interpolated.
+plot(x, n = 5)
+plot(y, n = 5)
+plot(z, n = 5)
+}
+\seealso{
+\code{pal_brewer()}
 }
