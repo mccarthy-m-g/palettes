@@ -16,7 +16,21 @@ met_palettes_a11y <- met_palettes[
 
 usethis::use_data(met_palettes_a11y, overwrite = TRUE)
 
-# viridisLite ----
+# nord palettes ---
+nord_palettes <- nord::nord_palettes |>
+  map(as_colour) |>
+  new_palette()
+
+usethis::use_data(nord_palettes, overwrite = TRUE)
+
+# PNWColors palettes ----
+pnw_palettes <- PNWColors::pnw_palettes |>
+  map(function(x) as_colour(x[1,]))  |>
+  new_palette()
+
+usethis::use_data(pnw_palettes, overwrite = TRUE)
+
+# viridisLite palettes ----
 
 n_colours <- 9
 

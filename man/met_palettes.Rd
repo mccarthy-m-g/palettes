@@ -8,13 +8,13 @@
 \format{
 \subsection{\code{met_palettes}}{
 
-An object of class \code{palettes_palette}. Use \code{names(met_palettes)} to return
-all palette names.
+An object of class \code{palettes_palette} with 56 colour palettes. Use
+\code{names(met_palettes)} to return all palette names.
 }
 
 \subsection{\code{met_palettes_a11y}}{
 
-An object of class \code{palettes_palette} limited to colourblind accessible
+An object of class \code{palettes_palette} limited to 24 colourblind accessible
 palettes. All colours in each palette are distinguishible with deuteranopia,
 protanopia, and tritanopia. Use \code{names(met_palettes_a11y)} to return all
 palette names.

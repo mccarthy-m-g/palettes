@@ -31,4 +31,6 @@ reference:
   desc:
   contents:
   - met_palettes
+  - nord_palettes
+  - pnw_palettes
   - viridis_palettes
