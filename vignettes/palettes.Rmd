@@ -1,0 +1,122 @@
+---
+title: "palettes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{palettes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+# Preview vignette with: devtools::build_rmd("vignettes/palettes.Rmd")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The goal of palettes is to provide methods for working with colour palettes for users and developers.
+
+```{r setup}
+library(palettes)
+```
+
+## Creating
+
+`pal_colour()` is a nice way to create a colour vector. Colours can be a character vector of `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`. Colour vectors are always printed as hex codes with colour previews.
+
+```{r}
+colour_vector <- pal_colour(
+  c("#a00e00", "#d04e00", "#f6c200", "#0086a8", "#132b69")
+)
+
+colour_vector
+```
+
+`pal_palette()` is a nice way to create named colour palettes.
+
+```{r}
+colour_palette <- pal_palette(
+  egypt = c("#dd5129", "#0f7ba2", "#43b284", "#fab255"),
+  java  = c("#663171", "#cf3a36", "#ea7428", "#e2998a", "#0c7156")
+)
+
+colour_palette
+```
+
+## Coercing
+
+To compliment `pal_colour()`, palettes provides `as_colour()` to coerce objects into colour vectors.
+
+```{r}
+colour_strings <- c("orange", "purple")
+as_colour(colour_strings)
+```
+
+Colour vectors and colour palettes can also be coerced into a tibble with `as_tibble()`. See `vignette("tibble", package = "tibble")` for an overview of tibbles.
+
+```{r}
+as_tibble(colour_vector)
+
+as_tibble(colour_palette)
+```
+
+## Subsetting
+
+To subset a colour vector use `[`.
+
+```{r}
+colour_vector[1]
+```
+
+Colour palettes can be subset using `[`, `[[`, and `$`.
+
+  - To extract one or more colour palettes use `[`:
+
+    ```{r}
+    colour_palette["egypt"]
+    ```
+  
+  - To extract a single colour palette as a colour vector use `[[` or `$`:
+
+    ```{r}
+    colour_palette[["egypt"]]
+    
+    colour_palette$egypt
+    ```
+    
+  - To get names of colour palettes use `names()`:
+
+    ```{r}
+    names(colour_palette)
+    ```
+
+## Plotting
+
+`plot()` is a nice way to showcase colour vectors and colour palettes. The appearance of the plot depends on the input.
+
+  - Colour vectors are plotted as swatches:
+
+    ```{r}
+    plot(colour_vector)
+    ```
+  
+  - Single colour palettes are plotted as swatches with a palette name overlay:
+
+    ```{r}
+    plot(colour_palette["egypt"])
+    ```
+    
+  - Multiple colour palettes are plotted as faceted swatches with palette name titles:
+
+    ```{r}
+    plot(colour_palette)
+    ```
+
+To interpolate or change the direction of colours in a plot, use the optional `n`, `direction`, or `interpolate` arguments.
+
+```{r}
+plot(colour_vector, n = 7, direction = -1, interpolate = "linear")
+```
+
+All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the [customizing FAQ](https://ggplot2.tidyverse.org/articles/faq-customising.html) for some common examples.

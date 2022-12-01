@@ -28,9 +28,12 @@ Imports:
 Suggests:
     pkgdown,
     testthat (>= 3.0.0),
-    dplyr
+    dplyr,
+    knitr,
+    rmarkdown
 Config/Needs/website:
     asciicast (>= 2.2.1)
 Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
+VignetteBuilder: knitr
