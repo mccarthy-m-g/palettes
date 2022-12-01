@@ -1,7 +1,7 @@
 # for compatibility with the S4 system
 methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 
-#' `colour` vector
+#' Colour vectors
 #'
 #' This creates a character vector that represents colours so when it is
 #' printed, colours will be formatted as hexadecimal strings.

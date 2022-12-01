@@ -7,7 +7,7 @@
 \alias{pal_color}
 \alias{is_color}
 \alias{as_color}
-\title{\code{colour} vector}
+\title{Colour vectors}
 \usage{
 pal_colour(x = character())
 

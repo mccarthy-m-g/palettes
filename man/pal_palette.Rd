@@ -3,7 +3,7 @@
 \name{pal_palette}
 \alias{pal_palette}
 \alias{is_palette}
-\title{\code{colour} palettes}
+\title{Colour palettes}
 \usage{
 pal_palette(...)
 

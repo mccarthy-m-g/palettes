@@ -1,7 +1,7 @@
 # for compatibility with the S4 system
 methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 
-#' `colour` palettes
+#' Colour palettes
 #'
 #' This creates a list of colour vectors.
 #'
