@@ -30,7 +30,7 @@ names(viridis_palettes)
 plot(viridis_palettes)
 }
 \seealso{
-\code{pal_palette()}, \code{pal_colour()}
+\code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_colour]{pal_colour()}}, \code{\link[viridisLite:viridis]{viridisLite::viridis()}}
 }
 \author{
 \href{https://github.com/sjmgarnier}{Simon Garnier}

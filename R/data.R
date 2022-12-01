@@ -8,7 +8,7 @@
 #' all palette names.
 #' @source <https://github.com/BlakeRMills/MetBrewer>
 #' @author [Blake Robert Mills](https://github.com/BlakeRMills)
-#' @seealso `pal_palette()`, `pal_colour()`
+#' @seealso [pal_palette()], [pal_colour()], [MetBrewer::met.brewer()]
 #' @examples
 #' # Get all palettes by name.
 #' names(met_palettes)
@@ -36,7 +36,7 @@
 #' `names(met_palettes)` to return all palette names.
 #' @source <https://github.com/sjmgarnier/viridisLite>
 #' @author [Simon Garnier](https://github.com/sjmgarnier)
-#' @seealso `pal_palette()`, `pal_colour()`
+#' @seealso [pal_palette()], [pal_colour()], [viridisLite::viridis()]
 #' @examples
 #' # Get all palettes by name.
 #' names(viridis_palettes)

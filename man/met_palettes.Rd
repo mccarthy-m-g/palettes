@@ -40,7 +40,7 @@ names(met_palettes)
 plot(met_palettes)
 }
 \seealso{
-\code{pal_palette()}, \code{pal_colour()}
+\code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_colour]{pal_colour()}}, \code{\link[MetBrewer:met.brewer]{MetBrewer::met.brewer()}}
 }
 \author{
 \href{https://github.com/BlakeRMills}{Blake Robert Mills}
