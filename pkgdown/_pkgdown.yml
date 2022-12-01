@@ -26,3 +26,8 @@ reference:
   contents:
   - arithmetic
   - math
+
+- title: Included palettes
+  desc:
+  contents:
+  - met_palettes

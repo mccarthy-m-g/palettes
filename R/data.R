@@ -1,0 +1,26 @@
+#' Metropolitan Museum of Art palettes
+#'
+#' Palettes inspired by works at the Metropolitan Museum of Art in New York.
+#' Pieces selected come from various time periods, regions, and mediums.
+#'
+#' @format ## `met_palettes`
+#' An object of class `palettes_palette`. Use `names(met_palettes)` to return
+#' all palette names.
+#' @source <https://github.com/BlakeRMills/MetBrewer>
+#' @author [Blake Robert Mills](https://github.com/BlakeRMills)
+#' @seealso `pal_palette()`, `pal_colour()`
+#' @examples
+#' # Get all palettes by name.
+#' names(met_palettes)
+#'
+#' # Plot all palettes.
+#' plot(met_palettes)
+"met_palettes"
+
+#' @rdname met_palettes
+#' @format ## `met_palettes_a11y`
+#' An object of class `palettes_palette` limited to colourblind accessible
+#' palettes. All colours in each palette are distinguishible with deuteranopia,
+#' protanopia, and tritanopia. Use `names(met_palettes_a11y)` to return all
+#' palette names.
+"met_palettes_a11y"
