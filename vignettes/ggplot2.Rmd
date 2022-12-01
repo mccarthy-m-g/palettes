@@ -1,0 +1,67 @@
+---
+title: "ggplot2"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ggplot2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+# Preview vignette with: devtools::build_rmd("vignettes/ggplot2.Rmd")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette shows you how to use palettes as colour and fill scales with ggplot2.
+
+```{r setup}
+library(palettes)
+library(ggplot2)
+```
+
+## Colour scales
+
+For discrete colours use `scale_colour_palette_d()`.
+
+```{r}
+ggplot(diamonds[sample(nrow(diamonds), 1000), ], aes(carat, price)) +
+  geom_point(aes(colour = clarity)) +
+  scale_colour_palette_d(met_palettes$VanGogh3)
+``` 
+
+Continuous or binned colours can be used with continuous data. For continuous colours use `scale_colour_palette_c()`. For binned colours use `scale_colour_palette_b()`.
+
+```{r, out.width = "45%", fig.show = "hold"}
+hwy_mpg <- ggplot(mpg, aes(displ, hwy, colour = hwy)) +
+  geom_point()
+
+hwy_mpg + scale_colour_palette_c(met_palettes$Greek)
+
+hwy_mpg + scale_colour_palette_b(met_palettes$Greek)
+```
+
+## Fill scales
+
+For discrete fills use `scale_fill_palette_d()`.
+
+```{r}
+ggplot(diamonds, aes(x = price, fill = cut)) +
+  geom_histogram(position = "dodge", binwidth = 1000) +
+  scale_fill_palette_d(pnw_palettes$Sunset)
+```
+
+Continuous or binned fills can be used with continuous data. For continuous fills use `scale_fill_palette_c()`. For binned fills use `scale_fill_palette_b()`.
+
+```{r, out.width = "45%", fig.show = "hold"}
+eruptions <- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_tile()
+
+eruptions + scale_fill_palette_c(viridis_palettes$mako)
+
+eruptions + scale_fill_palette_b(viridis_palettes$mako)
+```
+
+<!-- ## Plot themes -->
