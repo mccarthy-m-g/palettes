@@ -19,13 +19,13 @@
 #' )
 #' plot(z)
 plot.palettes_colour <- function(x, ...) {
-  plot_colour(x)
+  plot_colour(x, ...)
 }
 
 #' @export
 #' @rdname plot.palettes_colour
 plot.palettes_palette <- function(x, ...) {
-  plot_palette(x)
+  plot_palette(x, ...)
 }
 
 plot_colour <- function(x) {
