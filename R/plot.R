@@ -129,7 +129,14 @@ plot_palette <- function(
 
   } else {
     plot_colour(x, n, direction, interpolate) +
-      ggplot2::facet_wrap(~ palette, scales = "free")
+      ggplot2::facet_wrap(~ palette, scales = "free") +
+      # When there are a lot of palettes a smaller font size is needed to
+      # prevent longer strip text from getting cut off.
+      ggplot2::theme(
+        strip.text.x = ggplot2::element_text(
+          size = ifelse(vec_size(x) > 50, 9, 11)
+        )
+      )
   }
 
 }
