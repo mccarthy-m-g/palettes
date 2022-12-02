@@ -12,10 +12,10 @@ x + y
 them.}
 }
 \value{
-Unary \code{+} returns a \link{pal_colour} vector.
+Binary \code{+} returns a \link{pal_colour} vector.
 }
 \description{
-These unary operators perform "arithmetic" on \link{pal_colour} vectors
+These binary operators perform "arithmetic" on \link{pal_colour} vectors
 (or objects which can be coerced to them).
 }
 \examples{

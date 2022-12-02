@@ -1,6 +1,6 @@
 #' Arithmetic operators
 #'
-#' These unary operators perform "arithmetic" on [pal_colour] vectors
+#' These binary operators perform "arithmetic" on [pal_colour] vectors
 #' (or objects which can be coerced to them).
 #'
 #' @usage
@@ -9,7 +9,7 @@
 #' @param x,y [pal_colour] vectors or objects which can be coerced to
 #' them.
 #'
-#' @return Unary `+` returns a [pal_colour] vector.
+#' @return Binary `+` returns a [pal_colour] vector.
 #' @name arithmetic
 #' @aliases +
 #' @examples
