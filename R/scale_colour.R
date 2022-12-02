@@ -69,7 +69,9 @@ scale_palette_d <- function(aesthetics, palette, direction = 1, ...) {
   ggplot2::discrete_scale(
     aesthetics = aesthetics,
     scale_name = names(palette),
-    palette = scales::manual_pal(get_palette_colours(palette, direction)),
+    palette = scales::manual_pal(
+      get_palette_colours(palette, n = NULL, direction)
+    ),
     ...
   )
 
@@ -80,7 +82,9 @@ scale_palette_c <- function(aesthetics, palette, direction = 1, ...) {
   ggplot2::continuous_scale(
     aesthetics = aesthetics,
     scale_name = names(palette),
-    palette = scales::gradient_n_pal(get_palette_colours(palette, direction)),
+    palette = scales::gradient_n_pal(
+      get_palette_colours(palette, 256, direction)
+    ),
     guide = "colourbar",
     ...
   )
@@ -92,7 +96,9 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
   ggplot2::binned_scale(
     aesthetics = aesthetics,
     scale_name = names(palette),
-    palette = scales::gradient_n_pal(get_palette_colours(palette, direction)),
+    palette = scales::gradient_n_pal(
+      get_palette_colours(palette, n = 256, direction)
+    ),
     guide = "coloursteps",
     ...
   )
@@ -101,14 +107,14 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
 
 # TODO: decide whether to turn this into a generator (n) function instead, as in, e.g.,:
 # https://www.wjakethompson.com/blog/taylor/2021-11-11-taylor-ggplot2/
-get_palette_colours <- function(x, direction = 1) {
+get_palette_colours <- function(x, n = NULL, direction = 1) {
 
   if (is_palette(x) & vec_size(x) > 1) {
     warning("Multiple palettes supplied, only the first palette will be used.")
     x <- vec_slice(x, 1)
   }
   x <- as_colour(x)
-  pal_brewer(x, direction = direction)
+  pal_brewer(x, n, direction = direction)
 
 }
 
