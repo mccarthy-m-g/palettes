@@ -1,18 +1,22 @@
 Package: palettes
-Title: Methods for Colours
+Title: Methods for Colour Vectors and Colour Palettes
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Michael",
            family = "McCarthy",
-           role = c("aut", "cre"),
+           role = c("aut", "cre", "cph"),
            email = "m.mccarthy1624@gmail.com")
-Description: What the package does (one paragraph).
+Description: Provides a comprehensive library for colour vectors and colour
+    palettes using a new family of colour classes (palettes_colour, and
+    palettes_palette) that always print as hex codes with colour previews.
+    Capabilities include: formatting, casting and coercion, extraction and
+    updating of components, plotting, colour mixing arithmetic, and colour
+    interpolation.
 License: MIT + file LICENSE
-URL: https://mccarthy-m-g.github.io/palettes/
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+URL: https://mccarthy-m-g.github.io/palettes/, https://github.com/mccarthy-m-g/palettes
+BugReports: https://github.com/mccarthy-m-g/palettes/issues
+Depends: 
+    R (>= 2.10)
 Imports: 
     vctrs,
     cli,
@@ -21,19 +25,24 @@ Imports:
     glue,
     rlang,
     purrr,
-    colorspace,
     prismatic,
     ggplot2,
-    tibble
+    tibble,
+    grDevices
 Suggests:
     pkgdown,
     testthat (>= 3.0.0),
     dplyr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    colorspace,
+    farver
+VignetteBuilder:
+    knitr
 Config/Needs/website:
     asciicast (>= 2.2.1)
 Config/testthat/edition: 3
-Depends: 
-    R (>= 2.10)
-VignetteBuilder: knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1

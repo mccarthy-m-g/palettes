@@ -4,21 +4,23 @@
 \name{palettes-package}
 \alias{palettes}
 \alias{palettes-package}
-\title{palettes: Methods for Colours}
+\title{palettes: Methods for Colour Vectors and Colour Palettes}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-What the package does (one paragraph).
+Provides a comprehensive library for colour vectors and colour palettes using a new family of colour classes (palettes_colour, and palettes_palette) that always print as hex codes with colour previews. Capabilities include: formatting, casting and coercion, extraction and updating of components, plotting, colour mixing arithmetic, and colour interpolation.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://mccarthy-m-g.github.io/palettes/}
+  \item \url{https://github.com/mccarthy-m-g/palettes}
+  \item Report bugs at \url{https://github.com/mccarthy-m-g/palettes/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Michael McCarthy \email{m.mccarthy1624@gmail.com}
+\strong{Maintainer}: Michael McCarthy \email{m.mccarthy1624@gmail.com} [copyright holder]
 
 }
 \keyword{internal}
