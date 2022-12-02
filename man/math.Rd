@@ -2,6 +2,8 @@
 % Please edit documentation in R/math.R
 \name{math}
 \alias{math}
+\alias{sum}
+\alias{cumsum}
 \title{Math functions}
 \usage{
 sum(x)

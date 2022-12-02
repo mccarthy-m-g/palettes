@@ -20,6 +20,8 @@ reversed.}
 
 \item{interpolate}{The interpolation method. Either "linear" (default) or
 "spline".}
+
+\item{...}{Not used.}
 }
 \description{
 Plots a colour palette object.

@@ -6,8 +6,9 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #' This creates a list of colour vectors.
 #'
 #' @param ...
-#'  * For `pal_palette()`: A list of character vector of any of the three kinds of
+#'  * For `pal_palette()`: A list of character vectors of any of the three kinds of
 #'   R colour specifications.
+#' @param x An object.
 #'
 #' @details
 #'

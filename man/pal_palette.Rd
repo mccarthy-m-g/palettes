@@ -11,9 +11,11 @@ is_palette(x)
 }
 \arguments{
 \item{...}{\itemize{
-\item For \code{pal_palette()}: A list of character vector of any of the three kinds of
+\item For \code{pal_palette()}: A list of character vectors of any of the three kinds of
 R colour specifications.
 }}
+
+\item{x}{An object.}
 }
 \value{
 An S3 list of class \code{palettes_palette}.

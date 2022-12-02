@@ -11,6 +11,7 @@
 #'
 #' @return A [pal_colour] vector.
 #' @name math
+#' @aliases sum cumsum
 #' @examples
 #' x <- pal_colour(c("red", "blue"))
 #' sum(x)

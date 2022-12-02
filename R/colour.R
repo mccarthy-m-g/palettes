@@ -11,6 +11,7 @@ methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 #'   specifications.
 #'  * For `as_colour()`: An object to be coerced.
 #'  * For `is_colour()`: An object to test.
+#'
 #' @details
 #'
 #' Colours can be specified using either:
@@ -42,13 +43,13 @@ is_colour <- function(x) {
 
 #' @export
 #' @rdname pal_colour
-as_colour <- function(x, ...) {
+as_colour <- function(x) {
   UseMethod("as_colour")
 }
 
 #' @export
 #' @rdname pal_colour
-as_colour.default <- function(x, ...) {
+as_colour.default <- function(x) {
   vec_cast(x, new_colour())
 }
 

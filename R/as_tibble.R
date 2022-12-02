@@ -3,6 +3,7 @@
 #' Function converts a colour palette object to a tibble.
 #'
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
+#' @param ... Not used.
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @examples

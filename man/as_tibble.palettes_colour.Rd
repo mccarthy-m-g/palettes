@@ -11,6 +11,8 @@
 }
 \arguments{
 \item{x}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+
+\item{...}{Not used.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

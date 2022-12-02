@@ -27,6 +27,7 @@ Imports:
     purrr,
     prismatic,
     ggplot2,
+    scales,
     tibble,
     grDevices
 Suggests:
@@ -36,7 +37,8 @@ Suggests:
     knitr,
     rmarkdown,
     colorspace,
-    farver
+    farver,
+    gt
 VignetteBuilder:
     knitr
 Config/Needs/website:

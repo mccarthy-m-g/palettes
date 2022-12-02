@@ -2,6 +2,7 @@
 % Please edit documentation in R/arithmetic.R
 \name{arithmetic}
 \alias{arithmetic}
+\alias{+}
 \title{Arithmetic operators}
 \usage{
 x + y

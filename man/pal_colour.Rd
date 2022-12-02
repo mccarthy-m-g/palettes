@@ -15,9 +15,9 @@ pal_colour(x = character())
 
 is_colour(x)
 
-as_colour(x, ...)
+as_colour(x)
 
-\method{as_colour}{default}(x, ...)
+\method{as_colour}{default}(x)
 
 \method{as_colour}{palettes_palette}(x)
 }

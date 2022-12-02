@@ -10,6 +10,7 @@
 #'   reversed.
 #' @param interpolate The interpolation method. Either "linear" (default) or
 #'   "spline".
+#' @param ... Not used.
 #'
 #' @seealso `pal_brewer()`
 #' @export
@@ -69,13 +70,14 @@ plot_colour <- function(
   # it needs a unique position identifier in order to be plotted in the same
   # order as it appears in the vector.
   x$position <- make.unique(x$colour)
+  x$position <- factor(x$position, levels = x$position)
 
   ggplot2::ggplot(
     x,
-    mapping = ggplot2::aes(
-      x = factor(position, levels = position),
+    mapping = ggplot2::aes_string(
+      x = "position",
       y = 1,
-      fill = colour
+      fill = "colour"
     )
   ) +
     ggplot2::geom_col(width = 1) +

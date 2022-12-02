@@ -11,6 +11,7 @@
 #'
 #' @return Unary `+` returns a [pal_colour] vector.
 #' @name arithmetic
+#' @aliases +
 #' @examples
 #' x <- pal_colour("red")
 #' y <- pal_colour("blue")
