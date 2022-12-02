@@ -1,0 +1,106 @@
+---
+title: "gt"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{gt}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette shows you how to use palettes to colour data cells with gt.
+
+```{r setup}
+library(palettes)
+library(gt)
+library(scales)
+library(dplyr)
+```
+
+## Preparing the table
+
+To demonstrate how to use palettes to colour data cells with gt, we will use `airquality` as an input data table with the following columns:
+
+- Year, Month, Day: the numeric month and day of month for the record
+- Temp: maximum daily air temperature in degrees Fahrenheit (°F)
+
+Temperature is a good fit for colour---we can represent cold with blue, hot with red, and white as a midpoint.
+
+First we create the gt table we will add colour to. The table is slightly modified from a table in the [Introduction to Creating gt Tables](https://gt.rstudio.com/articles/intro-creating-gt-tables.html#the-column-labels) article. It looks like this.
+
+```{r}
+# Modify the `airquality` dataset by adding the year
+# of the measurements (1973) and limiting to 10 rows
+airquality_m <- 
+  airquality %>%
+  mutate(Year = 1973L) %>%
+  slice(1:10) %>% 
+  select(Year, Month, Day, Temp)
+  
+# Create a display table using the `airquality`
+# dataset; arrange columns into groups
+gt_tbl <- 
+  gt(airquality_m) %>%
+  tab_header(
+    title = "New York Temperature Measurements",
+    subtitle = "Daily measurements in New York City (May 1-10, 1973)"
+  ) %>%
+  tab_spanner(
+    label = "Time",
+    columns = c(Year, Month, Day)
+  ) %>%
+  tab_spanner(
+    label = "Measurement",
+    columns = c(Temp)
+  ) %>%
+  cols_label(
+    Temp = html("Temp,<br>&deg;F")
+  )
+
+# Show the gt table
+gt_tbl
+```
+
+## Adding colour
+
+We can use the `Benedictus` palette for blue, white, and red with some minor modifications.
+
+```{r}
+colour_vector <- pal_brewer(met_palettes$Benedictus, n = 3, direction = -1)
+colour_vector
+```
+
+At the moment, objects of class `palettes_palette` or `palettes_colour` cannot be used directly with the colour functions in gt. To work around this we cast the colour vector to a character vector.
+
+```{r}
+character_vector <- as.character(colour_vector)
+character_vector
+```
+
+Now we can use `gt::data_color()` to colour the temperature cells. The `colors` argument accepts either a colour mapping function from the **scales** package or a vector of colours to use for each distinct value or level in each of the provided columns as input. Both of these input types are compatible with the colour specifications used by palettes.
+
+Here we pass the character vector directly to the `colors` argument.
+
+```{r}
+gt_tbl %>% 
+  data_color(
+    columns = Temp,
+    colors  = character_vector
+  )
+```
+
+But this works equally well with the colour mapping functions from the scales package.
+
+```{r}
+gt_tbl %>% 
+  data_color(
+    columns = Temp,
+    colors  = col_numeric(character_vector, domain = c(56, 74))
+  )
+```
