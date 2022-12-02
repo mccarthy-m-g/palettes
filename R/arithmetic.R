@@ -25,6 +25,12 @@ vec_arith.palettes_colour <- function(op, x, y, ...) {
 }
 
 #' @export
+#' @method vec_arith.palettes_colour default
+vec_arith.palettes_colour.default <- function(op, x, y, ...) {
+  stop_incompatible_op(op, x, y)
+}
+
+#' @export
 #' @method vec_arith.palettes_colour palettes_colour
 vec_arith.palettes_colour.palettes_colour <- function(op, x, y, ...) {
   switch(
