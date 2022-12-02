@@ -52,6 +52,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/compatibility.html">Compatibility with other colour packages</a>
+    <a class="dropdown-item" href="../articles/ggplot2.html">ggplot2</a>
   </div>
 </li>
 <li class="nav-item">
@@ -87,7 +88,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Because palettes supports casting and coercion for colour vectors, it should be compatible with other colour packages and functions that accept or return colours as a character vector of <code>"#RRGGBB"</code> or <code>"#RRGGBBAA"</code>, colour names from <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colors()</a></code>, or a positive integer that indexes into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>.</p>
+<p>Because palettes supports casting and coercion for colour vectors, it is generally compatible with other colour packages and functions that accept or return colours as a character vector of <code>"#RRGGBB"</code> or <code>"#RRGGBBAA"</code>, colour names from <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colors()</a></code>, or a positive integer that indexes into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>.</p>
 <p>This vignette shows how to cast and coerce colour vectors with a select number of colour packages. We use the following colour vector for demonstration.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span></span>
