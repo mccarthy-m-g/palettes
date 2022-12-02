@@ -53,6 +53,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/compatibility.html">Compatibility with other colour packages</a>
     <a class="dropdown-item" href="../articles/ggplot2.html">ggplot2</a>
+    <a class="dropdown-item" href="../articles/gt.html">gt</a>
   </div>
 </li>
 <li class="nav-item">
@@ -245,6 +246,21 @@
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span>, n <span class="op">=</span> <span class="fl">7</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, interpolate <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="palettes_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
 <p>All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the <a href="https://ggplot2.tidyverse.org/articles/faq-customising.html" class="external-link">customizing FAQ</a> for some common examples.</p>
+</div>
+<div class="section level2">
+<h2 id="mixing">Mixing<a class="anchor" aria-label="anchor" href="#mixing"></a>
+</h2>
+<p>Colour vectors can be mixed to create new colours.</p>
+<ul>
+<li>
+<p>To mix colours in an additive space use <code>+</code>:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"blue"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[1]&gt;</span></span>
+<span><span class="co">#&gt; <span style="color: #AF00AF;">•</span> #800080</span></span></code></pre></div>
+</li>
+<li><p>Subtractive mixing with <code>-</code> will be supported in a future version.</p></li>
+</ul>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
