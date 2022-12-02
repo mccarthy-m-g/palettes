@@ -7,8 +7,8 @@
 \format{
 \subsection{\code{nord_palettes}}{
 
-An object of class \code{palettes_palette} with 16 colour palettes. Use
-\code{names(nord_palettes)} to return all palette names.
+An object of class \code{palettes_palette} with 16
+colour palettes. Use \code{names(nord_palettes)} to return all palette names.
 }
 }
 \source{
