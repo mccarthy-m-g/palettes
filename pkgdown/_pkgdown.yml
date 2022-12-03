@@ -3,32 +3,24 @@ template:
   bootstrap: 5
 
 reference:
-- title: S3 classes
+- title: Colour vectors and colour palettes
   desc:
   contents:
   - pal_colour
   - pal_palette
-  - pal_brewer
-
-- title: S3 methods
-  desc:
-  contents:
-  - plot.palettes_colour
   - as_tibble.palettes_colour
+  - plot.palettes_colour
 
-- title: Colour mapping
+- title: Colour mapping and colour scales
   desc:
   contents:
   - pal_numeric
-
-- title: ggplot2 scales
-  desc:
-  contents:
   - scale_colour_palette_d
 
-- title: Arithmetic
+- title: Colour interpolation and colour mixing
   desc:
   contents:
+  - pal_brewer
   - arithmetic
   - math
 
