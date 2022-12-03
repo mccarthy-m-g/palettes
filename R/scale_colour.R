@@ -1,4 +1,4 @@
-#' Colour scales from palettes
+#' Colour scales from colour vectors and colour palettes
 #'
 #' @param palette An object of class `palettes_palette` or `palettes_colour`.
 #' @param direction Sets the order of colours in the scale. If 1, the default,
@@ -11,7 +11,6 @@
 #' @export
 #'
 #' @examples
-#'
 #' library(ggplot2)
 #'
 #' rgb_pal <- pal_palette(rgb = c("red", "green", "blue"))

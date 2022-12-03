@@ -1,6 +1,7 @@
-#' Convert colour palette to a tibble
+#' Cast colour vectors and colour palettes to tibbles
 #'
-#' Function converts a colour palette object to a tibble.
+#' `as_tibble()` turns an existing colour vector or colour palette into a
+#' so-called tibble, a data frame with class `tbl_df`.
 #'
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
 #' @param ... Not used.

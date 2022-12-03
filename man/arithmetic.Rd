@@ -3,7 +3,7 @@
 \name{arithmetic}
 \alias{arithmetic}
 \alias{+}
-\title{Arithmetic operators}
+\title{Mix colour vectors with arithmetic operators}
 \usage{
 x + y
 }

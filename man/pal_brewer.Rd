@@ -2,7 +2,7 @@
 % Please edit documentation in R/pal_brewer.R
 \name{pal_brewer}
 \alias{pal_brewer}
-\title{Colour palette interpolation}
+\title{Colour vector and colour palette interpolation}
 \usage{
 pal_brewer(
   palette,

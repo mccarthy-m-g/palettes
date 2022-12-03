@@ -10,7 +10,7 @@
 \alias{scale_color_palette_d}
 \alias{scale_color_palette_c}
 \alias{scale_color_palette_b}
-\title{Colour scales from palettes}
+\title{Colour scales from colour vectors and colour palettes}
 \usage{
 scale_colour_palette_d(palette, direction = 1, ...)
 
@@ -36,10 +36,9 @@ reversed.}
 limits, breaks, labels and so forth.}
 }
 \description{
-Colour scales from palettes
+Colour scales from colour vectors and colour palettes
 }
 \examples{
-
 library(ggplot2)
 
 rgb_pal <- pal_palette(rgb = c("red", "green", "blue"))

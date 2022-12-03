@@ -1,5 +1,5 @@
 # TODO: Add accessibility check functions
-#' Plot colour palette
+#' Plot colour vectors and colour palettes
 #'
 #' Plots a colour palette object.
 #'

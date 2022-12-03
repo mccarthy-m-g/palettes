@@ -1,4 +1,4 @@
-#' Math functions
+#' Mix colour vectors with math functions
 #'
 #' These functions perform "math" on [pal_colour] vectors
 #' (or objects which can be coerced to them).

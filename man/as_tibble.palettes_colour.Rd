@@ -3,7 +3,7 @@
 \name{as_tibble.palettes_colour}
 \alias{as_tibble.palettes_colour}
 \alias{as_tibble.palettes_palette}
-\title{Convert colour palette to a tibble}
+\title{Cast colour vectors and colour palettes to tibbles}
 \usage{
 \method{as_tibble}{palettes_colour}(x, ...)
 
@@ -18,7 +18,8 @@
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Function converts a colour palette object to a tibble.
+\code{as_tibble()} turns an existing colour vector or colour palette into a
+so-called tibble, a data frame with class \code{tbl_df}.
 }
 \examples{
 x <- pal_colour(c("red", "green", "blue"))

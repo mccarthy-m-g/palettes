@@ -4,7 +4,7 @@
 \alias{math}
 \alias{sum}
 \alias{cumsum}
-\title{Math functions}
+\title{Mix colour vectors with math functions}
 \usage{
 sum(x)
 cumsum(x)

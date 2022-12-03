@@ -1,4 +1,4 @@
-#' Colour palette interpolation
+#' Colour vector and colour palette interpolation
 #'
 #' Interpolate the set of colours in `palettes_palette` or `palettes_colour`
 #' objects to create new colour palettes.

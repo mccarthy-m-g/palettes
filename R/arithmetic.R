@@ -1,4 +1,4 @@
-#' Arithmetic operators
+#' Mix colour vectors with arithmetic operators
 #'
 #' These binary operators perform "arithmetic" on [pal_colour] vectors
 #' (or objects which can be coerced to them).

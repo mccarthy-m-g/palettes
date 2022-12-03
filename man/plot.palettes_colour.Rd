@@ -3,7 +3,7 @@
 \name{plot.palettes_colour}
 \alias{plot.palettes_colour}
 \alias{plot.palettes_palette}
-\title{Plot colour palette}
+\title{Plot colour vectors and colour palettes}
 \usage{
 \method{plot}{palettes_colour}(x, n = NULL, direction = 1, interpolate = c("linear", "spline"), ...)
 
