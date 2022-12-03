@@ -1,7 +1,7 @@
 #' Colour vector and colour palette mapping
 #'
 #' Conveniently maps data values (numeric or factor/character) to colours
-#' according to a given colour vector or colour palettes.
+#' according to a given colour vector or colour palette.
 #'
 #' @details `pal_numeric` is a simple linear mapping from continuous numeric
 #'   data to an interpolated palette.
