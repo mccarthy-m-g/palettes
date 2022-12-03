@@ -16,6 +16,11 @@ reference:
   - plot.palettes_colour
   - as_tibble.palettes_colour
 
+- title: Colour mapping
+  desc:
+  contents:
+  - pal_numeric
+
 - title: ggplot2 scales
   desc:
   contents:
