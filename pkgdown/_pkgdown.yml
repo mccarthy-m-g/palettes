@@ -24,6 +24,11 @@ reference:
   - arithmetic
   - math
 
+# - title: Colour manipulation
+#   desc:
+#   contents:
+#   - pal_lighten
+
 - title: Included palettes
   desc:
   contents:
