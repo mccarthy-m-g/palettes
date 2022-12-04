@@ -135,17 +135,26 @@
 <span><span class="co">#&gt; <span style="color: #008787;">•</span> #0C7156</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="coercing">Coercing<a class="anchor" aria-label="anchor" href="#coercing"></a>
+<h2 id="casting-and-coercion">Casting and coercion<a class="anchor" aria-label="anchor" href="#casting-and-coercion"></a>
 </h2>
-<p>To compliment <code><a href="../reference/pal_colour.html">pal_colour()</a></code>, palettes provides <code><a href="../reference/pal_colour.html">as_colour()</a></code> to coerce objects into colour vectors.</p>
+<p>To compliment <code><a href="../reference/pal_colour.html">pal_colour()</a></code>, palettes provides <code><a href="../reference/pal_colour.html">as_colour()</a></code> to cast objects into colour vectors.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/pal_colour.html">as_colour</a></span><span class="op">(</span><span class="va">colour_strings</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[2]&gt;</span></span>
 <span><span class="co">#&gt; <span style="color: #FFAF00;">•</span> #FFA500</span></span>
 <span><span class="co">#&gt; <span style="color: #AF00FF;">•</span> #A020F0</span></span></code></pre></div>
-<p>Colour vectors and colour palettes can also be coerced into a tibble with <code><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble()</a></code>. See <code><a href="https://tibble.tidyverse.org/articles/tibble.html" class="external-link">vignette("tibble", package = "tibble")</a></code> for an overview of tibbles.</p>
+<p>To compliment <code><a href="../reference/pal_palette.html">pal_palette()</a></code>, palettes provides <code><a href="../reference/pal_palette.html">as_palette()</a></code> to cast objects into colour palettes.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">colour_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>OrPu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/pal_palette.html">as_palette</a></span><span class="op">(</span><span class="va">colour_list</span><span class="op">)</span></span>
+<span><span class="co">#&gt; &lt;palettes_palette[1]&gt;</span></span>
+<span><span class="co">#&gt; $OrPu</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[2]&gt;</span></span>
+<span><span class="co">#&gt; <span style="color: #FFAF00;">•</span> #FFA500</span></span>
+<span><span class="co">#&gt; <span style="color: #AF00FF;">•</span> #A020F0</span></span></code></pre></div>
+<p>Colour vectors and colour palettes can also be coerced into a tibble with <code><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble()</a></code>. See <code><a href="https://tibble.tidyverse.org/articles/tibble.html" class="external-link">vignette("tibble", package = "tibble")</a></code> for an overview of tibbles.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 1</span></span></span>
 <span><span class="co">#&gt;   colour   </span></span>
@@ -169,12 +178,13 @@
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> java    <span style="color: #FF8700;">•</span> #EA7428</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">8</span> java    <span style="color: #FFAFAF;">•</span> #E2998A</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">9</span> java    <span style="color: #008787;">•</span> #0C7156</span></span></code></pre></div>
+<!-- add coercion examples -->
 </div>
 <div class="section level2">
 <h2 id="subsetting">Subsetting<a class="anchor" aria-label="anchor" href="#subsetting"></a>
 </h2>
 <p>To subset a colour vector use <code>[</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_vector</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[1]&gt;</span></span>
 <span><span class="co">#&gt; <span style="color: #AF0000;">•</span> #A00E00</span></span></code></pre></div>
@@ -182,7 +192,7 @@
 <ul>
 <li>
 <p>To extract one or more colour palettes use <code>[</code>:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_palette</span><span class="op">[</span><span class="st">"egypt"</span><span class="op">]</span></span>
 <span><span class="co">#&gt; &lt;palettes_palette[1]&gt;</span></span>
 <span><span class="co">#&gt; $egypt</span></span>
@@ -194,7 +204,7 @@
 </li>
 <li>
 <p>To extract a single colour palette as a colour vector use <code>[[</code> or <code>$</code>:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_palette</span><span class="op">[[</span><span class="st">"egypt"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[4]&gt;</span></span>
 <span><span class="co">#&gt; <span style="color: #FF5F00;">•</span> #DD5129</span></span>
@@ -211,7 +221,7 @@
 </li>
 <li>
 <p>To get names of colour palettes use <code><a href="https://rdrr.io/r/base/names.html" class="external-link">names()</a></code>:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "egypt" "java"</span></span></code></pre></div>
 </li>
@@ -224,28 +234,28 @@
 <ul>
 <li>
 <p>Colour vectors are plotted as swatches:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
-</li>
-<li>
-<p>Single colour palettes are plotted as swatches with a palette name overlay:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">[</span><span class="st">"egypt"</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span></code></pre></div>
 <p><img src="palettes_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 </li>
 <li>
-<p>Multiple colour palettes are plotted as faceted swatches with palette name titles:</p>
+<p>Single colour palettes are plotted as swatches with a palette name overlay:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">[</span><span class="st">"egypt"</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
 <p><img src="palettes_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
+</li>
+<li>
+<p>Multiple colour palettes are plotted as faceted swatches with palette name titles:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">)</span></span></code></pre></div>
+<p><img src="palettes_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
 </li>
 </ul>
 <p>To interpolate or change the direction of colours in a plot, use the optional <code>n</code>, <code>direction</code>, or <code>interpolate</code> arguments.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span>, n <span class="op">=</span> <span class="fl">7</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, interpolate <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
-<p>All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the <a href="https://ggplot2.tidyverse.org/articles/faq-customising.html" class="external-link">customizing FAQ</a> for some common examples.</p>
+<p><img src="palettes_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
+<p>All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the ggplot2 <a href="https://ggplot2.tidyverse.org/articles/faq-customising.html" class="external-link">customizing FAQ</a> for some common examples.</p>
 </div>
 <div class="section level2">
 <h2 id="mixing">Mixing<a class="anchor" aria-label="anchor" href="#mixing"></a>
@@ -254,7 +264,7 @@
 <ul>
 <li>
 <p>To mix colours in an additive space use <code>+</code>:</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"blue"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[1]&gt;</span></span>
 <span><span class="co">#&gt; <span style="color: #AF00AF;">•</span> #800080</span></span></code></pre></div>
