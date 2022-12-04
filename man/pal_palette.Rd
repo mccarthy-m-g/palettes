@@ -3,19 +3,25 @@
 \name{pal_palette}
 \alias{pal_palette}
 \alias{is_palette}
+\alias{as_palette}
 \title{Colour palettes}
 \usage{
 pal_palette(...)
 
 is_palette(x)
+
+as_palette(x)
 }
 \arguments{
 \item{...}{\itemize{
-\item For \code{pal_palette()}: A list of character vectors of any of the three kinds of
-R colour specifications.
+\item For \code{pal_palette()}: A named list of character vectors of any of the three
+kinds of R colour specifications.
 }}
 
-\item{x}{An object.}
+\item{x}{\itemize{
+\item For \code{as_palette()}: An object to be coerced.
+\item For \code{is_palette()}: An object to test.
+}}
 }
 \value{
 An S3 list of class \code{palettes_palette}.
@@ -36,6 +42,12 @@ pal_palette(
   pal1 = c("red", "green", "blue"),
   pal2 = c("yellow", "orange", "purple")
 )
+
+x <- list(
+  pal1 = c("red", "green", "blue"),
+  pal2 = c("yellow", "orange", "purple")
+)
+as_palette(x)
 }
 \seealso{
 \code{pal_colour()}

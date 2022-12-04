@@ -6,9 +6,11 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #' This creates a list of colour vectors.
 #'
 #' @param ...
-#'  * For `pal_palette()`: A list of character vectors of any of the three kinds of
-#'   R colour specifications.
-#' @param x An object.
+#'  * For `pal_palette()`: A named list of character vectors of any of the three
+#'    kinds of R colour specifications.
+#' @param x
+#'  * For `as_palette()`: An object to be coerced.
+#'  * For `is_palette()`: An object to test.
 #'
 #' @details
 #'
@@ -25,12 +27,18 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #'   pal1 = c("red", "green", "blue"),
 #'   pal2 = c("yellow", "orange", "purple")
 #' )
+#'
+#' x <- list(
+#'   pal1 = c("red", "green", "blue"),
+#'   pal2 = c("yellow", "orange", "purple")
+#' )
+#' as_palette(x)
 pal_palette <- function(...) {
   x <- vec_cast_common(..., .to = pal_colour())
   new_palette(x)
 }
 
-new_palette <- function(x) {
+new_palette <- function(x = list()) {
   new_list_of(x, ptype = pal_colour(), class = "palettes_palette")
 }
 
@@ -38,4 +46,10 @@ new_palette <- function(x) {
 #' @rdname pal_palette
 is_palette <- function(x) {
   inherits(x, "palettes_palette")
+}
+
+#' @export
+#' @rdname pal_palette
+as_palette <- function(x) {
+  vec_cast(x, to = new_palette())
 }
