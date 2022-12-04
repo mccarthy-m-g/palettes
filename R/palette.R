@@ -26,8 +26,7 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #'   pal2 = c("yellow", "orange", "purple")
 #' )
 pal_palette <- function(...) {
-  x <- list(...)
-  x <- lapply(x, vec_cast, pal_colour())
+  x <- vec_cast_common(..., .to = pal_colour())
   new_palette(x)
 }
 
