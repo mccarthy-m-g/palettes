@@ -1,8 +1,8 @@
 ---
-title: "ggplot2"
+title: "Using palettes with ggplot2"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{ggplot2}
+  %\VignetteIndexEntry{Using palettes with ggplot2}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
