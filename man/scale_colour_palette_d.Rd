@@ -32,7 +32,7 @@ colours are ordered from first to last If -1, the order of colours is
 reversed.}
 
 \item{...}{Other arguments passed on to \code{ggplot2::discrete_scale()},
-\code{ggplot2::continuous_scale()}, or \code{ggplot2::binned_scale} to control name,
+\code{ggplot2::continuous_scale()}, or \code{ggplot2::binned_scale()} to control name,
 limits, breaks, labels and so forth.}
 }
 \description{

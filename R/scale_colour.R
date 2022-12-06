@@ -5,7 +5,7 @@
 #'   colours are ordered from first to last If -1, the order of colours is
 #'   reversed.
 #' @param ... Other arguments passed on to `ggplot2::discrete_scale()`,
-#'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale` to control name,
+#'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale()` to control name,
 #'   limits, breaks, labels and so forth.
 #'
 #' @export
