@@ -36,3 +36,16 @@ reference:
   - nord_palettes
   - pnw_palettes
   - viridis_palettes
+
+articles:
+- title: User
+  navbar: ~
+  contents:
+  - ggplot2
+  - gt
+  - compatibility
+
+- title: Developer
+  navbar: Developer
+  contents:
+  - creating-packages
