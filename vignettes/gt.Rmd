@@ -1,13 +1,14 @@
 ---
-title: "gt"
+title: "Using palettes with gt"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{gt}
+  %\VignetteIndexEntry{Using palettes with gt}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
+# Preview vignette with: devtools::build_rmd("vignettes/gt.Rmd")
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -83,7 +84,7 @@ character_vector <- as.character(colour_vector)
 character_vector
 ```
 
-Now we can use `gt::data_color()` to colour the temperature cells. The `colors` argument accepts either a colour mapping function from the **scales** package or a vector of colours to use for each distinct value or level in each of the provided columns as input. Both of these input types are compatible with the colour specifications used by palettes.
+Now we can use `gt::data_color()` to colour the temperature cells. The `colors` argument accepts either a vector of colours to use for each distinct cell value or level or a colour mapping function (e.g., from the **scales** package).
 
 Here we pass the character vector directly to the `colors` argument.
 
@@ -95,12 +96,14 @@ gt_tbl %>%
   )
 ```
 
-But this works equally well with the colour mapping functions from the scales package.
+But this works equally well with the colour mapping functions from palettes.
 
 ```{r}
 gt_tbl %>% 
   data_color(
     columns = Temp,
-    colors  = col_numeric(character_vector, domain = c(56, 74))
+    colors  = pal_numeric(colour_vector, domain = NULL)
   )
 ```
+
+The colour mapping functions from palettes are: `pal_numeric()`, `pal_bin()`, `pal_quantile()`, and `pal_factor()`. These functions are useful when you need finer control over colour evaluation with data.
