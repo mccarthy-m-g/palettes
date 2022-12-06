@@ -20,6 +20,7 @@ This vignette shows you how to use palettes as colour and fill scales with ggplo
 ```{r setup}
 library(palettes)
 library(ggplot2)
+library(scales)
 ```
 
 ## Colour scales
@@ -62,6 +63,44 @@ eruptions <- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
 eruptions + scale_fill_palette_c(viridis_palettes$mako)
 
 eruptions + scale_fill_palette_b(viridis_palettes$mako)
+```
+
+## Customizing scales
+
+The `scale_` functions can all pass arguments to the appropriate scale constructors in ggplot2 if you need to control the name, limits, breaks, labels, and so forth of colour and fill scales. The arguments are passed with `...` to the appropriate scale constructor for each function:
+
+- `ggplot2::discrete_scale()` for `scale_colour_palette_d()` and `scale_fill_palette_d()`
+- `ggplot2::continuous_scale()` for `scale_colour_palette_c()` and `scale_fill_palette_c()`
+- `ggplot2::binned_scale()` for `scale_colour_palette_b()` and `scale_fill_palette_b()`
+
+This is particularly useful when you need to change how colours are mapped to values in a scale. For example, a common problem when working with divergent colour palettes is getting the middle colour in a palette to align with a fixed value representing the mid-point of a continuous scale.
+
+To demonstrate, say we have mean treatment outcome results from four groups in a clinical trial.
+
+```{r}
+treatment_results <- data.frame(
+  group   = LETTERS[1:4],
+  outcome = c(-0.5, -1.1, 1.9, 2.3)
+)
+```
+
+We want to plot the outcomes as a diverging bar chart with divergent fills. By default, the fill scale's mid-point is the mean of the four groups, but we want it to be zero.
+
+```{r}
+ggplot(treatment_results, aes(x = group, y = outcome, fill = outcome)) +
+  geom_col() +
+  scale_fill_palette_c(met_palettes$Benedictus)
+```
+
+We can use the `rescaler` argument in `ggplot2::continuous_scale()`, which accepts a function used to scale the input values to the range [0, 1], to scale the fill values to have a mid-point of zero. For scaling the mid-point use `scales::rescale_mid()`.
+
+```{r}
+ggplot(treatment_results, aes(x = group, y = outcome, fill = outcome)) +
+  geom_col() +
+  scale_fill_palette_c(
+    met_palettes$Benedictus,
+    rescaler = ~ rescale_mid(.x, mid = 0)
+  )
 ```
 
 <!-- ## Plot themes -->
