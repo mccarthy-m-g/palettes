@@ -1,0 +1,215 @@
+---
+title: "Creating a colour palette package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Creating a colour palette package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette shows you how to create a colour palette package with **palettes**.
+
+## Set up advice
+
+This vignette assumes that you are already familiar with R package development and have [setup your system for creating R packages](https://r-pkgs.org/setup.html). If this is your first time creating an R package, the book [R Packages](https://r-pkgs.org) by Hadley Wickham and Jenny Bryan gives you all the tools you need to start, and I highly recommend using it as a supplement to this vignette.
+
+A good way to check that you are ready to create a colour palette package is to run `devtools::dev_sitrep()`, which prints info about your development setup. If this reveals that certain tools or packages are missing or out-of-date, you are encouraged to update them.
+
+Maybe usethis sitrep too...
+
+## Attach devtools
+
+All the code below assumes you've attached **devtools** in your R session:
+
+```{r eval = FALSE}
+library(devtools)
+```
+
+You can initiate your new package from any active R session. You don’t need to worry about whether you’re in an existing or new project or not. The functions we use take care of this.
+
+## Example package: sunsets
+
+We will use various functions from devtools and palettes to build a small example package from scratch. We call the package **sunsets** and you can take a peek at the finished product we are working towards by visiting sunsets on GitHub: <https://github.com/mccarthy-m-g/sunsets>.
+
+## Creating the package
+
+The first step is to create your R package and set up its basic structure. There are many ways to accomplish this, but here we demonstrate `usethis::create_package()`:
+
+```{r eval=FALSE}
+create_package("~/path/to/sunsets")
+```
+
+If `create_package()` package drops you into a fresh R session in your new package, you probably need to call `library(devtools)` again. You can also set the `open` argument to `FALSE` in `create_package()` if you are using it in the same session your R package will be created in.
+
+## Adding package metadata
+
+At this point we can add important metadata about what our package does in `DESCRIPTION` with `usethis::use_package()`:
+
+```{r eval=FALSE}
+use_description(
+  fields = list(
+    Title = "Sunset Colour Palettes",
+    `Authors@R` = 
+      'person("First", "Last", , "first.last@example.com", c("aut", "cre"))',
+    Description = paste0(
+      "Colour palettes inspired by sunsets in the Canadian Prairies. ",
+      "Built using the 'palettes' package, which provides methods for ",
+      "printing, formatting, casting and coercion, extraction and updating ",
+      "of components, plotting, colour mixing arithmetic, and colour ",
+      "interpolation."
+    ),
+    URL = "https://github.com/user/repo",
+    BugReports = "https://github.com/user/repo/issues"
+  )
+)
+```
+
+## Choosing a license
+
+Because our package will primarily contain colour palette data, not code, we recommend choosing a [Creative Commons](https://creativecommons.org) license:
+
+- For minimal restrictions choose the [CC0](https://choosealicense.com/licenses/cc0-1.0/) license with `usethis::use_cc0_license()`
+- To require attribution when your colour palettes are used, choose the [CC BY](https://choosealicense.com/licenses/cc-by-4.0/) license with `usethis::use_ccby_license()`
+
+For sunsets we choose the [CC0](https://choosealicense.com/licenses/cc0-1.0/) license with `usethis::use_cc0_license()`:
+
+```{r eval=FALSE}
+use_cc0_license()
+```
+
+## Creating colour palettes
+
+Colour palette packages made with palettes are examples of so-called [“data packages”](https://r-pkgs.org/data.html)---they exist solely for the purpose of distributing colour palettes created with `pal_palette()`, along with their documentation.
+
+To make it easy to update or reproduce our colour palettes, we first set up a data-creating script that includes the code used to create them with `usethis::use_data_raw()`:
+
+```{r eval=FALSE}
+use_data_raw(name = "sunset_palettes")
+```
+
+For the sunsets package our final script for creating colour palettes looks like this:
+
+```{r eval=FALSE}
+library(palettes)
+
+# Discrete palettes -----------------------------------------------------------
+sunset_palettes_discrete <- pal_palette(
+  pastel = c("#FAB39F", "#6A94C0", "#FFE295", "#A9E6D3"),
+  pastel_dark = c("#dc8951", "#4E8AC9", "#F5D06D", "#69ca97", "#c978b5")
+)
+
+plot(sunset_palettes_discrete)
+
+usethis::use_data(sunset_palettes_discrete, overwrite = TRUE)
+
+# Sequential palettes ---------------------------------------------------------
+sunset_palettes_sequential <- pal_palette(
+  orange = pal_brewer(pal_colour(c("#dc8951", "#FBE0D1")), n = 7),
+  blue   = pal_brewer(pal_colour(c("#4E8AC9", "#C1D1EB")), n = 7),
+  yellow = pal_brewer(pal_colour(c("#F5D06D", "#FFECC8")), n = 7),
+  green  = pal_brewer(pal_colour(c("#69ca97", "#C9EBD7")), n = 7)
+)
+
+plot(sunset_palettes_sequential)
+
+usethis::use_data(sunset_palettes_sequential, overwrite = TRUE)
+
+# All palettes ----------------------------------------------------------------
+sunset_palettes <- c(
+  sunset_palettes_sequential,
+  sunset_palettes_discrete
+)
+
+plot(sunset_palettes)
+
+usethis::use_data(sunset_palettes, overwrite = TRUE)
+```
+
+This demonstrates three important points about making colour palettes:
+
+- Palettes can be created manually, as in the "discrete palettes" section
+- Palettes can be made programmatically, as in the "sequential palettes" section
+- Multiple palette objects can coerced together, as in the "all palettes" section
+
+To store these colour palettes and make them available to users of our package, we save them as `.rda` files in the `data/` directory with `usethis::use_data()`.
+
+## Attaching the palettes package
+
+Our colour palettes in `data/` are always effectively exported, which can be seen by running `devtools::load_all()` then running `sunset_palettes` in the console. However, to make the functions from palettes available to users of sunsets, we need to add palettes as a dependency and attach it at runtime. We can add the necessary text to `DESCRIPTION` with `usethis::use_package()`:
+
+```{r eval=FALSE}
+usethis::use_package("palettes", "Depends")
+```
+
+We use `Depends` instead of `Imports` because sunsets is designed to be used in conjunction with palettes and is not useful without it.
+
+This is a valid exception to the general advice to always use `Imports`. As Hadley Wickham and Jenny Bryan explain in [R Packages](https://r-pkgs.org/dependencies.html#sec-search-path): 
+
+> Unless there is a good reason otherwise, you should always list packages in `Imports` not `Depends`. That’s because a good package is self-contained, and minimises changes to the global environment (including the search path). The only exception is if your package is designed to be used in conjunction with another package. For example, the analogue package builds on top of vegan. It’s not useful without vegan, so it has vegan in `Depends` instead of `Imports`. Similarly, ggplot2 should really `Depend` on scales, rather than `Import`ing it.
+
+## Documenting colour palettes
+
+Our colour palettes in `data/` are always effectively exported, but we still need to document them. To document our colour palettes, we create a script in `R/` where we will document the names of our colour palettes with `usethis::use_r()`:
+
+```{r eval=FALSE}
+usethis::use_r("palettes")
+```
+
+You can name the script anything you like, but we suggest "palettes" if all your colour palette documentation will be in a single file.
+
+Then in `R/palettes.R` we write **roxygen2** blocks to document our colour palettes, and run `devtools::document()` when we're finished. For the sunsets package our documentation looks like this:
+
+```{r eval=FALSE}
+#' Sunset palettes
+#'
+#' Palettes inspired by sunsets in the Canadian Prairies.
+#'
+#' @format ## `sunset_palettes`
+#' An object of class `palettes_palette` with `r length(sunset_palettes)`
+#' colour palettes. Use `names(sunset_palettes)` to return all palette names.
+#' @source <https://github.com/mccarthy-m-g/sunsets>
+#' @author [Michael McCarthy](https://github.com/mccarthy-m-g)
+#' @seealso [pal_palette()], [pal_colour()]
+#' @examples
+#' # Get all palettes by name.
+#' names(sunset_palettes)
+#'
+#' # Plot all palettes.
+#' plot(sunset_palettes)
+"sunset_palettes"
+
+#' @rdname sunset_palettes
+#' @format ## `sunset_palettes_discrete`
+#' An object of class `palettes_palette` with
+#' `r length(sunset_palettes_discrete)` discrete colour palettes.
+#'  Use `names(sunset_palettes_discrete)` to return all palette names.
+"sunset_palettes_discrete"
+
+#' @rdname sunset_palettes
+#' @format ## `sunset_palettes_sequential`
+#' An object of class `palettes_palette` with
+#' `r length(sunset_palettes_sequential)` sequential colour palettes.
+#'  Use `names(sunset_palettes_sequential)` to return all palette names.
+"sunset_palettes_sequential"
+```
+
+## Adding `README.md` and `NEWS.md`
+
+You now have a package that is ready to submit to CRAN. But before you do, you should update two important documentation files:
+
+- `README.md`, which describes what the package does
+- `NEWS.md`, which describes what’s changed since the previous version
+
+See the [Documentation](https://r-pkgs.org/other-markdown.html) chapter in [R Packages](https://r-pkgs.org) by Hadley Wickham and Jenny Bryan for advice on writing these files.
+
+If you want to include printed colour previews of your colour palettes in `README.md` like there are in palettes' [`README.md`](https://github.com/mccarthy-m-g/palettes/blob/main/README.md), you will need to write a `README.Rmd` file that uses the [asciicast](https://github.com/r-lib/asciicast) knitr engine. For a working example, refer to the code in palettes' [`README.Rmd`](https://github.com/r-lib/asciicast/blob/main/README.Rmd) file.
+
+Optionally, you might also consider adding [vignettes](https://r-pkgs.org/vignettes.html) or a [pkgdown website](https://r-pkgs.org/website.html) to your package.
+
+## Package maintenance
+
+Because colour palette packages made with palettes are data packages, they are very low maintenance. You will typically only need to update them if you are changing or updating your colour palettes. Moreover, when new features are added to palettes, users of your package can gain access to them by installing the new update---you do not need to make any changes to your own package to make them available.
+
+## Distributing your package
+
+See the [Maintenance and distribution](https://r-pkgs.org/check.html) chapter in [R Packages](https://r-pkgs.org) by Hadley Wickham and Jenny Bryan for advice on distributing your package.
