@@ -72,11 +72,25 @@ as_tibble(colour_palette)
 
 ## Subsetting
 
-To subset a colour vector use `[`.
+Colour vectors can be subset using `[`.
 
-```{r}
-colour_vector[1]
-```
+  - To extract one or more colours use positive integers:
+
+    ```{r}
+    colour_vector[3]
+    ```
+  
+  - To drop one or more colours use negative integers:
+
+    ```{r}
+    colour_vector[-3]
+    ```
+    
+  - To move one or more colours extract, drop, and combine:
+
+    ```{r}
+    c(colour_vector[-3], colour_vector[3])
+    ```
 
 Colour palettes can be subset using `[`, `[[`, and `$`.
 
