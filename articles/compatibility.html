@@ -51,9 +51,13 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/ggplot2.html">Using palettes with ggplot2</a>
+    <a class="dropdown-item" href="../articles/gt.html">Using palettes with gt</a>
+    <a class="dropdown-item" href="../articles/biscale.html">Using palettes with biscale</a>
     <a class="dropdown-item" href="../articles/compatibility.html">Compatibility with other colour packages</a>
-    <a class="dropdown-item" href="../articles/ggplot2.html">ggplot2</a>
-    <a class="dropdown-item" href="../articles/gt.html">gt</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>Developer</h6>
+    <a class="dropdown-item" href="../articles/creating-packages.html">Creating a colour palette package</a>
   </div>
 </li>
 <li class="nav-item">
@@ -80,7 +84,8 @@
 
 
 
-<script src="compatibility_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+<div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Compatibility with other colour packages</h1>
             
@@ -96,8 +101,15 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Because palettes supports casting and coercion for colour vectors, it is generally compatible with other colour packages and functions that accept or return colours as a character vector of <code>"#RRGGBB"</code> or <code>"#RRGGBBAA"</code>, colour names from <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colors()</a></code>, or a positive integer that indexes into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>.</p>
-<p>This vignette shows how to cast and coerce colour vectors with a select number of colour packages. We use the following colour vector for demonstration.</p>
+<p>Because palettes supports casting and coercion for colour vectors, it
+is generally compatible with other colour packages and functions that
+accept or return colours as a character vector of <code>"#RRGGBB"</code>
+or <code>"#RRGGBBAA"</code>, colour names from
+<code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colors()</a></code>, or a positive integer that indexes
+into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>.</p>
+<p>This vignette shows how to cast and coerce colour vectors with a
+select number of colour packages. We use the following colour vector for
+demonstration.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#a00e00"</span>, <span class="st">"#d04e00"</span>, <span class="st">"#f6c200"</span>, <span class="st">"#0086a8"</span>, <span class="st">"#132b69"</span><span class="op">)</span></span>
@@ -109,14 +121,19 @@
 <span><span class="co">#&gt; <span style="color: #FFD700;">•</span> #F6C200</span></span>
 <span><span class="co">#&gt; <span style="color: #00AFAF;">•</span> #0086A8</span></span>
 <span><span class="co">#&gt; <span style="color: #005F87;">•</span> #132B69</span></span></code></pre></div>
-<p>The same approaches below will also work for single colour palettes extracted as a colour vector using <code>[[</code> or <code>$</code>. See the “Subsetting” section in <code><a href="../articles/palettes.html">vignette("palettes", package = "palettes")</a></code> for more details.</p>
+<p>The same approaches below will also work for single colour palettes
+extracted as a colour vector using <code>[[</code> or <code>$</code>.
+See the “Subsetting” section in
+<code><a href="../articles/palettes.html">vignette("palettes", package = "palettes")</a></code> for more
+details.</p>
 </div>
 <div class="section level2">
 <h2 id="colorspace">colorspace<a class="anchor" aria-label="anchor" href="#colorspace"></a>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://colorspace.R-Forge.R-project.org/" class="external-link">colorspace</a></span><span class="op">)</span></span></code></pre></div>
-<p>To turn colour vectors into sRGB objects, pass them to <code><a href="https://colorspace.R-Forge.R-project.org/reference/hex2RGB.html" class="external-link">colorspace::hex2RGB()</a></code>.</p>
+<p>To turn colour vectors into sRGB objects, pass them to
+<code><a href="https://colorspace.R-Forge.R-project.org/reference/hex2RGB.html" class="external-link">colorspace::hex2RGB()</a></code>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/hex2RGB.html" class="external-link">hex2RGB</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span>
 <span><span class="va">colour_matrix</span></span>
@@ -126,7 +143,8 @@
 <span><span class="co">#&gt; [3,] 0.9647059 0.76078431 0.0000000</span></span>
 <span><span class="co">#&gt; [4,] 0.0000000 0.52549020 0.6588235</span></span>
 <span><span class="co">#&gt; [5,] 0.0745098 0.16862745 0.4117647</span></span></code></pre></div>
-<p>To convert colour matrices into a different colour space use <code><a href="https://rdrr.io/r/methods/as.html" class="external-link">as()</a></code>.</p>
+<p>To convert colour matrices into a different colour space use
+<code><a href="https://rdrr.io/r/methods/as.html" class="external-link">as()</a></code>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/methods/as.html" class="external-link">as</a></span><span class="op">(</span><span class="va">colour_matrix</span>, <span class="st">"HLS"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;              H         L         S</span></span>
@@ -135,7 +153,9 @@
 <span><span class="co">#&gt; [3,]  47.31707 0.4823529 1.0000000</span></span>
 <span><span class="co">#&gt; [4,] 192.14286 0.3294118 1.0000000</span></span>
 <span><span class="co">#&gt; [5,] 223.25581 0.2431373 0.6935484</span></span></code></pre></div>
-<p>To turn colour matrices from any colour space back into colour vectors use <code><a href="https://colorspace.R-Forge.R-project.org/reference/hex.html" class="external-link">colorspace::hex()</a></code> and <code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
+<p>To turn colour matrices from any colour space back into colour
+vectors use <code><a href="https://colorspace.R-Forge.R-project.org/reference/hex.html" class="external-link">colorspace::hex()</a></code> and
+<code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://colorspace.R-Forge.R-project.org/reference/hex.html" class="external-link">hex</a></span><span class="op">(</span><span class="va">colour_matrix</span><span class="op">)</span></span>
 <span><span class="va">colour_strings</span></span>
@@ -154,7 +174,8 @@
 </h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://farver.data-imaginist.com" class="external-link">farver</a></span><span class="op">)</span></span></code></pre></div>
-<p>To turn colour vectors into the standard form expected by farver, pass them to <code><a href="https://farver.data-imaginist.com/reference/decode_colour.html" class="external-link">farver::decode_colour()</a></code>.</p>
+<p>To turn colour vectors into the standard form expected by farver,
+pass them to <code><a href="https://farver.data-imaginist.com/reference/decode_colour.html" class="external-link">farver::decode_colour()</a></code>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://farver.data-imaginist.com/reference/decode_colour.html" class="external-link">decode_colour</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span>
 <span><span class="va">colour_matrix</span></span>
@@ -164,7 +185,8 @@
 <span><span class="co">#&gt; [3,] 246 194   0</span></span>
 <span><span class="co">#&gt; [4,]   0 134 168</span></span>
 <span><span class="co">#&gt; [5,]  19  43 105</span></span></code></pre></div>
-<p>To convert colour matrices into a different colour space use <code><a href="https://rdrr.io/r/methods/as.html" class="external-link">as()</a></code>.</p>
+<p>To convert colour matrices into a different colour space use
+<code><a href="https://rdrr.io/r/methods/as.html" class="external-link">as()</a></code>.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://farver.data-imaginist.com/reference/convert_colour.html" class="external-link">convert_colour</a></span><span class="op">(</span><span class="va">colour_matrix</span>, <span class="st">"rgb"</span>, <span class="st">"lab"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             l          a         b</span></span>
@@ -173,7 +195,8 @@
 <span><span class="co">#&gt; [3,] 80.83906   4.979744  82.46354</span></span>
 <span><span class="co">#&gt; [4,] 51.69585 -18.094069 -26.58568</span></span>
 <span><span class="co">#&gt; [5,] 19.58020  15.807937 -38.93437</span></span></code></pre></div>
-<p>To turn colour matrices back into colour vectors use <code><a href="https://farver.data-imaginist.com/reference/encode_colour.html" class="external-link">farver::encode_colour()</a></code> and <code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
+<p>To turn colour matrices back into colour vectors use
+<code><a href="https://farver.data-imaginist.com/reference/encode_colour.html" class="external-link">farver::encode_colour()</a></code> and <code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://farver.data-imaginist.com/reference/encode_colour.html" class="external-link">encode_colour</a></span><span class="op">(</span><span class="va">colour_matrix</span><span class="op">)</span></span>
 <span><span class="va">colour_strings</span></span>
@@ -192,7 +215,8 @@
 </h2>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">grDevices</span><span class="op">)</span></span></code></pre></div>
-<p>To turn colour vectors into the standard form expected by grDevices, pass them to <code><a href="https://rdrr.io/r/grDevices/col2rgb.html" class="external-link">grDevices::col2rgb()</a></code>.</p>
+<p>To turn colour vectors into the standard form expected by grDevices,
+pass them to <code><a href="https://rdrr.io/r/grDevices/col2rgb.html" class="external-link">grDevices::col2rgb()</a></code>.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/col2rgb.html" class="external-link">col2rgb</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span>
 <span><span class="va">colour_matrix</span></span>
@@ -200,7 +224,9 @@
 <span><span class="co">#&gt; red    160  208  246    0   19</span></span>
 <span><span class="co">#&gt; green   14   78  194  134   43</span></span>
 <span><span class="co">#&gt; blue     0    0    0  168  105</span></span></code></pre></div>
-<p>To convert colour matrices into a different colour space use <code><a href="https://rdrr.io/r/grDevices/convertColor.html" class="external-link">grDevices::convertColor()</a></code> with the transpose of the colour matrix.</p>
+<p>To convert colour matrices into a different colour space use
+<code><a href="https://rdrr.io/r/grDevices/convertColor.html" class="external-link">grDevices::convertColor()</a></code> with the transpose of the colour
+matrix.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/grDevices/convertColor.html" class="external-link">convertColor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">colour_matrix</span><span class="op">)</span>, <span class="st">"sRGB"</span>, <span class="st">"Lab"</span><span class="op">)</span></span>
 <span><span class="co">#&gt;             L          a         b</span></span>
@@ -209,7 +235,8 @@
 <span><span class="co">#&gt; [3,] 7730.129   541.3668  6602.094</span></span>
 <span><span class="co">#&gt; [4,] 5255.133 -1327.5554 -2215.970</span></span>
 <span><span class="co">#&gt; [5,] 2479.118  1571.4634 -3318.586</span></span></code></pre></div>
-<p>To turn colour matrices back into colour vectors use <code><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">grDevices::rgb()</a></code> and <code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
+<p>To turn colour matrices back into colour vectors use
+<code><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">grDevices::rgb()</a></code> and <code><a href="../reference/pal_colour.html">as_colour()</a></code>.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_strings</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">rgb</a></span><span class="op">(</span></span>
 <span>  r <span class="op">=</span> <span class="va">colour_matrix</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span>, g <span class="op">=</span> <span class="va">colour_matrix</span><span class="op">[</span><span class="fl">2</span>, <span class="op">]</span>, b <span class="op">=</span> <span class="va">colour_matrix</span><span class="op">[</span><span class="fl">3</span>, <span class="op">]</span>,</span>
