@@ -21,8 +21,8 @@ reference:
   desc:
   contents:
   - pal_brewer
-  - arithmetic
-  - math
+  - colour-mixing-arithmetic
+  - colour-mixing-math
 
 # - title: Colour manipulation
 #   desc:

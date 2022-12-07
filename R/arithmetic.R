@@ -3,20 +3,23 @@
 #' These binary operators perform "arithmetic" on [pal_colour] vectors
 #' (or objects which can be coerced to them).
 #'
-#' @usage
-#' x + y
-#'
-#' @param x,y [pal_colour] vectors or objects which can be coerced to
+#' @param e1,e2 [pal_colour] vectors or objects which can be coerced to
 #' them.
 #'
 #' @return Binary `+` returns a [pal_colour] vector.
-#' @name arithmetic
-#' @aliases +
+#' @name colour-mixing-arithmetic
+#' @aliases color-mixing-arithmetic
 #' @examples
 #' x <- pal_colour("red")
 #' y <- pal_colour("blue")
 #' x + y
 NULL
+
+#' @export
+#' @rdname colour-mixing-arithmetic
+"+.palettes_colour" <- function(e1, e2) {
+  vec_arith("+", e1, e2)
+}
 
 #' @export
 #' @method vec_arith palettes_colour

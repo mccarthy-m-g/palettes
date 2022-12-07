@@ -3,15 +3,13 @@
 #' These functions perform "math" on [pal_colour] vectors
 #' (or objects which can be coerced to them).
 #'
-#' @usage
-#' sum(x)
-#' cumsum(x)
-#'
-#' @param x A [pal_colour] vector or an object which can be coerced to one.
+#' @param x An object of class `palettes_colour`.
+#' @param ... Colour vectors of class `palettes_colour`.
+#' @param na.rm	Whether to include missing values. Either `TRUE` or `FALSE`.
 #'
 #' @return A [pal_colour] vector.
-#' @name math
-#' @aliases sum cumsum
+#' @name colour-mixing-math
+#' @aliases color-mixing-math
 #' @examples
 #' x <- pal_colour(c("red", "blue"))
 #' sum(x)
@@ -19,6 +17,18 @@
 #' x <- pal_colour(c("red", "blue", "yellow"))
 #' cumsum(x)
 NULL
+
+#' @export
+#' @rdname colour-mixing-math
+sum.palettes_colour <- function(..., na.rm = FALSE) {
+  vec_math("sum", ..., na.rm)
+}
+
+#' @export
+#' @rdname colour-mixing-math
+cumsum.palettes_colour <- function(x) {
+  vec_math("cumsum", x)
+}
 
 #' @export
 #' @method vec_math palettes_colour
