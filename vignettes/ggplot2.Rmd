@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-This vignette shows you how to use palettes as colour and fill scales with ggplot2.
+This vignette shows you how to use palettes as colour and fill scales with **ggplot2**.
 
 ```{r setup}
 library(palettes)
