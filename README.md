@@ -4,6 +4,8 @@
 # palettes <a href='https://mccarthy-m-g.github.io/palettes/'><img src='man/figures/logo.png' align="right" height="139"/></a>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/mccarthy-m-g/palettes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mccarthy-m-g/palettes/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 palettes is an R package for working with colour palettes. The goal of
