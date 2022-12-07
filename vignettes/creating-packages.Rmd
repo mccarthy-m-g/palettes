@@ -15,8 +15,6 @@ This vignette assumes that you are already familiar with R package development a
 
 A good way to check that you are ready to create a colour palette package is to run `devtools::dev_sitrep()`, which prints info about your development setup. If this reveals that certain tools or packages are missing or out-of-date, you are encouraged to update them.
 
-Maybe usethis sitrep too...
-
 ## Attach devtools
 
 All the code below assumes you've attached **devtools** in your R session:
