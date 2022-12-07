@@ -39,7 +39,7 @@ create_package("~/path/to/sunsets")
 
 If `create_package()` package drops you into a fresh R session in your new package, you probably need to call `library(devtools)` again. You can also set the `open` argument to `FALSE` in `create_package()` if you are using it in the same session your R package will be created in.
 
-## Adding package metadata
+### Adding package metadata
 
 At this point we can add important metadata about what our package does in `DESCRIPTION` with `usethis::use_package()`:
 
@@ -62,7 +62,7 @@ use_description(
 )
 ```
 
-## Choosing a license
+### Choosing a license
 
 Because our package will primarily contain colour palette data, not code, we recommend choosing a [Creative Commons](https://creativecommons.org) license:
 
@@ -75,7 +75,7 @@ For sunsets we choose the [CC0](https://choosealicense.com/licenses/cc0-1.0/) li
 use_cc0_license()
 ```
 
-## Creating colour palettes
+### Creating colour palettes
 
 Colour palette packages made with palettes are examples of so-called [“data packages”](https://r-pkgs.org/data.html)---they exist solely for the purpose of distributing colour palettes created with `pal_palette()`, along with their documentation.
 
@@ -132,7 +132,7 @@ This demonstrates three important points about making colour palettes:
 
 To store these colour palettes and make them available to users of our package, we save them as `.rda` files in the `data/` directory with `usethis::use_data()`.
 
-## Attaching the palettes package
+### Attaching the palettes package
 
 Our colour palettes in `data/` are always effectively exported, which can be seen by running `devtools::load_all()` then running `sunset_palettes` in the console. However, to make the functions from palettes available to users of sunsets, we need to add palettes as a dependency and attach it at runtime. We can add the necessary text to `DESCRIPTION` with `usethis::use_package()`:
 
@@ -146,7 +146,27 @@ This is a valid exception to the general advice to always use `Imports`. As Hadl
 
 > Unless there is a good reason otherwise, you should always list packages in `Imports` not `Depends`. That’s because a good package is self-contained, and minimises changes to the global environment (including the search path). The only exception is if your package is designed to be used in conjunction with another package. For example, the analogue package builds on top of vegan. It’s not useful without vegan, so it has vegan in `Depends` instead of `Imports`. Similarly, ggplot2 should really `Depend` on scales, rather than `Import`ing it.
 
-## Documenting colour palettes
+We also need to import palettes in our package's `NAMESPACE` for its methods to be available when sunsets is loaded but not attached (i.e., `sunsets::my_fun()`). To import palettes in our package's `NAMESPACE`, we create a basic package-level documentation script in `R/` where we will import palettes with `usethis::use_package_doc()`:
+
+```{r eval=FALSE}
+use_package_doc()
+```
+
+Then in `R/sunsets-package.R` we write **roxygen2** blocks to document our colour palettes, and run `devtools::document()` when we're finished. For the sunsets package our documentation looks like this:
+
+```{r eval=FALSE}
+#' @keywords internal
+"_PACKAGE"
+
+#' Internal palettes methods
+#'
+#' @import palettes
+#' @keywords internal
+#' @name sunsets-palettes
+NULL
+```
+
+### Documenting colour palettes
 
 Our colour palettes in `data/` are always effectively exported, but we still need to document them. To document our colour palettes, we create a script in `R/` where we will document the names of our colour palettes with `usethis::use_r()`:
 
@@ -156,7 +176,7 @@ usethis::use_r("palettes")
 
 You can name the script anything you like, but we suggest "palettes" if all your colour palette documentation will be in a single file.
 
-Then in `R/palettes.R` we write **roxygen2** blocks to document our colour palettes, and run `devtools::document()` when we're finished. For the sunsets package our documentation looks like this:
+Then in `R/palettes.R` we write roxygen2 blocks to document our colour palettes, and run `devtools::document()` when we're finished. For the sunsets package our documentation looks like this:
 
 ```{r eval=FALSE}
 #' Sunset palettes
@@ -192,7 +212,7 @@ Then in `R/palettes.R` we write **roxygen2** blocks to document our colour palet
 "sunset_palettes_sequential"
 ```
 
-## Adding `README.md` and `NEWS.md`
+### Adding `README.md` and `NEWS.md`
 
 You now have a package that is ready to submit to CRAN. But before you do, you should update two important documentation files:
 
