@@ -38,7 +38,9 @@ Suggests:
     rmarkdown,
     colorspace,
     farver,
-    gt
+    gt,
+    biscale,
+    patchwork
 VignetteBuilder:
     knitr
 Config/Needs/website:

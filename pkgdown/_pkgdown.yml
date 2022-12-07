@@ -43,6 +43,7 @@ articles:
   contents:
   - ggplot2
   - gt
+  - biscale
   - compatibility
 
 - title: Developer
