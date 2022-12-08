@@ -82,5 +82,12 @@ test_that("ptype is correct", {
 # ------------------------------------------------------------------------------
 # vec_arith()
 
+test_that("zero-length input works", {
+  x <- pal_colour("black")
+  expect_identical(x + pal_colour(character()), pal_colour(character()))
+  expect_length(x + pal_colour(character()), 0)
+  expect_true(is_colour(x + pal_colour(character())))
+})
+
 # ------------------------------------------------------------------------------
 # vec_math()
