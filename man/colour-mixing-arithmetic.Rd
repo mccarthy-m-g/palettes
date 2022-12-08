@@ -9,15 +9,17 @@
 \method{+}{palettes_colour}(e1, e2)
 }
 \arguments{
-\item{e1, e2}{\link{pal_colour} vectors or objects which can be coerced to
-them.}
+\item{e1, e2}{Colour vectors of class \code{palettes_colour}.}
 }
 \value{
-Binary \code{+} returns a \link{pal_colour} vector.
+The binary operators return colour vectors of class \code{palettes_colour}
+containing the result of the element by element operations. If involving a
+zero-length vector the result has length zero. Otherwise, the elements of
+shorter vectors are recycled as necessary. The \code{+} operator is for additive
+colour mixing.
 }
 \description{
-These binary operators perform "arithmetic" on \link{pal_colour} vectors
-(or objects which can be coerced to them).
+These binary operators mix colour vectors with arithmetic operators.
 }
 \examples{
 x <- pal_colour("red")

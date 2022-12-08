@@ -19,11 +19,16 @@
 \item{x}{An object of class \code{palettes_colour}.}
 }
 \value{
-A \link{pal_colour} vector.
+These functions return colour vectors of class \code{palettes_colour}:
+\itemize{
+\item \code{sum()} returns the sum of all the colours present in its arguments with
+additive colour mixing.
+\item \code{cumsum()} returns a vector whose elements are the cumulative sums of the
+elements of the argument with additive colour mixing.
+}
 }
 \description{
-These functions perform "math" on \link{pal_colour} vectors
-(or objects which can be coerced to them).
+These functions mix colour vectors with math functions.
 }
 \examples{
 x <- pal_colour(c("red", "blue"))

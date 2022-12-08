@@ -1,9 +1,6 @@
 #' Colour scales from colour vectors and colour palettes
 #'
-#' @param palette An object of class `palettes_palette` or `palettes_colour`.
-#' @param direction Sets the order of colours in the scale. If 1, the default,
-#'   colours are ordered from first to last If -1, the order of colours is
-#'   reversed.
+#' @inheritParams pal_brewer
 #' @param ... Other arguments passed on to `ggplot2::discrete_scale()`,
 #'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale()` to control name,
 #'   limits, breaks, labels and so forth.

@@ -7,17 +7,17 @@ methods::setOldClass(c("palettes_palette", "vctrs_list_of"))
 #'
 #' @param ...
 #'  * For `pal_palette()`: A named list of character vectors of any of the three
-#'    kinds of R colour specifications.
+#'    kinds of R colour specifications, or a named list of colour vectors of
+#'    class `palettes_colour`.
 #' @param x
 #'  * For `as_palette()`: An object to be coerced.
 #'  * For `is_palette()`: An object to test.
 #'
 #' @details
-#'
 #' Colours can be specified using either:
-#' - A colour name (as listed by colours())
-#' - a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
-#' - A positive integer i meaning `palette()[i]`.
+#' - Hexadecimal strings of the form `"#RRGGBB"` or `"#RRGGBBAA"`
+#' - Colour names from `grDevices::colors()`
+#' - Positive integers `i` that index into `grDevices::palette()[i]`
 #'
 #' @return An S3 list of class `palettes_palette`.
 #' @seealso `pal_colour()`

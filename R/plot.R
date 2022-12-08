@@ -3,15 +3,11 @@
 #'
 #' Plots a colour palette object.
 #'
+#' @inheritParams pal_brewer
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
-#' @param n An integer specifying the number of colours to return.
-#' @param direction Sets the order of colours in the scale. If 1, the default,
-#'   colours are ordered from first to last If -1, the order of colours is
-#'   reversed.
-#' @param interpolate The interpolation method. Either "linear" (default) or
-#'   "spline".
 #' @param ... Not used.
 #'
+#' @return A ggplot2 object.
 #' @seealso `pal_brewer()`
 #' @export
 #' @examples

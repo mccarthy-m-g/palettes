@@ -1,12 +1,14 @@
 #' Mix colour vectors with arithmetic operators
 #'
-#' These binary operators perform "arithmetic" on [pal_colour] vectors
-#' (or objects which can be coerced to them).
+#' These binary operators mix colour vectors with arithmetic operators.
 #'
-#' @param e1,e2 [pal_colour] vectors or objects which can be coerced to
-#' them.
+#' @param e1,e2 Colour vectors of class `palettes_colour`.
 #'
-#' @return Binary `+` returns a [pal_colour] vector.
+#' @return The binary operators return colour vectors of class `palettes_colour`
+#'   containing the result of the element by element operations. If involving a
+#'   zero-length vector the result has length zero. Otherwise, the elements of
+#'   shorter vectors are recycled as necessary. The `+` operator is for additive
+#'   colour mixing.
 #' @name colour-mixing-arithmetic
 #' @aliases color-mixing-arithmetic
 #' @examples

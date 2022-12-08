@@ -39,13 +39,16 @@ printed, colours will be formatted as hexadecimal strings.
 \details{
 Colours can be specified using either:
 \itemize{
-\item A colour name (as listed by colours())
-\item a hexadecimal string of the form "#rrggbb" or "#rrggbbaa" (see rgb)
-\item A positive integer i meaning \code{palette()[i]}.
+\item Hexadecimal strings of the form \code{"#RRGGBB"} or \code{"#RRGGBBAA"}
+\item Colour names from \code{grDevices::colors()}
+\item Positive integers \code{i} that index into \code{grDevices::palette()[i]}
 }
 }
 \examples{
 pal_colour(c("red", "#00FF00", "blue"))
 is_colour(c("red", "#00FF00", "blue"))
 as_colour("white")
+}
+\seealso{
+\code{pal_palette()}
 }

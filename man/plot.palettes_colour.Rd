@@ -23,6 +23,9 @@ reversed.}
 
 \item{...}{Not used.}
 }
+\value{
+A ggplot2 object.
+}
 \description{
 Plots a colour palette object.
 }
