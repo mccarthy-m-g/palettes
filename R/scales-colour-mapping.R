@@ -39,7 +39,7 @@ pal_numeric <- function(
   na.color = "#808080",
   alpha = FALSE,
   reverse = FALSE
-) {
+) { # nocov start
 
   palette <- get_palette_colours(palette)
   palette <- as.character(palette)
@@ -52,7 +52,7 @@ pal_numeric <- function(
     reverse = reverse
   )
 
-}
+} # nocov end
 
 #' @details `pal_bin` also maps continuous numeric data, but performs
 #'   binning based on value (see the [base::cut()] function). `pal_bin`
@@ -79,7 +79,7 @@ pal_bin <- function(
   alpha = FALSE,
   reverse = FALSE,
   right = FALSE
-) {
+) { # nocov start
 
   palette <- get_palette_colours(palette)
   palette <- as.character(palette)
@@ -95,7 +95,7 @@ pal_bin <- function(
     right = right
   )
 
-}
+} # nocov end
 
 #' @details `pal_quantile` similarly bins numeric data, but via the
 #'   [stats::quantile()] function.
@@ -115,7 +115,7 @@ pal_quantile <- function(
   alpha = FALSE,
   reverse = FALSE,
   right = FALSE
-) {
+) { # nocov start
 
   palette <- get_palette_colours(palette)
   palette <- as.character(palette)
@@ -129,7 +129,7 @@ pal_quantile <- function(
     right = right
   )
 
-}
+} # nocov end
 
 #' @details `pal_factor` maps factors to colours. If the palette is
 #'   discrete and has a different number of colours than the number of factors,
@@ -149,7 +149,7 @@ pal_factor <- function(
   na.color = "#808080",
   alpha = FALSE,
   reverse = FALSE
-) {
+) { # nocov start
 
   palette <- get_palette_colours(palette)
   palette <- as.character(palette)
@@ -164,7 +164,7 @@ pal_factor <- function(
     reverse = reverse
   )
 
-}
+} # nocov end
 
 #' @examples
 #' pal <- pal_bin(met_palettes$Tam, domain = 0:100)
