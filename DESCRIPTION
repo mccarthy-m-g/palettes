@@ -22,7 +22,6 @@ Imports:
     cli,
     methods,
     pillar,
-    glue,
     rlang,
     purrr,
     prismatic,
@@ -41,7 +40,11 @@ Suggests:
     gt,
     biscale,
     sf,
-    patchwork
+    patchwork,
+    MetBrewer,
+    nord,
+    PNWColors,
+    viridisLite
 VignetteBuilder:
     knitr
 Config/Needs/website:

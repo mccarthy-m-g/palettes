@@ -4,10 +4,9 @@
 # The following block is used by usethis to automatically manage
 # roxygen namespace tags. Modify with care!
 ## usethis namespace: start
-#' @importFrom glue glue
-#' @importFrom grDevices col2rgb
-#' @importFrom grDevices rgb
+#' @importFrom grDevices col2rgb rgb
 #' @importFrom tibble tibble as_tibble
+#' @importFrom methods setOldClass
 ## usethis namespace: end
 NULL
 
