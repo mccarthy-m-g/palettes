@@ -44,7 +44,8 @@ Suggests:
     MetBrewer,
     nord,
     PNWColors,
-    viridisLite
+    viridisLite,
+    covr
 VignetteBuilder:
     knitr
 Config/Needs/website:

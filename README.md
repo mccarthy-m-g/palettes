@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/mccarthy-m-g/palettes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mccarthy-m-g/palettes/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/mccarthy-m-g/palettes/branch/main/graph/badge.svg)](https://app.codecov.io/gh/mccarthy-m-g/palettes?branch=main)
 <!-- badges: end -->
 
 palettes is an R package for working with colour palettes. The goal of
