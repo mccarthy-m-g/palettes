@@ -44,6 +44,16 @@ test_that("zero-length input works", {
 })
 
 # ------------------------------------------------------------------------------
+# plot()
+
+test_that("plotting works", {
+  x <- pal_palette(pal = c("red", "blue"))
+  y <- pal_palette(pal1 = c("red", "blue"), pal2 = c("yellow", "purple"))
+  expect_s3_class(plot(x), "gg")
+  expect_s3_class(plot(y), "gg")
+})
+
+# ------------------------------------------------------------------------------
 # vec_c()
 
 test_that("vec_c(x, y) is class palettes_palette", {
@@ -66,6 +76,13 @@ test_that("inputs that cannot be combined fail with an error", {
 
 test_that("palette is considered a list in the vctrs sense", {
   expect_identical(vec_is_list(pal_palette("black")), TRUE)
+})
+
+# ------------------------------------------------------------------------------
+# vec_ptype_abbr()
+
+test_that("ptype abbreviation is correct", {
+  expect_identical(vec_ptype_abbr(pal_palette()), "palette")
 })
 
 # ------------------------------------------------------------------------------

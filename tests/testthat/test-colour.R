@@ -47,13 +47,41 @@ test_that("zero-length input works", {
   expect_true(is_colour(pal_colour()))
 })
 
+test_that("hexadecimal string input works", {
+  x <- pal_colour("#FFFFFF")
+  x_alpha <- pal_colour("#FFFFFFFF")
+  expect_true(is_colour(pal_colour(x)))
+  expect_true(is_colour(pal_colour(x_alpha)))
+})
+
+# ------------------------------------------------------------------------------
+# pillar_shaft()
+
+test_that("pillar shaft works", {
+  x <- as_tibble(pal_colour("red"))
+  expect_snapshot(pillar_shaft(x$colour))
+})
+
+# ------------------------------------------------------------------------------
+# plot()
+
+test_that("plotting works", {
+  x <- pal_colour(c("red", "blue"))
+  expect_s3_class(plot(x), "gg")
+})
+
 # ------------------------------------------------------------------------------
 # print() / obj_print_data() / obj_print_footer()
 
-# test_that("normal print method works", {
-#   x <- year_month_day(2019, 1:5)
-#   expect_snapshot(x)
-# })
+test_that("normal print method works", {
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+test_that("zero-length normal print method works", {
+  x <- pal_colour()
+  expect_snapshot(x)
+})
 
 # ------------------------------------------------------------------------------
 # vec_c()
@@ -80,6 +108,13 @@ test_that("ptype is correct", {
 })
 
 # ------------------------------------------------------------------------------
+# vec_ptype_abbr()
+
+test_that("ptype abbreviation is correct", {
+  expect_identical(vec_ptype_abbr(pal_colour()), "colour")
+})
+
+# ------------------------------------------------------------------------------
 # vec_arith()
 
 test_that("zero-length input works", {
@@ -89,5 +124,26 @@ test_that("zero-length input works", {
   expect_true(is_colour(x + pal_colour(character())))
 })
 
+test_that("operators that are not supported fail with an error", {
+  x <- pal_colour("black")
+  expect_error(x - x, class = "vctrs_error_incompatible_op")
+})
+
 # ------------------------------------------------------------------------------
 # vec_math()
+
+test_that("sum works", {
+  x <- pal_colour(c("red", "blue"))
+  expect_identical(sum(x), x[1] + x[2])
+})
+
+test_that("cumsum works", {
+  x <- pal_colour(c("red", "blue"))
+  expect_length(cumsum(x), 2)
+  expect_identical(cumsum(x)[2], sum(x))
+})
+
+test_that("functions that are not supported fail with an error", {
+  x <- pal_colour(c("red", "blue"))
+  expect_error(sqrt(x), "not implemented")
+})
