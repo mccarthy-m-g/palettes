@@ -61,6 +61,9 @@ brew_colour <- function(
   # first colour in the palette since its logical is of length 1.
   palette <- if (direction >= 0) palette else rev(palette)
 
+  # Note: This action is destructive in that if the original colour included
+  # colour names, they will be converted to hexadecimal strings in the
+  # interpolated vector.
   brewed_palette <- grDevices::colorRampPalette(
     palette,
     space = "Lab",
