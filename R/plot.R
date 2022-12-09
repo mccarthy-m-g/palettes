@@ -71,9 +71,9 @@ plot_colour <- function(
   ggplot2::ggplot(
     x,
     mapping = ggplot2::aes(
-      x = position,
+      x = .data$position,
       y = 1,
-      fill = colour
+      fill = .data$colour
     )
   ) +
     ggplot2::geom_col(width = 1) +
