@@ -31,7 +31,7 @@ To demonstrate how to use palettes to colour data cells with gt, we will use `ai
 - Year, Month, Day: the numeric month and day of month for the record
 - Temp: maximum daily air temperature in degrees Fahrenheit (°F)
 
-Temperature is a good fit for colour---we can represent cold with blue, hot with red, and white as a midpoint.
+Temperature is a good fit for colour---we can represent cold with blue and hot with red.
 
 First we create the gt table we will add colour to. The table is slightly modified from a table in the [Introduction to Creating gt Tables](https://gt.rstudio.com/articles/intro-creating-gt-tables.html#the-column-labels) article. It looks like this.
 
@@ -70,10 +70,10 @@ gt_tbl
 
 ## Adding colour
 
-We can use the `Benedictus` palette for blue, white, and red with some minor modifications.
+We can use the `Hiroshige` palette for blue and red gradients, reversing it so the colours are in the correct order for this example.
 
 ```{r}
-colour_vector <- pal_brewer(met_palettes$Benedictus, n = 3, direction = -1)
+colour_vector <- rev(met_palettes$Hiroshige)
 colour_vector
 ```
 
