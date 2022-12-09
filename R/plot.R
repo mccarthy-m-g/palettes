@@ -70,10 +70,10 @@ plot_colour <- function(
 
   ggplot2::ggplot(
     x,
-    mapping = ggplot2::aes_string(
-      x = "position",
+    mapping = ggplot2::aes(
+      x = position,
       y = 1,
-      fill = "colour"
+      fill = colour
     )
   ) +
     ggplot2::geom_col(width = 1) +
