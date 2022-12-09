@@ -108,65 +108,56 @@ reversed.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># The class returned after interpolation matches the input class.</span></span></span>
-<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="pal_palette.html">pal_palette</a></span><span class="op">(</span>my_pal <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[3]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000FF;">•</span> #0000FF</span>
-<span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_palette[1]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $my_pal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[3]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000FF;">•</span> #0000FF</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"darkslateblue"</span>, <span class="st">"cornflowerblue"</span>, <span class="st">"slategray1"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="pal_palette.html">pal_palette</a></span><span class="op">(</span>blues <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "palettes_colour" "vctrs_vctr"     </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "palettes_palette" "vctrs_list_of"    "vctrs_vctr"       "list"            </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Choose between linear and spline interpolation.</span></span></span>
 <span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">7</span>, interpolate <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[7]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAF00;">•</span> #DE8A00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD700;">•</span> #AAC800</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87D7AF;">•</span> #77B784</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787D7;">•</span> #746EC4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000FF;">•</span> #0000FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #473D8B</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87AF;">•</span> #5259AA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787D7;">•</span> #5C76CB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6494EC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #88ADF3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A8C7F9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C5E1FF</span>
 <span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">7</span>, interpolate <span class="op">=</span> <span class="st">"spline"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[7]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7D700;">•</span> #C9BB00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87FF00;">•</span> #7AF400</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF87;">•</span> #23E070</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFD7;">•</span> #599AB7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000FF;">•</span> #0000FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #473D8B</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #495BB3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #5178D4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6494EC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #80AFFC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A1C9FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C5E1FF</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Palettes will have the same length after interpolation, regardless of the</span></span></span>
 <span class="r-in"><span><span class="co"># number of colours in the original palette.</span></span></span>
 <span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="pal_palette.html">pal_palette</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  pal1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  pal2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  Egypt <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#DD5129"</span>, <span class="st">"#0F7BA2"</span>, <span class="st">"#43B284"</span>, <span class="st">"#FAB255"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  Java  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#663171"</span>, <span class="st">"#CF3A36"</span>, <span class="st">"#EA7428"</span>, <span class="st">"#E2998A"</span>, <span class="st">"#0C7156"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">z</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_palette[2]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $pal1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $Egypt</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[5]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7D700;">•</span> #C8AB00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFAF;">•</span> #7C93A6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000FF;">•</span> #0000FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF5F00;">•</span> #DD5128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787AF;">•</span> #737484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5FAFAF;">•</span> #359593</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD787;">•</span> #83B379</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFD75F;">•</span> #F9B254</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $pal2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $Java</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[5]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAF00;">•</span> #FFA500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAF87;">•</span> #F3875E</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF87AF;">•</span> #E16891</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D75FD7;">•</span> #C847C0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AF00FF;">•</span> #9F1FF0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #875F87;">•</span> #663171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D75F5F;">•</span> #CE3935</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF8700;">•</span> #EA7327</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAFAF;">•</span> #E1998A</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00875F;">•</span> #0C7155</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

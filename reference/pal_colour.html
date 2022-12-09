@@ -111,16 +111,19 @@ specifications.</p></li>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">pal_colour</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"#00FF00"</span>, <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[3]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">•</span> #FF0000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00FF00;">•</span> #00FF00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0000BB;">•</span> #0000FF</span>
-<span class="r-in"><span><span class="fu">is_colour</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"#00FF00"</span>, <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">pal_colour</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"darkred"</span>, <span class="st">"#0F7BA2"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[2]&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AF0000;">•</span> #8B0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0087AF;">•</span> #0F7BA2</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">is_colour</span><span class="op">(</span><span class="st">"darkred"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
-<span class="r-in"><span><span class="fu">as_colour</span><span class="op">(</span><span class="st">"white"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">is_colour</span><span class="op">(</span><span class="fu">pal_colour</span><span class="op">(</span><span class="st">"darkred"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">as_colour</span><span class="op">(</span><span class="st">"#0F7BA2"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[1]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BBBBBB;">•</span> #FFFFFF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #0087AF;">•</span> #0F7BA2</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
