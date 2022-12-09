@@ -16,10 +16,10 @@
 #'
 #' @examples
 #' # The class returned after interpolation matches the input class.
-#' x <- pal_colour(c("red", "green", "blue"))
-#' y <- pal_palette(my_pal = x)
-#' pal_brewer(x)
-#' pal_brewer(y)
+#' x <- pal_colour(c("darkslateblue", "cornflowerblue", "slategray1"))
+#' y <- pal_palette(blues = x)
+#' class(pal_brewer(x))
+#' class(pal_brewer(y))
 #'
 #' # Choose between linear and spline interpolation.
 #' pal_brewer(x, n = 7, interpolate = "linear")
@@ -28,8 +28,8 @@
 #' # Palettes will have the same length after interpolation, regardless of the
 #' # number of colours in the original palette.
 #' z <- pal_palette(
-#'   pal1 = c("red", "green", "blue"),
-#'   pal2 = c("orange", "purple")
+#'   Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
+#'   Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 #' )
 #' pal_brewer(z, n = 5)
 pal_brewer <- function(

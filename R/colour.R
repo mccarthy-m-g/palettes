@@ -22,9 +22,12 @@ methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 #' @seealso `pal_palette()`
 #' @export
 #' @examples
-#' pal_colour(c("red", "#00FF00", "blue"))
-#' is_colour(c("red", "#00FF00", "blue"))
-#' as_colour("white")
+#' pal_colour(c("darkred", "#0F7BA2"))
+#'
+#' is_colour("darkred")
+#' is_colour(pal_colour("darkred"))
+#'
+#' as_colour("#0F7BA2")
 pal_colour <- function(x = character()) {
   x <- vec_cast(x, character())
   new_colour(x)

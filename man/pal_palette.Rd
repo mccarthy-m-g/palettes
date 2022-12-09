@@ -40,13 +40,13 @@ Colours can be specified using either:
 }
 \examples{
 pal_palette(
-  pal1 = c("red", "green", "blue"),
-  pal2 = c("yellow", "orange", "purple")
+  Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
+  Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 )
 
 x <- list(
-  pal1 = c("red", "green", "blue"),
-  pal2 = c("yellow", "orange", "purple")
+  Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
+  Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 )
 as_palette(x)
 }

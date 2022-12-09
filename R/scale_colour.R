@@ -10,22 +10,22 @@
 #' @examples
 #' library(ggplot2)
 #'
-#' rgb_pal <- pal_palette(rgb = c("red", "green", "blue"))
-#'
 #' # Use palette_d with discrete data
+#' discrete_pal <- pal_colour(c("#663171", "#EA7428", "#0C7156"))
 #' ggplot(mtcars, aes(wt, mpg, colour = as.factor(cyl))) +
 #'   geom_point(size = 3) +
-#'   scale_colour_palette_d(rgb_pal)
+#'   scale_colour_palette_d(discrete_pal)
 #'
 #' # Use palette_c with continuous data
+#' continuous_pal <- pal_colour(c("#3C0D03", "#E67424", "#F5C34D"))
 #' ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
 #'   geom_point(size = 3) +
-#'   scale_colour_palette_c(rgb_pal)
+#'   scale_colour_palette_c(continuous_pal)
 #'
 #' # Use palette_b to bin continuous data before mapping
 #' ggplot(mtcars, aes(wt, mpg, colour = mpg)) +
 #'   geom_point(size = 3) +
-#'   scale_colour_palette_b(rgb_pal)
+#'   scale_colour_palette_b(continuous_pal)
 scale_colour_palette_d <- function(palette, direction = 1, ...) {
   scale_palette_d(aesthetics = "colour", palette, direction, ...)
 }

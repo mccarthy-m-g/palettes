@@ -8,12 +8,12 @@
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @examples
-#' x <- pal_colour(c("red", "green", "blue"))
+#' x <- pal_colour(c("#663171", "#EA7428", "#0C7156"))
 #' as_tibble(x)
 #'
 #' y <- pal_palette(
-#'   pal1 = c("red", "green", "blue"),
-#'   pal2 = c("yellow", "orange", "purple")
+#'   Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
+#'   Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 #' )
 #' as_tibble(y)
 as_tibble.palettes_colour <- function(x, ...) {

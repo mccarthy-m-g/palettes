@@ -45,9 +45,12 @@ Colours can be specified using either:
 }
 }
 \examples{
-pal_colour(c("red", "#00FF00", "blue"))
-is_colour(c("red", "#00FF00", "blue"))
-as_colour("white")
+pal_colour(c("darkred", "#0F7BA2"))
+
+is_colour("darkred")
+is_colour(pal_colour("darkred"))
+
+as_colour("#0F7BA2")
 }
 \seealso{
 \code{pal_palette()}

@@ -31,18 +31,18 @@ Plots a colour palette object.
 }
 \examples{
 # Objects of class `palettes_colour` are plotted as swatches.
-x <- pal_colour(c("red", "green", "blue"))
+x <- pal_colour(c("darkslateblue", "cornflowerblue", "slategray1"))
 plot(x)
 
 # Objects of class `palettes_palette` with one palette are plotted with
 # the palette name spanned across the swatches.
-y <- pal_palette(my_pal = c("red", "green", "blue"))
+y <- pal_palette(Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"))
 plot(y)
 
 # Objects of class `palettes_palette` with multiple palettes are faceted.
 z <- pal_palette(
-  pal1 = c("red", "green", "blue"),
-  pal2 = c("yellow", "orange", "purple")
+  Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
+  Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 )
 plot(z)
 
