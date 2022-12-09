@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 This vignette shows you how to use palettes to colour data cells with **gt**.
 
-```{r setup}
+```{r setup, message = FALSE, warning = FALSE}
 library(palettes)
 library(gt)
 library(scales)
