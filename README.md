@@ -17,11 +17,16 @@ package. It is in very early development.
 
 ## Installation
 
-Install the development version from [GitHub](https://github.com/) with:
+Install the development version from [GitHub](https://github.com/) or
+[R-universe](https://r-universe.dev/) with:
 
 ``` r
+# Install from GitHub
 # install.packages("remotes")
 remotes::install_github("mccarthy-m-g/palettes")
+
+# Install from R-universe
+install.packages('palettes', repos = 'https://mccarthy-m-g.r-universe.dev')
 ```
 
 ## Usage
