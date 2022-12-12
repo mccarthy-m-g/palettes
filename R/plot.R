@@ -72,11 +72,11 @@ plot_colour <- function(
     x,
     mapping = ggplot2::aes(
       x = .data$position,
-      y = 1,
+      y = 0.5,
       fill = .data$colour
     )
   ) +
-    ggplot2::geom_col(width = 1) +
+    ggplot2::geom_raster() +
     ggplot2::scale_fill_identity() +
     ggplot2::coord_cartesian(expand = FALSE) +
     ggplot2::theme_void() +
