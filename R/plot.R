@@ -35,10 +35,11 @@ plot.palettes_colour <- function(
   x,
   n = NULL,
   direction = 1,
+  space = "lab",
   interpolate = c("linear", "spline"),
   ...
 ) {
-  plot_colour(x, n, direction, interpolate, ...)
+  plot_colour(x, n, direction, space, interpolate, ...)
 }
 
 #' @export
@@ -47,20 +48,22 @@ plot.palettes_palette <- function(
   x,
   n = NULL,
   direction = 1,
+  space = "lab",
   interpolate = c("linear", "spline"),
   ...
 ) {
-  plot_palette(x, n, direction, interpolate, ...)
+  plot_palette(x, n, direction, space, interpolate, ...)
 }
 
 plot_colour <- function(
   x,
   n = NULL,
   direction = 1,
+  space = "lab",
   interpolate = c("linear", "spline")
 ) {
 
-  x <- pal_brewer(x, n, direction, interpolate)
+  x <- pal_brewer(x, n, direction, space, interpolate)
   x <- tibble::as_tibble(x)
   # When the same colour is repeated in a pal_colour() or pal_palette() object
   # it needs a unique position identifier in order to be plotted in the same
@@ -96,6 +99,7 @@ plot_palette <- function(
   x,
   n = NULL,
   direction = 1,
+  space = "lab",
   interpolate = c("linear", "spline")
 ) {
 
@@ -104,7 +108,7 @@ plot_palette <- function(
     cols <- get_palette_colours(x)
     cols_length <- ifelse(is.null(n), vec_size(cols), n)
 
-    plot_colour(x, n, direction, interpolate) +
+    plot_colour(x, n, direction, space, interpolate) +
       ggplot2::annotate(
         "rect",
         xmin = -Inf, xmax = Inf,
@@ -124,7 +128,7 @@ plot_palette <- function(
       )
 
   } else {
-    plot_colour(x, n, direction, interpolate) +
+    plot_colour(x, n, direction, space, interpolate) +
       ggplot2::facet_wrap(~ palette, scales = "free") +
       # When there are a lot of palettes a smaller font size is needed to
       # prevent longer strip text from getting cut off.

@@ -8,6 +8,7 @@ pal_brewer(
   palette,
   n = NULL,
   direction = 1,
+  space = "lab",
   interpolate = c("linear", "spline")
 )
 }
@@ -19,6 +20,12 @@ pal_brewer(
 \item{direction}{Sets the order of colours in the scale. If 1, the default,
 colours are ordered from first to last If -1, the order of colours is
 reversed.}
+
+\item{space}{The colour space to interpolate in. One of: \code{"cmy"}, \code{"cmyk"},
+\code{"hsl"}, \code{"hsb"}, \code{"hsv"}, \code{"lab"} (CIE L*ab), \code{"hunterlab"} (Hunter Lab),
+\code{"oklab"}, \code{"lch"} (CIE Lch(ab) / polarLAB), \code{"luv"}, \code{"rgb"} (sRGB),
+\code{"xyz"}, \code{"yxy"} (CIE xyY), \code{"hcl"} (CIE Lch(uv) / polarLuv), or \code{"oklch"}
+(Polar form of oklab).}
 
 \item{interpolate}{The interpolation method. Either "linear" (default) or
 "spline".}

@@ -136,7 +136,7 @@ Colour palettes can be subset using `[`, `[[`, and `$`.
     plot(colour_palette)
     ```
 
-To interpolate or change the direction of colours in a plot, use the optional `n`, `direction`, or `interpolate` arguments.
+To interpolate or change the direction of colours in a plot, use the optional `n`, `direction`, `space`, or `interpolate` arguments.
 
 ```{r}
 plot(colour_vector, n = 7, direction = -1, interpolate = "linear")
