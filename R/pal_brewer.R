@@ -44,7 +44,7 @@ pal_brewer <- function(
   } else if (is_colour(palette)) {
     brew_colour(palette, n, direction, interpolate)
   } else {
-    warning("`palette` not of class `palettes_palette` or `palettes_colour`.")
+    rlang::warn("`palette` not of class `palettes_palette` or `palettes_colour`.")
   }
 
 }

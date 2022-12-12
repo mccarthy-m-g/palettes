@@ -66,7 +66,7 @@ colour_lighten <- function(
   # These checks are done by prismatic::clr_lighten(), but we repeat them here
   # so the error messages are consistent with the palettes API.
   if (!(length(shift) == 1 || (length(shift) == length(palette)))) {
-    stop("`shift` must be of length 1 or the same length as `palette`.")
+    rlang::abort("`shift` must be of length 1 or the same length as `palette`.")
   }
   space <- rlang::arg_match(space)
 

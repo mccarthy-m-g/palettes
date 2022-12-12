@@ -106,7 +106,7 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
 get_palette_colours <- function(x, n = NULL, direction = 1) {
 
   if (is_palette(x) & vec_size(x) > 1) {
-    warning("Multiple palettes supplied, only the first palette will be used.")
+    rlang::warn("Multiple palettes supplied, only the first palette will be used.")
     x <- vec_slice(x, 1)
   }
   x <- as_colour(x)
