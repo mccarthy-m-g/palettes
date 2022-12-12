@@ -48,7 +48,7 @@ vec_arith.palettes_colour.palettes_colour <- function(op, x, y, ...) {
 }
 
 colour_plus <- function(x, y) {
-  colour_arith(x, y, colour_plus_prismatic)
+  colour_arith(x, y, colour_plus_farver)
 }
 # colour_minus <- function(x, y) {
 #   colour_arith(x, y, colour_minus_farver)
@@ -77,10 +77,6 @@ colour_arith <- function(x, y, fn) {
   pal_colour(fields)
 }
 
-# TODO: Decide the function for adding colours; the current is just a proof of
-# concept placeholder.
-colour_plus_prismatic <- function(x, y) {
-  prismatic::clr_mix(x, y)
+colour_plus_farver <- function(x, y) {
+  pal_mix(c(x, y))
 }
-
-#TODO: Create colour_minus_xxx function.
