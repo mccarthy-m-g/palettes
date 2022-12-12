@@ -22,7 +22,7 @@ Imports:
     cli,
     methods,
     pillar,
-    rlang,
+    rlang (>= 1.0.0),
     purrr,
     prismatic,
     farver (>= 2.0.3),
