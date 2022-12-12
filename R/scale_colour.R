@@ -79,7 +79,7 @@ scale_palette_c <- function(aesthetics, palette, direction = 1, ...) {
     aesthetics = aesthetics,
     scale_name = names(palette),
     palette = scales::gradient_n_pal(
-      get_palette_colours(palette, 256, direction)
+      get_palette_colours(palette, n = 256, direction)
     ),
     guide = "colourbar",
     ...
