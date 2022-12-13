@@ -1,6 +1,6 @@
 colourspaces <- c(
   "cmy",       # 1
-  "cmyk",      # 2
+  # "cmyk",    # 2 (Don't include since it has 4 channels, not 3)
   "hsl",       # 3
   "hsb",       # 4
   "hsv",       # 5

@@ -8,8 +8,8 @@
 #' @param direction Sets the order of colours in the scale. If 1, the default,
 #'   colours are ordered from first to last If -1, the order of colours is
 #'   reversed.
-#' @param space The colour space to interpolate in. One of: `"cmy"`, `"cmyk"`,
-#'   `"hsl"`, `"hsb"`, `"hsv"`, `"lab"` (CIE L*ab), `"hunterlab"` (Hunter Lab),
+#' @param space The colour space to interpolate in. One of: `"cmy"`, `"hsl"`,
+#'   `"hsb"`, `"hsv"`, `"lab"` (CIE L*ab), `"hunterlab"` (Hunter Lab),
 #'   `"oklab"`, `"lch"` (CIE Lch(ab) / polarLAB), `"luv"`, `"rgb"` (sRGB),
 #'   `"xyz"`, `"yxy"` (CIE xyY), `"hcl"` (CIE Lch(uv) / polarLuv), or `"oklch"`
 #'   (Polar form of oklab).

@@ -32,8 +32,8 @@
 colours are ordered from first to last If -1, the order of colours is
 reversed.}
 
-\item{space}{The colour space to interpolate in. One of: \code{"cmy"}, \code{"cmyk"},
-\code{"hsl"}, \code{"hsb"}, \code{"hsv"}, \code{"lab"} (CIE L*ab), \code{"hunterlab"} (Hunter Lab),
+\item{space}{The colour space to interpolate in. One of: \code{"cmy"}, \code{"hsl"},
+\code{"hsb"}, \code{"hsv"}, \code{"lab"} (CIE L*ab), \code{"hunterlab"} (Hunter Lab),
 \code{"oklab"}, \code{"lch"} (CIE Lch(ab) / polarLAB), \code{"luv"}, \code{"rgb"} (sRGB),
 \code{"xyz"}, \code{"yxy"} (CIE xyY), \code{"hcl"} (CIE Lch(uv) / polarLuv), or \code{"oklch"}
 (Polar form of oklab).}
