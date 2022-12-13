@@ -32,7 +32,7 @@ usethis::use_data(pnw_palettes, overwrite = TRUE)
 
 # viridisLite palettes ----
 
-n_colours <- 9
+n_colours <- 27
 
 viridis_palettes <- pal_palette(
   viridis = viridisLite::viridis(n_colours),

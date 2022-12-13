@@ -80,5 +80,5 @@
 #' names(viridis_palettes)
 #'
 #' # Plot all palettes.
-#' plot(viridis_palettes)
+#' plot(viridis_palettes, n = 256)
 "viridis_palettes"
