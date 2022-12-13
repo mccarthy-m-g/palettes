@@ -73,6 +73,7 @@ objects to create new colour palettes.</p>
 <span>  <span class="va">palette</span>,</span>
 <span>  n <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  direction <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  space <span class="op">=</span> <span class="st">"lab"</span>,</span>
 <span>  interpolate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"spline"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -91,6 +92,14 @@ objects to create new colour palettes.</p>
 <dd><p>Sets the order of colours in the scale. If 1, the default,
 colours are ordered from first to last If -1, the order of colours is
 reversed.</p></dd>
+
+
+<dt>space</dt>
+<dd><p>The colour space to interpolate in. One of: <code>"cmy"</code>, <code>"cmyk"</code>,
+<code>"hsl"</code>, <code>"hsb"</code>, <code>"hsv"</code>, <code>"lab"</code> (CIE L*ab), <code>"hunterlab"</code> (Hunter Lab),
+<code>"oklab"</code>, <code>"lch"</code> (CIE Lch(ab) / polarLAB), <code>"luv"</code>, <code>"rgb"</code> (sRGB),
+<code>"xyz"</code>, <code>"yxy"</code> (CIE xyY), <code>"hcl"</code> (CIE Lch(uv) / polarLuv), or <code>"oklch"</code>
+(Polar form of oklab).</p></dd>
 
 
 <dt>interpolate</dt>
@@ -118,22 +127,22 @@ reversed.</p></dd>
 <span class="r-in"><span><span class="co"># Choose between linear and spline interpolation.</span></span></span>
 <span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">7</span>, interpolate <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[7]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #473D8B</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87AF;">•</span> #5259AA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787D7;">•</span> #5C76CB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6494EC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #88ADF3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A8C7F9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C5E1FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #483D8B</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #535AAB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787D7;">•</span> #5C77CB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6495ED</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #89AEF3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A9C8F9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C6E2FF</span>
 <span class="r-in"><span><span class="fu">pal_brewer</span><span class="op">(</span><span class="va">x</span>, n <span class="op">=</span> <span class="fl">7</span>, interpolate <span class="op">=</span> <span class="st">"spline"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[7]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #473D8B</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #495BB3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #5178D4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6494EC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #80AFFC</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A1C9FF</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C5E1FF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F5FAF;">•</span> #483D8B</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #495CB3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5F87D7;">•</span> #5179D4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #87AFFF;">•</span> #6495ED</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #80B0FD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD7FF;">•</span> #A2CAFF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D7FFFF;">•</span> #C6E2FF</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Palettes will have the same length after interpolation, regardless of the</span></span></span>
 <span class="r-in"><span><span class="co"># number of colours in the original palette.</span></span></span>
@@ -145,19 +154,19 @@ reversed.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_palette[2]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Egypt</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[5]&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF5F00;">•</span> #DD5128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF5F00;">•</span> #DD5129</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #8787AF;">•</span> #737484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5FAFAF;">•</span> #359593</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD787;">•</span> #83B379</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFD75F;">•</span> #F9B254</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #5FAFAF;">•</span> #369694</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #AFD787;">•</span> #83B479</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFD75F;">•</span> #FAB255</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Java</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[5]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #875F87;">•</span> #663171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D75F5F;">•</span> #CE3935</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF8700;">•</span> #EA7327</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAFAF;">•</span> #E1998A</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00875F;">•</span> #0C7155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #D75F5F;">•</span> #CF3A36</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FF8700;">•</span> #EA7428</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #FFAFAF;">•</span> #E2998A</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #008787;">•</span> #0C7156</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
