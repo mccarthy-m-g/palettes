@@ -28,8 +28,7 @@ Imports:
     farver (>= 2.0.3),
     ggplot2,
     scales,
-    tibble,
-    grDevices
+    tibble
 Suggests:
     pkgdown,
     testthat (>= 3.0.0),
@@ -45,7 +44,8 @@ Suggests:
     nord,
     PNWColors,
     viridisLite,
-    covr
+    covr,
+    grDevices
 VignetteBuilder:
     knitr
 Config/Needs/website:
