@@ -30,12 +30,30 @@ methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 #' as_colour("#0F7BA2")
 pal_colour <- function(x = character()) {
   x <- vec_cast(x, character())
-  new_colour(x)
+  validate_colour(new_colour(x))
 }
 
 new_colour <- function(x = character()) {
   vec_assert(x, character())
   new_vctr(x, class = "palettes_colour")
+}
+
+validate_colour <- function(x) {
+  values <- vec_data(x)
+  is_named_colour <- values %in% colour_names
+  is_hex_colour <- grepl(values, pattern = "#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})")
+  is_na_colour <- is.na(values)
+  is_valid_colour <- is_named_colour | is_hex_colour | is_na_colour
+
+  if (any(!is_valid_colour) & vec_size(values) != 0) {
+    invalid_colours <- paste(paste0("\"", values[!is_valid_colour], "\""), collapse = ", ")
+    rlang::abort(c(
+      "All `x` values must be hexadecimal strings or colour names.",
+      "x" = paste0("The following values are not valid colours: ", invalid_colours, ".")
+    ))
+  }
+
+  x
 }
 
 #' @export

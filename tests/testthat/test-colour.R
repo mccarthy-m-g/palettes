@@ -54,6 +54,10 @@ test_that("hexadecimal string input works", {
   expect_true(is_colour(pal_colour(x_alpha)))
 })
 
+test_that("invalid values fail with an error", {
+  expect_error(pal_colour("a"), class = "rlang_error")
+})
+
 # ------------------------------------------------------------------------------
 # pillar_shaft()
 
