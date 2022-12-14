@@ -28,7 +28,7 @@ scale_fill_palette_b(palette, direction = 1, ...)
 \item{palette}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
 
 \item{direction}{Sets the order of colours in the scale. If 1, the default,
-colours are ordered from first to last If -1, the order of colours is
+colours are ordered from first to last. If -1, the order of colours is
 reversed.}
 
 \item{...}{Other arguments passed on to \code{ggplot2::discrete_scale()},

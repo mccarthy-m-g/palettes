@@ -1,16 +1,16 @@
 test_that("colour vectors work", {
   x <- pal_colour(c("red", "blue"))
-  expect_length(pal_brewer(x, n = 5), 5)
+  expect_length(pal_ramp(x, n = 5), 5)
 })
 
 test_that("single colour vectors are repeated", {
   x <- pal_colour("#FF0000")
-  expect_identical(unique(pal_brewer(x, n = 5)), x)
+  expect_identical(unique(pal_ramp(x, n = 5)), x)
 })
 
 test_that("direction works", {
   x <- pal_colour(c("#FF0000", "#0000FF"))
-  expect_identical(pal_brewer(x, direction = -1), rev(x))
+  expect_identical(pal_ramp(x, direction = -1), rev(x))
 })
 
 test_that("colour palettes work", {
@@ -18,10 +18,10 @@ test_that("colour palettes work", {
     pal1 = c("red", "blue"),
     pal2 = c("purple", "yellow")
   )
-  expect_length(pal_brewer(x, n = 5), 2)
+  expect_length(pal_ramp(x, n = 5), 2)
 })
 
-test_that("objects that are not supported fail with a warning", {
+test_that("objects that are not supported fail with an error", {
   x <- c("red", "blue")
-  expect_warning(pal_brewer(x), "not of class")
+  expect_error(pal_ramp(x), "no applicable method")
 })

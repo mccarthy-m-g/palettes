@@ -20,7 +20,7 @@ reference:
 - title: Colour interpolation and colour mixing
   desc:
   contents:
-  - pal_brewer
+  - pal_ramp
   - colour-mixing-arithmetic
   - colour-mixing-math
 

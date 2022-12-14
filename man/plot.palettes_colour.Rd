@@ -29,7 +29,7 @@
 \item{n}{An integer specifying the number of colours to return.}
 
 \item{direction}{Sets the order of colours in the scale. If 1, the default,
-colours are ordered from first to last If -1, the order of colours is
+colours are ordered from first to last. If -1, the order of colours is
 reversed.}
 
 \item{space}{The colour space to interpolate in. One of: \code{"cmy"}, \code{"hsl"},
@@ -72,5 +72,5 @@ plot(y, n = 5)
 plot(z, n = 5)
 }
 \seealso{
-\code{pal_brewer()}
+\code{pal_ramp()}
 }

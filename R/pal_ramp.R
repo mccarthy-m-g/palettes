@@ -6,7 +6,7 @@
 #' @param palette An object of class `palettes_palette` or `palettes_colour`.
 #' @param n An integer specifying the number of colours to return.
 #' @param direction Sets the order of colours in the scale. If 1, the default,
-#'   colours are ordered from first to last If -1, the order of colours is
+#'   colours are ordered from first to last. If -1, the order of colours is
 #'   reversed.
 #' @param space The colour space to interpolate in. One of: `"cmy"`, `"hsl"`,
 #'   `"hsb"`, `"hsv"`, `"lab"` (CIE L*ab), `"hunterlab"` (Hunter Lab),
@@ -23,12 +23,12 @@
 #' # The class returned after interpolation matches the input class.
 #' x <- pal_colour(c("darkslateblue", "cornflowerblue", "slategray1"))
 #' y <- pal_palette(blues = x)
-#' class(pal_brewer(x))
-#' class(pal_brewer(y))
+#' class(pal_ramp(x))
+#' class(pal_ramp(y))
 #'
 #' # Choose between linear and spline interpolation.
-#' pal_brewer(x, n = 7, interpolate = "linear")
-#' pal_brewer(x, n = 7, interpolate = "spline")
+#' pal_ramp(x, n = 7, interpolate = "linear")
+#' pal_ramp(x, n = 7, interpolate = "spline")
 #'
 #' # Palettes will have the same length after interpolation, regardless of the
 #' # number of colours in the original palette.
@@ -36,26 +36,45 @@
 #'   Egypt = c("#DD5129", "#0F7BA2", "#43B284", "#FAB255"),
 #'   Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 #' )
-#' pal_brewer(z, n = 5)
-pal_brewer <- function(
+#' pal_ramp(z, n = 5)
+pal_ramp <- function(
   palette,
   n = NULL,
   direction = 1,
   space = "lab",
   interpolate = c("linear", "spline")
 ) {
-
-  if (is_palette(palette)) {
-    pal_ramp(palette, n, direction, space, interpolate)
-  } else if (is_colour(palette)) {
-    col_ramp(palette, n, direction, space, interpolate)
-  } else {
-    rlang::warn("`palette` not of class `palettes_palette` or `palettes_colour`.")
-  }
-
+  UseMethod("pal_ramp")
 }
 
-col_ramp <- function(
+#' @export
+#' @rdname pal_ramp
+pal_ramp.palettes_colour <- function(
+  palette,
+  n = NULL,
+  direction = 1,
+  space = "lab",
+  interpolate = c("linear", "spline")
+) {
+  colour_ramp(palette, n, direction, space, interpolate)
+}
+
+#' @export
+#' @rdname pal_ramp
+pal_ramp.palettes_palette <- function(
+  palette,
+  n = NULL,
+  direction = 1,
+  space = "lab",
+  interpolate = c("linear", "spline")
+) {
+  palette <- purrr::map(
+    palette, function(x) colour_ramp(x, n, direction, space, interpolate)
+  )
+  new_palette(palette)
+}
+
+colour_ramp <- function(
   x,
   n = NULL,
   direction = 1,
@@ -110,11 +129,4 @@ col_ramp <- function(
 
   as_colour(ramp(seq(0, 1, length.out = n)))
 
-}
-
-pal_ramp <- function(x, ...) {
-  palette <- purrr::map(
-    x, function(x) col_ramp(x, ...)
-  )
-  new_palette(palette)
 }

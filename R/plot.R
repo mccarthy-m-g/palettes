@@ -3,12 +3,12 @@
 #'
 #' Plots a colour palette object.
 #'
-#' @inheritParams pal_brewer
+#' @inheritParams pal_ramp
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
 #' @param ... Not used.
 #'
 #' @return A ggplot2 object.
-#' @seealso `pal_brewer()`
+#' @seealso `pal_ramp()`
 #' @export
 #' @examples
 #' # Objects of class `palettes_colour` are plotted as swatches.
@@ -63,7 +63,7 @@ plot_colour <- function(
   interpolate = c("linear", "spline")
 ) {
 
-  x <- pal_brewer(x, n, direction, space, interpolate)
+  x <- pal_ramp(x, n, direction, space, interpolate)
   x <- tibble::as_tibble(x)
   # When the same colour is repeated in a pal_colour() or pal_palette() object
   # it needs a unique position identifier in order to be plotted in the same

@@ -1,6 +1,6 @@
 #' Colour scales from colour vectors and colour palettes
 #'
-#' @inheritParams pal_brewer
+#' @inheritParams pal_ramp
 #' @param ... Other arguments passed on to `ggplot2::discrete_scale()`,
 #'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale()` to control name,
 #'   limits, breaks, labels and so forth.
@@ -110,7 +110,7 @@ get_palette_colours <- function(x, n = NULL, direction = 1) {
     x <- vec_slice(x, 1)
   }
   x <- as_colour(x)
-  pal_brewer(x, n, direction = direction)
+  pal_ramp(x, n, direction = direction)
 
 }
 
