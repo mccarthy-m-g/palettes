@@ -58,9 +58,6 @@
     <loc>https://mccarthy-m-g.github.io/palettes/reference/nord_palettes.html</loc>
   </url>
   <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_brewer.html</loc>
-  </url>
-  <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_colour.html</loc>
   </url>
   <url>
@@ -68,6 +65,9 @@
   </url>
   <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_palette.html</loc>
+  </url>
+  <url>
+    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_ramp.html</loc>
   </url>
   <url>
     <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-package.html</loc>
