@@ -81,6 +81,24 @@ as_colour.palettes_palette <- function(x) {
   new_colour(value)
 }
 
+# Coerce ----------------------------------------------------------------------
+
+#' @export
+vec_ptype2.palettes_colour.palettes_colour <- function(x, y, ...) new_colour()
+#' @export
+vec_ptype2.palettes_colour.character <- function(x, y, ...) character()
+#' @export
+vec_ptype2.character.palettes_colour <- function(x, y, ...) character()
+
+# Cast ------------------------------------------------------------------------
+
+#' @export
+vec_cast.palettes_colour.palettes_colour <- function(x, to, ...) x
+#' @export
+vec_cast.palettes_colour.character <- function(x, to, ...) pal_colour(x)
+#' @export
+vec_cast.character.palettes_colour <- function(x, to, ...) vec_data(x)
+
 # British to American spellings ----------------------------------------------
 
 #' @export

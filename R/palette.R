@@ -53,3 +53,21 @@ is_palette <- function(x) {
 as_palette <- function(x) {
   vec_cast(x, to = new_palette())
 }
+
+# Coerce ----------------------------------------------------------------------
+
+#' @export
+vec_ptype2.palettes_palette.palettes_palette <- function(x, y, ...) new_palette()
+#' @export
+vec_ptype2.palettes_palette.list <- function(x, y, ...) list()
+#' @export
+vec_ptype2.list.palettes_palette <- function(x, y, ...) list()
+
+# Cast ------------------------------------------------------------------------
+
+#' @export
+vec_cast.palettes_palette.palettes_palette <- function(x, to, ...) x
+#' @export
+vec_cast.palettes_palette.list <- function(x, to, ...) do.call(pal_palette, x)
+#' @export
+vec_cast.list.palettes_palette <- function(x, to, ...) vec_data(x)
