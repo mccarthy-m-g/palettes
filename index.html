@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Provides a comprehensive library for colour vectors and colour
-    palettes using a new family of colour classes (palettes_colour, and
+    palettes using a new family of colour classes (palettes_colour and
     palettes_palette) that always print as hex codes with colour previews.
     Capabilities include: formatting, casting and coercion, extraction and
     updating of components, plotting, colour mixing arithmetic, and colour
@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Methods for Colour Vectors and Colour Palettes">
 <meta property="og:description" content="Provides a comprehensive library for colour vectors and colour
-    palettes using a new family of colour classes (palettes_colour, and
+    palettes using a new family of colour classes (palettes_colour and
     palettes_palette) that always print as hex codes with colour previews.
     Capabilities include: formatting, casting and coercion, extraction and
     updating of components, plotting, colour mixing arithmetic, and colour
@@ -100,7 +100,12 @@
 </div>
 <!-- badges: start -->
 
-<p>palettes is an R package for working with colour palettes. The goal of palettes is to provide methods for working with colour palettes, particularly for developers who want to make their own colour palette package. It is in very early development.</p>
+<p>palettes is an R package for working with colour vectors and colour palettes. There are three main goals to the palettes package, each described in a vignette:</p>
+<ul>
+<li><p>To provide a new family of colour classes (<code>palettes_colour</code> and <code>palettes_palette</code>) that always print as hex codes with colour previews; <code><a href="articles/palettes.html">vignette("palettes")</a></code>.</p></li>
+<li><p>To provide a comprehensive library of methods for working with colour vectors and colour palettes, including methods for ggplot2, <code><a href="articles/ggplot2.html">vignette("ggplot2")</a></code>; gt, <code><a href="articles/gt.html">vignette("gt")</a></code>; biscale, <code><a href="articles/biscale.html">vignette("biscale")</a></code>; and other colour packages, <code><a href="articles/compatibility.html">vignette("compatibility")</a></code>.</p></li>
+<li><p>To make it easy for anyone to make their own colour palette package; <code><a href="articles/creating-packages.html">vignette("creating-packages")</a></code>. Colour palette packages made with palettes exist solely for the purpose of distributing colour palettes and get access to all the features of palettes for free.</p></li>
+</ul>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -117,8 +122,7 @@
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mccarthy-m-g.github.io/palettes/">palettes</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mccarthy-m-g.github.io/palettes/">palettes</a></span><span class="op">)</span></span></code></pre></div>
 <p>Colours can be specified by name (as listed by <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colours()</a></code>):</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
@@ -129,20 +133,18 @@
 <p><img src="reference/figures/README-/pal-colour-hex.svg" width="100%"></p>
 <p>Multiple colours can be specified at once as a character vector:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#FF0000"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#a00e00"</span>, <span class="st">"#d04e00"</span>, <span class="st">"#f6c200"</span>, <span class="st">"#0086a8"</span>, <span class="st">"#132b69"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-colour-vector.svg" width="100%"></p>
 <p>Named colour palettes can be specified in the same way:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_palette.html">pal_palette</a></span><span class="op">(</span></span>
-<span>  palette_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#FF0000"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span><span class="op">)</span>,</span>
-<span>  palette_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"yellow"</span>, <span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  egypt <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#dd5129"</span>, <span class="st">"#0f7ba2"</span>, <span class="st">"#43b284"</span>, <span class="st">"#fab255"</span><span class="op">)</span>,</span>
+<span>  java  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#663171"</span>, <span class="st">"#cf3a36"</span>, <span class="st">"#ea7428"</span>, <span class="st">"#e2998a"</span>, <span class="st">"#0c7156"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-palette.svg" width="100%"></p>
-<p>Colours also work in tibbles:</p>
+<p>Colours also print nicely in tibbles:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span></span>
-<span>  colours <span class="op">=</span> <span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#FF0000"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#dd5129"</span>, <span class="st">"#0f7ba2"</span>, <span class="st">"#43b284"</span>, <span class="st">"#fab255"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/tibble.svg" width="100%"></p>
 </div>
 <div class="section level2">
