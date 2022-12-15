@@ -54,8 +54,22 @@ test_that("hexadecimal string input works", {
   expect_true(is_colour(pal_colour(x_alpha)))
 })
 
+test_that("colour name input works", {
+  x <- pal_colour("red")
+  expect_true(is_colour(pal_colour(x)))
+})
+
 test_that("invalid values fail with an error", {
+  # No "#"
   expect_error(pal_colour("a"), class = "rlang_error")
+  # Wrong number of values
+  expect_error(pal_colour("#a"), class = "rlang_error")
+  expect_error(pal_colour("#ab"), class = "rlang_error")
+  expect_error(pal_colour("#abc"), class = "rlang_error")
+  expect_error(pal_colour("#abcd"), class = "rlang_error")
+  expect_error(pal_colour("#abcde"), class = "rlang_error")
+  expect_error(pal_colour("#abcdefa"), class = "rlang_error")
+  expect_error(pal_colour("#abcdefabc"), class = "rlang_error")
 })
 
 # ------------------------------------------------------------------------------

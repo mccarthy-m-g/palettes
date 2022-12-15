@@ -40,13 +40,10 @@ new_colour <- function(x = character()) {
 
 validate_colour <- function(x) {
   values <- vec_data(x)
-  is_named_colour <- values %in% colour_names
-  is_hex_colour <- grepl(values, pattern = "#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})")
-  is_na_colour <- is.na(values)
-  is_valid_colour <- is_named_colour | is_hex_colour | is_na_colour
+  valid_colours <- is_valid_colour(values)
 
-  if (any(!is_valid_colour) & vec_size(values) != 0) {
-    invalid_colours <- paste(paste0("\"", values[!is_valid_colour], "\""), collapse = ", ")
+  if (any(!valid_colours) & vec_size(values) != 0) {
+    invalid_colours <- paste(paste0("\"", values[!valid_colours], "\""), collapse = ", ")
     rlang::abort(c(
       "All `x` values must be hexadecimal strings or colour names.",
       "x" = paste0("The following values are not valid colours: ", invalid_colours, ".")
