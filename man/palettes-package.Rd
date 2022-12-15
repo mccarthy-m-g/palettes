@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Provides a comprehensive library for colour vectors and colour palettes using a new family of colour classes (palettes_colour, and palettes_palette) that always print as hex codes with colour previews. Capabilities include: formatting, casting and coercion, extraction and updating of components, plotting, colour mixing arithmetic, and colour interpolation.
+Provides a comprehensive library for colour vectors and colour palettes using a new family of colour classes (palettes_colour and palettes_palette) that always print as hex codes with colour previews. Capabilities include: formatting, casting and coercion, extraction and updating of components, plotting, colour mixing arithmetic, and colour interpolation.
 }
 \seealso{
 Useful links:
