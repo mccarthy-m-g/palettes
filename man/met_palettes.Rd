@@ -16,7 +16,7 @@ palettes. Use \code{names(met_palettes)} to return all palette names.
 
 An object of class \code{palettes_palette} limited to
 24 colourblind accessible palettes. All colours
-in each palette are distinguishible with deuteranopia, protanopia, and
+in each palette are distinguishable with deuteranopia, protanopia, and
 tritanopia. Use \code{names(met_palettes_a11y)} to return all palette names.
 }
 }
