@@ -4,9 +4,9 @@
 #' @param ... Other arguments passed on to `ggplot2::discrete_scale()`,
 #'   `ggplot2::continuous_scale()`, or `ggplot2::binned_scale()` to control name,
 #'   limits, breaks, labels and so forth.
-#'
+#' @return A scale function that controls the mapping between data and colour or
+#'   fill aesthetics in a [ggplot2][ggplot2::ggplot2-package] plot.
 #' @export
-#'
 #' @examples
 #' library(ggplot2)
 #'

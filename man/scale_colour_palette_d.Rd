@@ -35,6 +35,10 @@ reversed.}
 \code{ggplot2::continuous_scale()}, or \code{ggplot2::binned_scale()} to control name,
 limits, breaks, labels and so forth.}
 }
+\value{
+A scale function that controls the mapping between data and colour or
+fill aesthetics in a \link[ggplot2:ggplot2-package]{ggplot2} plot.
+}
 \description{
 Colour scales from colour vectors and colour palettes
 }
