@@ -5,7 +5,13 @@
 #'
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
 #' @param ... Not used.
-#' @return A [tibble][tibble::tibble-package].
+#' @return
+#' A [tibble][tibble::tibble-package]. The output has the following properties:
+#'
+#' * For objects of class `palettes_colour`: A tibble with column `colour`
+#'   containing the colour vector.
+#' * For objects of class `palettes_palette`: A tibble with columns `palette`
+#'   and `colour` containing palette names and colour vectors.
 #' @export
 #' @examples
 #' x <- pal_colour(c("#663171", "#EA7428", "#0C7156"))

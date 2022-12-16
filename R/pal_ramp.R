@@ -15,10 +15,13 @@
 #'   (Polar form of oklab).
 #' @param interpolate The interpolation method. Either "linear" (default) or
 #'   "spline".
+#' @return
+#' An object of the same type as `palette`. The output has the following properties:
 #'
-#' @return An object of class `palettes_palette` or `palettes_colour`.
+#' * For objects of class `palettes_colour`: A colour vector with `n` colours.
+#' * For objects of class `palettes_palette`: Colour palettes with `n` colours
+#'   in each palette.
 #' @export
-#'
 #' @examples
 #' # The class returned after interpolation matches the input class.
 #' x <- pal_colour(c("darkslateblue", "cornflowerblue", "slategray1"))

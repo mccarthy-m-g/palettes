@@ -44,7 +44,14 @@ reversed.}
 \item{...}{Not used.}
 }
 \value{
-A ggplot2 object.
+A \link[ggplot2:ggplot2-package]{ggplot2} object. The output has the following properties:
+\itemize{
+\item For objects of class \code{palettes_colour}: A plot of colour swatches.
+\item For objects of class \code{palettes_palette} with one palette: A plot of colour
+swatches with the palette name spanned across the swatches.
+\item For objects of class \code{palettes_palette} with more than one palette: A
+faceted plot of colour swatches with palette names as facet titles.
+}
 }
 \description{
 Plots a colour palette object.

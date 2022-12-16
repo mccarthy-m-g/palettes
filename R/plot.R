@@ -6,8 +6,14 @@
 #' @inheritParams pal_ramp
 #' @param x An object of class `palettes_palette` or `palettes_colour`.
 #' @param ... Not used.
+#' @return
+#' A [ggplot2][ggplot2::ggplot2-package] object. The output has the following properties:
 #'
-#' @return A ggplot2 object.
+#' * For objects of class `palettes_colour`: A plot of colour swatches.
+#' * For objects of class `palettes_palette` with one palette: A plot of colour
+#'   swatches with the palette name spanned across the swatches.
+#' * For objects of class `palettes_palette` with more than one palette: A
+#'   faceted plot of colour swatches with palette names as facet titles.
 #' @seealso `pal_ramp()`
 #' @export
 #' @examples

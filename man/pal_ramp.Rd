@@ -49,7 +49,12 @@ reversed.}
 "spline".}
 }
 \value{
-An object of class \code{palettes_palette} or \code{palettes_colour}.
+An object of the same type as \code{palette}. The output has the following properties:
+\itemize{
+\item For objects of class \code{palettes_colour}: A colour vector with \code{n} colours.
+\item For objects of class \code{palettes_palette}: Colour palettes with \code{n} colours
+in each palette.
+}
 }
 \description{
 Interpolate the set of colours in \code{palettes_palette} or \code{palettes_colour}
