@@ -8,7 +8,7 @@
 \subsection{\code{viridis_palettes}}{
 
 An object of class \code{palettes_palette} with 8
-colour palettes. All colours in each palette are distinguishible with
+colour palettes. All colours in each palette are distinguishable with
 deuteranopia, protanopia, and tritanopia. Use \code{names(viridis_palettes)} to
 return all palette names.
 }

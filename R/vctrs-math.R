@@ -5,7 +5,6 @@
 #' @param x An object of class `palettes_colour`.
 #' @param ... Colour vectors of class `palettes_colour`.
 #' @param na.rm	Whether to include missing values. Either `TRUE` or `FALSE`.
-#'
 #' @return
 #' These functions return colour vectors of class `palettes_colour`:
 #' - `sum()` returns the sum of all the colours present in its arguments with

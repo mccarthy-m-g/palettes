@@ -15,7 +15,13 @@
 \item{...}{Not used.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble}. The output has the following properties:
+\itemize{
+\item For objects of class \code{palettes_colour}: A tibble with column \code{colour}
+containing the colour vector.
+\item For objects of class \code{palettes_palette}: A tibble with columns \code{palette}
+and \code{colour} containing palette names and colour vectors.
+}
 }
 \description{
 \code{as_tibble()} turns an existing colour vector or colour palette into a

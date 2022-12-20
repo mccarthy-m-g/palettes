@@ -21,7 +21,7 @@
 #' @format ## `met_palettes_a11y`
 #' An object of class `palettes_palette` limited to
 #' `r vec_size(met_palettes_a11y)` colourblind accessible palettes. All colours
-#' in each palette are distinguishible with deuteranopia, protanopia, and
+#' in each palette are distinguishable with deuteranopia, protanopia, and
 #' tritanopia. Use `names(met_palettes_a11y)` to return all palette names.
 "met_palettes_a11y"
 
@@ -69,7 +69,7 @@
 #'
 #' @format ## `viridis_palettes`
 #' An object of class `palettes_palette` with `r vec_size(viridis_palettes)`
-#' colour palettes. All colours in each palette are distinguishible with
+#' colour palettes. All colours in each palette are distinguishable with
 #' deuteranopia, protanopia, and tritanopia. Use `names(viridis_palettes)` to
 #' return all palette names.
 #' @source <https://github.com/sjmgarnier/viridisLite>

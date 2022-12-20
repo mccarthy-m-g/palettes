@@ -140,11 +140,7 @@ Our colour palettes in `data/` are always effectively exported, which can be see
 usethis::use_package("palettes", "Depends")
 ```
 
-We use `Depends` instead of `Imports` because sunsets is designed to be used in conjunction with palettes and is not useful without it.
-
-This is a valid exception to the general advice to always use `Imports`. As Hadley Wickham and Jenny Bryan explain in [R Packages](https://r-pkgs.org/dependencies.html#sec-search-path): 
-
-> Unless there is a good reason otherwise, you should always list packages in `Imports` not `Depends`. That’s because a good package is self-contained, and minimises changes to the global environment (including the search path). The only exception is if your package is designed to be used in conjunction with another package. For example, the analogue package builds on top of vegan. It’s not useful without vegan, so it has vegan in `Depends` instead of `Imports`. Similarly, ggplot2 should really `Depend` on scales, rather than `Import`ing it.
+We use `Depends` instead of `Imports` because sunsets is designed to be used in conjunction with palettes and is not useful without it. This is a [valid exception](https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-imports-vs-depends) to the general advice to always use `Imports`.
 
 We also need to import palettes in our package's `NAMESPACE` for its methods to be available when sunsets is loaded but not attached (i.e., `sunsets::my_fun()`). To import palettes in our package's `NAMESPACE`, we create a basic package-level documentation script in `R/` where we will import palettes with `usethis::use_package_doc()`:
 

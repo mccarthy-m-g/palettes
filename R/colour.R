@@ -11,13 +11,11 @@ methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 #'   specifications.
 #'  * For `as_colour()`: An object to be coerced.
 #'  * For `is_colour()`: An object to test.
-#'
 #' @details
 #' Colours can be specified using either:
 #' - Hexadecimal strings of the form `"#RRGGBB"` or `"#RRGGBBAA"`
 #' - Colour names from `grDevices::colors()`
 #' - Positive integers `i` that index into `grDevices::palette()[i]`
-#'
 #' @return An S3 vector of class `palettes_colour`.
 #' @seealso `pal_palette()`
 #' @export
