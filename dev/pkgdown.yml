@@ -1,0 +1,15 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  biscale: biscale.html
+  compatibility: compatibility.html
+  creating-packages: creating-packages.html
+  ggplot2: ggplot2.html
+  gt: gt.html
+  palettes: palettes.html
+last_built: 2022-12-20T23:08Z
+urls:
+  reference: https://mccarthy-m-g.github.io/palettes/reference
+  article: https://mccarthy-m-g.github.io/palettes/articles
+
