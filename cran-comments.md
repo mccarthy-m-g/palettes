@@ -1,22 +1,12 @@
 ## Release summary
 
-This is a resubmission with the following requested fixes:
+This is a small patch release that fixes a typo in the "Creating a Colour Package" vignette, replacing the non-existent `pal_brewer()` function with the intended `pal_ramp()` function.
 
-* Fixed invalid URL in inst/doc/creating-packages.html
-* Added \value to scale_colour_palette_d.Rd for exported methods and explained the function's results in the documentation
-
-In addition, I made the following changes:
-
-* Improved \value documentation about output structure and meaning in the following .Rd files:
- - as_tibble.palettes_colour.Rd
- - pal_ramp.Rd
- - plot.palettes_colour.Rd
+The code in question is not evaluated when building the vignette, but running it interactively leads to the error `ERROR: could not find function "pal_brewer"`, hence the need for a patch.
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* New submission
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 

@@ -102,11 +102,11 @@ usethis::use_data(sunset_palettes_discrete, overwrite = TRUE)
 
 # Sequential palettes ---------------------------------------------------------
 sunset_palettes_sequential <- pal_palette(
-  orange = pal_brewer(pal_colour(c("#EE6720", "#FBE0D1")), n = 7),
-  blue   = pal_brewer(pal_colour(c("#0792C9", "#C1D1EB")), n = 7),
-  yellow = pal_brewer(pal_colour(c("#E4B854", "#FFECC8")), n = 7),
-  green  = pal_brewer(pal_colour(c("#24B079", "#C9EBD7")), n = 7),
-  purple = pal_brewer(pal_colour(c("#9A4F80", "#ECCCE2")), n = 7)
+  orange = pal_ramp(pal_colour(c("#EE6720", "#FBE0D1")), n = 7),
+  blue   = pal_ramp(pal_colour(c("#0792C9", "#C1D1EB")), n = 7),
+  yellow = pal_ramp(pal_colour(c("#E4B854", "#FFECC8")), n = 7),
+  green  = pal_ramp(pal_colour(c("#24B079", "#C9EBD7")), n = 7),
+  purple = pal_ramp(pal_colour(c("#9A4F80", "#ECCCE2")), n = 7)
 )
 
 plot(sunset_palettes_sequential)
