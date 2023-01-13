@@ -41,6 +41,11 @@ reference:
   - pnw_palettes
   - viridis_palettes
 
+- title: Miscellaneous
+  desc:
+  contents:
+  - palettes-options
+
 articles:
 - title: User
   navbar: ~
