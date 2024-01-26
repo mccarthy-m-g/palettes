@@ -33,7 +33,8 @@ described in a vignette:
 
 ## Installation
 
-Install palettes from [CRAN](https://cran.r-project.org) with:
+Install palettes from
+[CRAN](https://CRAN.R-project.org/package=palettes) with:
 
 ``` r
 install.packages("palettes")

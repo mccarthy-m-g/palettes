@@ -42,7 +42,7 @@ palettes is an R package for working with colour vectors and colour palettes. Th
 
 ## Installation
 
-Install palettes from [CRAN](https://cran.r-project.org) with:
+Install palettes from [CRAN](https://CRAN.R-project.org/package=palettes) with:
 
 ```r
 install.packages("palettes")
