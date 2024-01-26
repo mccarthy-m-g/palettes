@@ -113,41 +113,51 @@
 <p>Install palettes from <a href="https://cran.r-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"palettes"</span><span class="op">)</span></span></code></pre></div>
-<p>Install the development version from <a href="https://github.com/" class="external-link">GitHub</a> or <a href="https://r-universe.dev/" class="external-link">R-universe</a> with:</p>
+<p>Install the development version from <a href="https://github.com/mccarthy-m-g/palettes" class="external-link">GitHub</a> or <a href="https://mccarthy-m-g.r-universe.dev/palettes" class="external-link">R-universe</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install from GitHub</span></span>
 <span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"mccarthy-m-g/palettes"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Install from R-universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'palettes'</span>, repos <span class="op">=</span> <span class="st">'https://mccarthy-m-g.r-universe.dev'</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"palettes"</span>, repos <span class="op">=</span> <span class="st">"https://mccarthy-m-g.r-universe.dev"</span><span class="op">)</span></span></code></pre></div>
+<p>Install the <a href="https://webassembly.org" class="external-link">WebAssembly</a> version for use in <a href="https://docs.r-wasm.org/webr/latest/" class="external-link">WebR</a> applications with:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install CRAN version from r-wasm</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"palettes"</span>, repos <span class="op">=</span> <span class="st">"https://repo.r-wasm.org"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Install development version from R-universe</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="st">"palettes"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://mccarthy-m-g.r-universe.dev"</span>, <span class="st">"https://repo.r-wasm.org"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mccarthy-m-g.github.io/palettes/">palettes</a></span><span class="op">)</span></span></code></pre></div>
 <p>Colours can be specified by name (as listed by <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colours()</a></code>):</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-colour-character.svg" width="100%"></p>
 <p>Or by hex code:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"#FF0000"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-colour-hex.svg" width="100%"></p>
 <p>Multiple colours can be specified at once as a character vector:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#a00e00"</span>, <span class="st">"#d04e00"</span>, <span class="st">"#f6c200"</span>, <span class="st">"#0086a8"</span>, <span class="st">"#132b69"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-colour-vector.svg" width="100%"></p>
 <p>Named colour palettes can be specified in the same way:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/pal_palette.html">pal_palette</a></span><span class="op">(</span></span>
 <span>  egypt <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#dd5129"</span>, <span class="st">"#0f7ba2"</span>, <span class="st">"#43b284"</span>, <span class="st">"#fab255"</span><span class="op">)</span>,</span>
 <span>  java  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#663171"</span>, <span class="st">"#cf3a36"</span>, <span class="st">"#ea7428"</span>, <span class="st">"#e2998a"</span>, <span class="st">"#0c7156"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/pal-palette.svg" width="100%"></p>
 <p>Colours also print nicely in tibbles:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="fu"><a href="reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#dd5129"</span>, <span class="st">"#0f7ba2"</span>, <span class="st">"#43b284"</span>, <span class="st">"#fab255"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-/tibble.svg" width="100%"></p>
 </div>
