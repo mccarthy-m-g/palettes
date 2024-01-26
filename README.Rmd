@@ -48,7 +48,7 @@ Install palettes from [CRAN](https://cran.r-project.org) with:
 install.packages("palettes")
 ```
 
-Install the development version from [GitHub](https://github.com/) or [R-universe](https://r-universe.dev/) with:
+Install the development version from [GitHub](https://github.com/mccarthy-m-g/palettes) or [R-universe](https://mccarthy-m-g.r-universe.dev/palettes) with:
 
 ```r
 # Install from GitHub
@@ -56,7 +56,20 @@ Install the development version from [GitHub](https://github.com/) or [R-univers
 remotes::install_github("mccarthy-m-g/palettes")
 
 # Install from R-universe
-install.packages('palettes', repos = 'https://mccarthy-m-g.r-universe.dev')
+install.packages("palettes", repos = "https://mccarthy-m-g.r-universe.dev")
+```
+
+Install the [WebAssembly](https://webassembly.org) version for use in [WebR](https://docs.r-wasm.org/webr/latest/) applications with:
+
+```r
+# Install CRAN version from r-wasm
+install.packages("palettes", repos = "https://repo.r-wasm.org")
+
+# Install development version from R-universe
+install.packages(
+  "palettes",
+  repos = c("https://mccarthy-m-g.r-universe.dev", "https://repo.r-wasm.org")
+)
 ```
 
 ## Usage
