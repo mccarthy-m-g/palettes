@@ -180,3 +180,10 @@ The printing behaviour of colour vectors can be adjusted using a variety of glob
     options(palettes.print_sep = " ")
     colour_vector
     ```
+    
+  - To show the index of the first colour on each line use `palettes.print_index`:
+
+    ```{r}
+    options(palettes.print_index = TRUE)
+    colour_vector
+    ```

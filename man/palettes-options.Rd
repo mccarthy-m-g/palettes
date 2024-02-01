@@ -38,6 +38,12 @@ Integer setting the maximum number of colours on a line in colour previews.
 Defaults to \code{1}.
 
 }
+\item{\code{palettes.print_index}:}{
+
+Logical setting whether to print the index of the first colour on each line
+in colour previews. Defaults to \code{FALSE}.
+
+}
 
 }
 }
@@ -53,7 +59,8 @@ options(
   palettes.print_symbol = "square",
   palettes.print_hex = FALSE,
   palettes.print_sep = " ",
-  palettes.print_width = 3
+  palettes.print_width = 3,
+  palettes.print_index = TRUE
 )
 met_palettes$Cross
 }

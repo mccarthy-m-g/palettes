@@ -32,6 +32,12 @@
 #'   Defaults to `1`.
 #'
 #' }
+#' \item{\code{palettes.print_index}:}{
+#'
+#'   Logical setting whether to print the index of the first colour on each line
+#'   in colour previews. Defaults to `FALSE`.
+#'
+#' }
 #'
 #' }
 #' @section Note:
@@ -43,7 +49,8 @@
 #'   palettes.print_symbol = "square",
 #'   palettes.print_hex = FALSE,
 #'   palettes.print_sep = " ",
-#'   palettes.print_width = 3
+#'   palettes.print_width = 3,
+#'   palettes.print_index = TRUE
 #' )
 #' met_palettes$Cross
 NULL
