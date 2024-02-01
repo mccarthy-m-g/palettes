@@ -19,7 +19,7 @@ colour_format_symbol <- function(x, ...) {
       } else if (print_hex && !print_symbol) {
         ifelse(colour_index, format(.x), "   <NA>")
       } else {
-        ifelse(colour_index, paste0("\"", .x, "\""), "<NA>")
+        ifelse(colour_index, paste0("\"", .x, "\""), "NA")
       }
     }
   )
