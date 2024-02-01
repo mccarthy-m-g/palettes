@@ -42,6 +42,12 @@ Defaults to \code{1}.
 }
 }
 
+\section{Note}{
+
+To disable formatting in colour previews set both \code{palettes.print_symbol} and
+\code{palettes.print_hex} to \code{FALSE}.
+}
+
 \examples{
 options(
   palettes.print_symbol = "square",

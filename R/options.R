@@ -34,6 +34,9 @@
 #' }
 #'
 #' }
+#' @section Note:
+#' To disable formatting in colour previews set both `palettes.print_symbol` and
+#' `palettes.print_hex` to `FALSE`.
 #' @name palettes-options
 #' @examples
 #' options(
