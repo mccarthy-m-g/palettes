@@ -23,7 +23,7 @@ library(palettes)
 
 ## Creating
 
-`pal_colour()` is a nice way to create a colour vector. Colours can be a character vector of `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`. Colour vectors are always printed as hex codes with colour previews.
+`pal_colour()` is a nice way to create a colour vector. Colours can be a character vector of hexadecimal strings of the form `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`. By default, colour vectors are always printed as hex codes with colour previews.
 
 ```{r}
 colour_vector <- pal_colour(
@@ -68,7 +68,7 @@ as_tibble(colour_vector)
 as_tibble(colour_palette)
 ```
 
-<!-- add coercion examples -->
+<!-- TODO: add coercion examples -->
 
 ## Subsetting
 
@@ -155,3 +155,28 @@ Colour vectors can be mixed to create new colours.
     ```
     
   - Subtractive mixing with `-` will be supported in a future version.
+
+## Printing
+
+The printing behaviour of colour vectors can be adjusted using a variety of global options. See `help("palettes-options")` for a list of the available options and their default values.
+
+  - To change the symbol used for colour previews use `palettes.print_symbol`:
+
+    ```{r}
+    options(palettes.print_symbol = "square")
+    colour_vector
+    ```
+    
+  - To print colour vectors compactly use `palettes.print_hex` and `palettes.print_width`:
+
+    ```{r}
+    options(palettes.print_hex = FALSE, palettes.print_width = 5)
+    colour_palette
+    ```
+    
+  - To separate colours on the same line use `palettes.print_sep`:
+
+    ```{r}
+    options(palettes.print_sep = " ")
+    colour_vector
+    ```
