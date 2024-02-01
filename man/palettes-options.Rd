@@ -14,13 +14,40 @@ These options can be set via \code{\link[=options]{options()}} and queried via \
 
 \describe{
 
-\item{\code{palettes.symbol}:}{
+\item{\code{palettes.print_symbol}:}{
 
 Character string setting the symbol used for colour previews. See
 \code{cli::list_symbols()} for a list of symbol choices. Defaults to \code{"bullet"}.
+Set to \code{FALSE} to disable printing symbols.
+
+}
+\item{\code{palettes.print_hex}:}{
+
+Logical setting whether to print hex codes in colour previews. Defaults to
+\code{TRUE}.
+
+}
+\item{\code{palettes.print_sep}:}{
+
+Character string to separate colours by in colour previews. Defaults to \code{""}.
+
+}
+\item{\code{palettes.print_width}:}{
+
+Integer setting the maximum number of colours on a line in colour previews.
+Defaults to \code{1}.
 
 }
 
 }
 }
 
+\examples{
+options(
+  palettes.print_symbol = "square",
+  palettes.print_hex = FALSE,
+  palettes.print_sep = " ",
+  palettes.print_width = 3
+)
+met_palettes$Cross
+}
