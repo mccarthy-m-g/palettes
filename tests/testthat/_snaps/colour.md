@@ -148,3 +148,12 @@
       <palettes_colour[1]>
       [31m•[39m
 
+# palettes.print_sep option works
+
+    Code
+      x
+    Output
+      <palettes_colour[2]>
+      * #FF0000, 
+      * #0000FF
+

@@ -121,6 +121,12 @@ cli::test_that_cli("palettes.print_hex option works", {
   expect_snapshot(x)
 })
 
+test_that("palettes.print_sep option works", {
+  local_palettes_options(print_sep = ", ")
+  x <- pal_colour(c("red", "blue"))
+  expect_snapshot(x)
+})
+
 # ------------------------------------------------------------------------------
 # vec_c()
 
