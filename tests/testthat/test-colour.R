@@ -76,6 +76,7 @@ test_that("invalid values fail with an error", {
 # pillar_shaft()
 
 cli::test_that_cli("pillar shaft works", {
+  local_palettes_options()
   x <- as_tibble(pal_colour("red"))
   expect_snapshot(pillar_shaft(x$colour))
 })
@@ -92,6 +93,7 @@ test_that("plotting works", {
 # print() / obj_print_data() / obj_print_footer()
 
 cli::test_that_cli("normal print method works", {
+  local_palettes_options()
   x <- pal_colour("red")
   expect_snapshot(x)
 })

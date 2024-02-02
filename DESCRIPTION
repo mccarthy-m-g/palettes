@@ -45,7 +45,8 @@ Suggests:
     PNWColors,
     viridisLite,
     covr,
-    grDevices
+    grDevices,
+    withr
 VignetteBuilder:
     knitr
 Config/Needs/website:
