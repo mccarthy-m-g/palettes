@@ -10,12 +10,13 @@ obj_print_data.palettes_colour <- function(x, ...) {
   out_nchar <- max(cli::ansi_nchar(out, type = "width")) + nchar(print_sep)
   out_width <- print_width * out_nchar
 
-  index <- NULL
   if (print_index) {
     index <- paste0("[", seq(from = 1, to = vec_size(x), by = print_width), "]")
     index_nchar <- max(nchar(index))
     index <- format(index, width = index_nchar, justify = "left")
     out_width <- out_width + index_nchar + 1
+  } else {
+    index <- NULL
   }
 
   # Formatting each row manually ensures that the the maximum number of colours
