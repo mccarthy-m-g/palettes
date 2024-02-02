@@ -76,3 +76,35 @@
     Output
       <palettes_colour[0]>
 
+# print_hex option works [plain]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      *
+
+# print_hex option works [ansi]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      [31m*[39m
+
+# print_hex option works [unicode]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      •
+
+# print_hex option works [fancy]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      [31m•[39m
+

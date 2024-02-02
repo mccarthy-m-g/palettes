@@ -103,6 +103,12 @@ test_that("zero-length normal print method works", {
   expect_snapshot(x)
 })
 
+cli::test_that_cli("palettes.print_hex option works", {
+  local_palettes_options(print_hex = FALSE)
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
 # ------------------------------------------------------------------------------
 # vec_c()
 
