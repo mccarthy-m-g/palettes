@@ -16,17 +16,21 @@
 #' @examples
 #' list_colour_symbols()
 list_colour_symbols <- function() {
-  rpad <- function(x, width) {
-    w <- nchar(x, type = "width")
-    paste0(x, strrep(" ", width - w))
-  }
-  chars <- rpad(paste0(pal_symbol, "\t", names(pal_symbol)), 25)
-  if (length(chars) %% 2) chars <- c(chars, "")
-  chars <- paste(
-    sep = "   ",
-    chars[1:(length(chars)/2)],
-    chars[(length(chars)/2 + 1):length(chars)])
-  cat(chars, sep = "\n")
+  width <- 50
+  cat(
+    cli::rule(
+      left = "options(palettes.print_symbol = ...)",
+      width = width + 10
+    ),
+    cli::ansi_columns(
+      paste0(pal_symbol, "\t", names(pal_symbol)),
+      width = width,
+      fill = "cols",
+      max_cols = 2,
+      align = "left"
+    ),
+    sep = "\n"
+  )
 }
 
 symbol_utf8 <- list(
