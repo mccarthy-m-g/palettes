@@ -3,7 +3,7 @@
 .onLoad <- function(libname, pkgname) {
   op <- options()
   op.palettes <- list(
-    palettes.print_symbol = "bullet",
+    palettes.print_symbol = "circle_small",
     palettes.print_hex = TRUE,
     palettes.print_sep = "",
     palettes.print_width = 1,

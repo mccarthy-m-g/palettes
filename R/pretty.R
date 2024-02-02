@@ -1,6 +1,6 @@
 colour_symbol <- function(x) {
   style_box <- cli::make_ansi_style(x)
-  style_box(cli::symbol[getOption("palettes.print_symbol")])
+  style_box(pal_symbol[getOption("palettes.print_symbol")])
 }
 
 colour_format_symbol <- function(x, ...) {

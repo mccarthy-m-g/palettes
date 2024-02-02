@@ -17,8 +17,8 @@ These options can be set via \code{\link[=options]{options()}} and queried via \
 \item{\code{palettes.print_symbol}:}{
 
 Character string setting the symbol used for colour previews. See
-\code{cli::list_symbols()} for a list of symbol choices. Defaults to \code{"bullet"}.
-Set to \code{FALSE} to disable printing symbols.
+\code{list_colour_symbols()} for a list of symbol choices. Defaults to
+\code{"circle_small"}. Set to \code{FALSE} to disable printing symbols.
 
 }
 \item{\code{palettes.print_hex}:}{
