@@ -10,3 +10,8 @@ is_valid_colour <- function(x) {
   is_valid <- is_named_colour | is_hex_colour | is_na_colour
   is_valid
 }
+
+is_latex_output <- function() {
+  if (!("knitr" %in% loadedNamespaces())) return(FALSE)
+  get("is_latex_output", asNamespace("knitr"))()
+}

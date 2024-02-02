@@ -45,6 +45,7 @@ reference:
   desc:
   contents:
   - palettes-options
+  - list_colour_symbols
 
 articles:
 - title: User
