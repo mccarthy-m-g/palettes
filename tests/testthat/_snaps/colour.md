@@ -176,3 +176,13 @@
       [2] * #0000FF
       [3] * #00FF00
 
+# disabling formatting works
+
+    Code
+      x
+    Output
+      <palettes_colour[3]>
+          "red"
+      "#ff0000"
+      "#FF0000"
+

@@ -139,6 +139,12 @@ test_that("palettes.print_index option works", {
   expect_snapshot(x)
 })
 
+test_that("disabling formatting works", {
+  local_palettes_options(print_symbol = FALSE, print_hex = FALSE)
+  x <- pal_colour(c("red", "#ff0000", "#FF0000"))
+  expect_snapshot(x)
+})
+
 # ------------------------------------------------------------------------------
 # vec_c()
 
