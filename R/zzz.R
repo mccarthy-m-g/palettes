@@ -1,5 +1,7 @@
 ## nocov start
 
+package_env <- environment()
+
 .onLoad <- function(libname, pkgname) {
   op <- options()
   op.palettes <- list(
@@ -11,6 +13,18 @@
   )
   toset <- !(names(op.palettes) %in% names(op))
   if (any(toset)) options(op.palettes[toset])
+
+  makeActiveBinding(
+    "pal_symbol",
+    function() {
+      if (cli::is_utf8_output()) {
+        symbol_utf8
+      } else {
+        symbol_ascii
+      }
+    },
+    package_env
+  )
 
   invisible()
 }

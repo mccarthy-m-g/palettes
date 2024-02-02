@@ -29,20 +29,6 @@ list_colour_symbols <- function() {
   cat(chars, sep = "\n")
 }
 
-makeActiveBinding(
-  "pal_symbol",
-  function() {
-    if (cli::is_utf8_output()) {
-      symbol_utf8
-    } else if (is_latex_output()) {
-      symbol_ascii
-    } else {
-      symbol_ascii
-    }
-  },
-  environment()
-)
-
 symbol_utf8 <- list(
   "circle_small" = "\u2022",
   "circle" = "\u25CF",
