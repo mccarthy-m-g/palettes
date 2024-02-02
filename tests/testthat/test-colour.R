@@ -103,6 +103,18 @@ test_that("zero-length normal print method works", {
   expect_snapshot(x)
 })
 
+cli::test_that_cli("palettes.print_symbol option works", {
+  local_palettes_options(print_symbol = "square")
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_symbol works with FALSE", {
+  local_palettes_options(print_symbol = FALSE)
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
 cli::test_that_cli("palettes.print_hex option works", {
   local_palettes_options(print_hex = FALSE)
   x <- pal_colour("red")

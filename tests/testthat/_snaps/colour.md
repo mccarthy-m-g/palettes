@@ -76,7 +76,47 @@
     Output
       <palettes_colour[0]>
 
-# print_hex option works [plain]
+# palettes.print_symbol option works [plain]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      [x] #FF0000
+
+# palettes.print_symbol option works [ansi]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      [31m[x][39m #FF0000
+
+# palettes.print_symbol option works [unicode]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      ■ #FF0000
+
+# palettes.print_symbol option works [fancy]
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      [31m■[39m #FF0000
+
+# palettes.print_symbol works with FALSE
+
+    Code
+      x
+    Output
+      <palettes_colour[1]>
+      #FF0000
+
+# palettes.print_hex option works [plain]
 
     Code
       x
@@ -84,7 +124,7 @@
       <palettes_colour[1]>
       *
 
-# print_hex option works [ansi]
+# palettes.print_hex option works [ansi]
 
     Code
       x
@@ -92,7 +132,7 @@
       <palettes_colour[1]>
       [31m*[39m
 
-# print_hex option works [unicode]
+# palettes.print_hex option works [unicode]
 
     Code
       x
@@ -100,7 +140,7 @@
       <palettes_colour[1]>
       •
 
-# print_hex option works [fancy]
+# palettes.print_hex option works [fancy]
 
     Code
       x
