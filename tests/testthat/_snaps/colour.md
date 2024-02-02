@@ -157,3 +157,12 @@
       * #FF0000, 
       * #0000FF
 
+# palettes.print_width option works
+
+    Code
+      x
+    Output
+      <palettes_colour[3]>
+      * #FF0000* #0000FF
+      * #00FF00
+
