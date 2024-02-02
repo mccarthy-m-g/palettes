@@ -133,6 +133,12 @@ test_that("palettes.print_width option works", {
   expect_snapshot(x)
 })
 
+test_that("palettes.print_index option works", {
+  local_palettes_options(print_index = TRUE)
+  x <- pal_colour(c("red", "blue", "green"))
+  expect_snapshot(x)
+})
+
 # ------------------------------------------------------------------------------
 # vec_c()
 

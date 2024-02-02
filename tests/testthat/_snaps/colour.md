@@ -166,3 +166,13 @@
       * #FF0000* #0000FF
       * #00FF00
 
+# palettes.print_index option works
+
+    Code
+      x
+    Output
+      <palettes_colour[3]>
+      [1] * #FF0000
+      [2] * #0000FF
+      [3] * #00FF00
+
