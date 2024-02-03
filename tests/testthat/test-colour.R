@@ -35,6 +35,7 @@ test_that("as_tibble() works", {
 # format()
 
 test_that("format - can format() a colour", {
+  local_palettes_options()
   expect_snapshot(format(pal_colour("black")))
 })
 
@@ -118,6 +119,12 @@ test_that("palettes.print_symbol works with FALSE", {
 cli::test_that_cli("palettes.print_hex option works", {
   local_palettes_options(print_hex = FALSE)
   x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_alpha option works", {
+  local_palettes_options(print_alpha = TRUE)
+  x <- pal_colour(c("#88A0DCF0", "#381A61CC", "#7C4B73"))
   expect_snapshot(x)
 })
 

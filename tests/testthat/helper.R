@@ -2,6 +2,7 @@
 local_palettes_options <- function(
   print_symbol = "circle_small",
   print_hex = TRUE,
+  print_alpha = FALSE,
   print_sep = "",
   print_width = 1,
   print_index = FALSE,
@@ -10,6 +11,7 @@ local_palettes_options <- function(
   withr::local_options(
     palettes.print_symbol = print_symbol,
     palettes.print_hex = print_hex,
+    palettes.print_alpha = print_alpha,
     palettes.print_sep = print_sep,
     palettes.print_width = print_width,
     palettes.print_index = print_index,

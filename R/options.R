@@ -21,6 +21,13 @@
 #'   `TRUE`.
 #'
 #' }
+#' \item{\code{palettes.print_alpha}:}{
+#'
+#'   Logical setting whether to print the hex code alpha channel in colour
+#'   previews. Defaults to `FALSE`. Colours without an alpha channel will be
+#'   assumed to be full opacity.
+#'
+#' }
 #' \item{\code{palettes.print_sep}:}{
 #'
 #'   Character string to separate colours by in colour previews. Defaults to `""`.

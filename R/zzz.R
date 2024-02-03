@@ -7,6 +7,7 @@ package_env <- environment()
   op.palettes <- list(
     palettes.print_symbol = "circle_small",
     palettes.print_hex = TRUE,
+    palettes.print_alpha = FALSE,
     palettes.print_sep = "",
     palettes.print_width = 1,
     palettes.print_index = FALSE

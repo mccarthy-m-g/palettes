@@ -148,6 +148,16 @@
       <palettes_colour[1]>
       [31m•[39m
 
+# palettes.print_alpha option works
+
+    Code
+      x
+    Output
+      <palettes_colour[3]>
+      * #88A0DCF0
+      * #381A61CC
+      * #7C4B73FF
+
 # palettes.print_sep option works
 
     Code
