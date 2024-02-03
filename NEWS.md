@@ -1,6 +1,6 @@
 # palettes (development version)
 
-- Added the `palettes.symbol` option to set the symbol used for colour previews. See `?"palettes-options"` for details.
+- Added a variety of global options to adjust the printing behaviour of colour vectors. See `help("palettes-options")` and `vignette("palettes")` for details and examples.
 
 - Improved error message for invalid colours to support singular and plural grammar (@olivroy, #32)
 

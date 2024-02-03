@@ -1,6 +1,9 @@
 str_to_hex <- function(x) {
-  # TODO: Decide whether to support alpha channel
-  farver::encode_colour(farver::decode_colour(x))
+  print_alpha <- getOption("palettes.print_alpha")
+  alpha <- NULL
+  col_rgb <- farver::decode_colour(x, alpha = print_alpha)
+  if (print_alpha) alpha <- col_rgb[,"alpha"]
+  farver::encode_colour(col_rgb, alpha = alpha)
 }
 
 is_valid_colour <- function(x) {

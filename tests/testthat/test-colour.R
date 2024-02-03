@@ -35,6 +35,7 @@ test_that("as_tibble() works", {
 # format()
 
 test_that("format - can format() a colour", {
+  local_palettes_options()
   expect_snapshot(format(pal_colour("black")))
 })
 
@@ -75,7 +76,8 @@ test_that("invalid values fail with an error", {
 # ------------------------------------------------------------------------------
 # pillar_shaft()
 
-test_that("pillar shaft works", {
+cli::test_that_cli("pillar shaft works", {
+  local_palettes_options()
   x <- as_tibble(pal_colour("red"))
   expect_snapshot(pillar_shaft(x$colour))
 })
@@ -91,13 +93,62 @@ test_that("plotting works", {
 # ------------------------------------------------------------------------------
 # print() / obj_print_data() / obj_print_footer()
 
-test_that("normal print method works", {
+cli::test_that_cli("normal print method works", {
+  local_palettes_options()
   x <- pal_colour("red")
   expect_snapshot(x)
 })
 
 test_that("zero-length normal print method works", {
   x <- pal_colour()
+  expect_snapshot(x)
+})
+
+cli::test_that_cli("palettes.print_symbol option works", {
+  local_palettes_options(print_symbol = "square")
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_symbol works with FALSE", {
+  local_palettes_options(print_symbol = FALSE)
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+cli::test_that_cli("palettes.print_hex option works", {
+  local_palettes_options(print_hex = FALSE)
+  x <- pal_colour("red")
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_alpha option works", {
+  local_palettes_options(print_alpha = TRUE)
+  x <- pal_colour(c("#88A0DCF0", "#381A61CC", "#7C4B73"))
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_sep option works", {
+  local_palettes_options(print_sep = ", ")
+  x <- pal_colour(c("red", "blue"))
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_width option works", {
+  local_palettes_options(print_width = 2)
+  x <- pal_colour(c("red", "blue", "green"))
+  expect_snapshot(x)
+})
+
+test_that("palettes.print_index option works", {
+  local_palettes_options(print_index = TRUE)
+  x <- pal_colour(c("red", "blue", "green"))
+  expect_snapshot(x)
+})
+
+test_that("disabling formatting works", {
+  local_palettes_options(print_symbol = FALSE, print_hex = FALSE)
+  x <- pal_colour(c("red", "#ff0000", "#FF0000"))
   expect_snapshot(x)
 })
 

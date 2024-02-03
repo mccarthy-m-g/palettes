@@ -23,7 +23,7 @@ library(palettes)
 
 ## Creating
 
-`pal_colour()` is a nice way to create a colour vector. Colours can be a character vector of `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`. Colour vectors are always printed as hex codes with colour previews.
+`pal_colour()` is a nice way to create a colour vector. Colours can be a character vector of hexadecimal strings of the form `"#RRGGBB"` or `"#RRGGBBAA"`, colour names from `grDevices::colors()`, or a positive integer that indexes into `grDevices::palette()`. By default, colour vectors are always printed as hex codes with colour previews.
 
 ```{r}
 colour_vector <- pal_colour(
@@ -68,7 +68,7 @@ as_tibble(colour_vector)
 as_tibble(colour_palette)
 ```
 
-<!-- add coercion examples -->
+<!-- TODO: add coercion examples -->
 
 ## Subsetting
 
@@ -114,6 +114,20 @@ Colour palettes can be subset using `[`, `[[`, and `$`.
     names(colour_palette)
     ```
 
+<!--
+## Mixing
+
+Colour vectors can be mixed to create new colours.
+
+  - To mix colours in an additive space use `+`:
+
+    ```{r}
+    pal_colour("red") + pal_colour("blue")
+    ```
+    
+  - Subtractive mixing with `-` will be supported in a future version.
+-->
+
 ## Plotting
 
 `plot()` is a nice way to showcase colour vectors and colour palettes. The appearance of the plot depends on the input.
@@ -144,14 +158,56 @@ plot(colour_vector, n = 7, direction = -1, interpolate = "linear")
 
 All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the ggplot2 [customizing FAQ](https://ggplot2.tidyverse.org/articles/faq-customising.html) for some common examples.
 
-## Mixing
+## Printing
 
-Colour vectors can be mixed to create new colours.
+```{r, include=FALSE}
+op <- options()
+```
 
-  - To mix colours in an additive space use `+`:
+The printing behaviour of colour vectors can be adjusted using a variety of global options. See `help("palettes-options")` for a list of all the available options and their default values.
+
+For example, to change the symbol used for colour previews, set the `palettes.print_symbol` option.
+
+```{r}
+options(palettes.print_symbol = "square")
+colour_vector
+```
+
+```{r, include=FALSE}
+options(op)
+```
+
+Set multiple options together for unique printing styles.
+    
+  - Print colour vectors compactly:
 
     ```{r}
-    pal_colour("red") + pal_colour("blue")
+    options(
+      palettes.print_symbol = "circle_large",
+      palettes.print_hex = FALSE,
+      palettes.print_width = 5
+    )
+    colour_palette
     ```
     
-  - Subtractive mixing with `-` will be supported in a future version.
+    ```{r, include=FALSE}
+    options(op)
+    ```
+    
+  - Mimic the appearance of a character vector:
+
+    ```{r}
+    options(
+      palettes.print_symbol = FALSE,
+      palettes.print_sep = ", ",
+      palettes.print_width = 5,
+      palettes.print_index = TRUE
+    )
+    colour_vector
+    ```
+    
+    ```{r, include=FALSE}
+    options(op)
+    ```
+
+Set any of these options in your [`.Rprofile`](https://rstats.wtf/r-startup.html#rprofile) dotfile to have them persist across R sessions on a global or per-project basis.
