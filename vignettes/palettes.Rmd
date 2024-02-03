@@ -158,32 +158,54 @@ Colour vectors can be mixed to create new colours.
 
 ## Printing
 
-The printing behaviour of colour vectors can be adjusted using a variety of global options. See `help("palettes-options")` for a list of the available options and their default values.
+```{r, include=FALSE}
+op <- options()
+```
 
-  - To change the symbol used for colour previews use `palettes.print_symbol`:
+The printing behaviour of colour vectors can be adjusted using a variety of global options. See `help("palettes-options")` for a list of all the available options and their default values.
 
-    ```{r}
-    options(palettes.print_symbol = "square")
-    colour_vector
-    ```
+For example, to change the symbol used for colour previews, set the `palettes.print_symbol` option.
+
+```{r}
+options(palettes.print_symbol = "square")
+colour_vector
+```
+
+```{r, include=FALSE}
+options(op)
+```
+
+Set multiple options together for unique printing styles.
     
-  - To print colour vectors compactly use `palettes.print_hex` and `palettes.print_width`:
+  - Print colour vectors compactly:
 
     ```{r}
-    options(palettes.print_hex = FALSE, palettes.print_width = 5)
+    options(
+      palettes.print_symbol = "circle_large",
+      palettes.print_hex = FALSE,
+      palettes.print_width = 5
+    )
     colour_palette
     ```
     
-  - To separate colours on the same line use `palettes.print_sep`:
+    ```{r, include=FALSE}
+    options(op)
+    ```
+    
+  - Mimic the appearance of a character vector:
 
     ```{r}
-    options(palettes.print_sep = " ")
+    options(
+      palettes.print_symbol = FALSE,
+      palettes.print_sep = ", ",
+      palettes.print_width = 5,
+      palettes.print_index = TRUE
+    )
     colour_vector
     ```
     
-  - To show the index of the first colour on each line use `palettes.print_index`:
-
-    ```{r}
-    options(palettes.print_index = TRUE)
-    colour_vector
+    ```{r, include=FALSE}
+    options(op)
     ```
+
+Set any of these options in your [`.Rprofile`](https://rstats.wtf/r-startup.html#rprofile) dotfile to have them persist across R sessions on a global or per-project basis.
