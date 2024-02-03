@@ -74,16 +74,70 @@
     
 
 
-<dl><dt><code>palettes.symbol</code>:</dt>
+<dl><dt><code>palettes.print_symbol</code>:</dt>
 <dd>
 
 <p>Character string setting the symbol used for colour previews. See
-<code><a href="https://cli.r-lib.org/reference/symbol.html" class="external-link">cli::list_symbols()</a></code> for a list of symbol choices. Defaults to <code>"bullet"</code>.</p></dd>
+<code><a href="list_colour_symbols.html">list_colour_symbols()</a></code> for a list of symbol choices. Defaults to
+<code>"circle_small"</code>. Set to <code>FALSE</code> to disable printing symbols.</p></dd>
+
+<dt><code>palettes.print_hex</code>:</dt>
+<dd>
+
+<p>Logical setting whether to print hex codes in colour previews. Defaults to
+<code>TRUE</code>.</p></dd>
+
+<dt><code>palettes.print_alpha</code>:</dt>
+<dd>
+
+<p>Logical setting whether to print the hex code alpha channel in colour
+previews. Defaults to <code>FALSE</code>. Colours without an alpha channel will be
+assumed to be full opacity.</p></dd>
+
+<dt><code>palettes.print_sep</code>:</dt>
+<dd>
+
+<p>Character string to separate colours by in colour previews. Defaults to <code>""</code>.</p></dd>
+
+<dt><code>palettes.print_width</code>:</dt>
+<dd>
+
+<p>Integer setting the maximum number of colours on a line in colour previews.
+Defaults to <code>1</code>.</p></dd>
+
+<dt><code>palettes.print_index</code>:</dt>
+<dd>
+
+<p>Logical setting whether to print the index of the first colour on each line
+in colour previews. Defaults to <code>FALSE</code>.</p></dd>
 
 
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    
 
+<p>To disable formatting in colour previews set both <code>palettes.print_symbol</code> and
+<code>palettes.print_hex</code> to <code>FALSE</code>.</p>
+    </div>
+
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  palettes.print_symbol <span class="op">=</span> <span class="st">"square"</span>,</span></span>
+<span class="r-in"><span>  palettes.print_hex <span class="op">=</span> <span class="cn">FALSE</span>,</span></span>
+<span class="r-in"><span>  palettes.print_sep <span class="op">=</span> <span class="st">" "</span>,</span></span>
+<span class="r-in"><span>  palettes.print_width <span class="op">=</span> <span class="fl">3</span>,</span></span>
+<span class="r-in"><span>  palettes.print_index <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">met_palettes</span><span class="op">$</span><span class="va">Cross</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;palettes_colour[9]&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] <span style="color: #D787AF;">■</span> <span style="color: #D75F5F;">■</span> <span style="color: #FFAF87;">■</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4] <span style="color: #FF8700;">■</span> <span style="color: #FFD75F;">■</span> <span style="color: #AFAF87;">■</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [7] <span style="color: #87AFAF;">■</span> <span style="color: #005F87;">■</span> <span style="color: #00005F;">■</span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

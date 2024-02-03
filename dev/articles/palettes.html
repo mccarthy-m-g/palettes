@@ -105,11 +105,11 @@ palettes for users and developers.</p>
 <h2 id="creating">Creating<a class="anchor" aria-label="anchor" href="#creating"></a>
 </h2>
 <p><code><a href="../reference/pal_colour.html">pal_colour()</a></code> is a nice way to create a colour vector.
-Colours can be a character vector of <code>"#RRGGBB"</code> or
-<code>"#RRGGBBAA"</code>, colour names from
+Colours can be a character vector of hexadecimal strings of the form
+<code>"#RRGGBB"</code> or <code>"#RRGGBBAA"</code>, colour names from
 <code><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">grDevices::colors()</a></code>, or a positive integer that indexes
-into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>. Colour vectors are always
-printed as hex codes with colour previews.</p>
+into <code><a href="https://rdrr.io/r/grDevices/palette.html" class="external-link">grDevices::palette()</a></code>. By default, colour vectors are
+always printed as hex codes with colour previews.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colour_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#a00e00"</span>, <span class="st">"#d04e00"</span>, <span class="st">"#f6c200"</span>, <span class="st">"#0086a8"</span>, <span class="st">"#132b69"</span><span class="op">)</span></span>
@@ -196,7 +196,7 @@ tibbles.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> java    <span style="color: #FF8700;">•</span> #EA7428</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">8</span> java    <span style="color: #FFAFAF;">•</span> #E2998A</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">9</span> java    <span style="color: #008787;">•</span> #0C7156</span></span></code></pre></div>
-<!-- add coercion examples -->
+<!-- TODO: add coercion examples -->
 </div>
 <div class="section level2">
 <h2 id="subsetting">Subsetting<a class="anchor" aria-label="anchor" href="#subsetting"></a>
@@ -272,6 +272,22 @@ and <code>$</code>.</p>
 <span><span class="co">#&gt; [1] "egypt" "java"</span></span></code></pre></div>
 </li>
 </ul>
+<!--
+## Mixing
+
+Colour vectors can be mixed to create new colours.
+
+  - To mix colours in an additive space use `+`:
+
+    
+    ```r
+    pal_colour("red") + pal_colour("blue")
+    #> <palettes_colour[1]>
+    #>  [38;5;201m• [39m #FF00FF
+    ```
+    
+  - Subtractive mixing with `-` will be supported in a future version.
+-->
 </div>
 <div class="section level2">
 <h2 id="plotting">Plotting<a class="anchor" aria-label="anchor" href="#plotting"></a>
@@ -283,21 +299,21 @@ colour palettes. The appearance of the plot depends on the input.</p>
 <p>Colour vectors are plotted as swatches:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
+<p><img src="palettes_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
 </li>
 <li>
 <p>Single colour palettes are plotted as swatches with a palette
 name overlay:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">[</span><span class="st">"egypt"</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
+<p><img src="palettes_files/figure-html/unnamed-chunk-15-1.png" width="700"></p>
 </li>
 <li>
 <p>Multiple colour palettes are plotted as faceted swatches with
 palette name titles:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_palette</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-15-1.png" width="700"></p>
+<p><img src="palettes_files/figure-html/unnamed-chunk-16-1.png" width="700"></p>
 </li>
 </ul>
 <p>To interpolate or change the direction of colours in a plot, use the
@@ -305,26 +321,65 @@ optional <code>n</code>, <code>direction</code>, <code>space</code>, or
 <code>interpolate</code> arguments.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">colour_vector</span>, n <span class="op">=</span> <span class="fl">7</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, interpolate <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="palettes_files/figure-html/unnamed-chunk-16-1.png" width="700"></p>
+<p><img src="palettes_files/figure-html/unnamed-chunk-17-1.png" width="700"></p>
 <p>All plots are ggplot2 objects and can be customized using any of the
 standard ggplot2 methods. See the ggplot2 <a href="https://ggplot2.tidyverse.org/articles/faq-customising.html" class="external-link">customizing
 FAQ</a> for some common examples.</p>
 </div>
 <div class="section level2">
-<h2 id="mixing">Mixing<a class="anchor" aria-label="anchor" href="#mixing"></a>
+<h2 id="printing">Printing<a class="anchor" aria-label="anchor" href="#printing"></a>
 </h2>
-<p>Colour vectors can be mixed to create new colours.</p>
+<p>The printing behaviour of colour vectors can be adjusted using a
+variety of global options. See <code><a href="../reference/palettes-options.html">help("palettes-options")</a></code> for
+a list of all the available options and their default values.</p>
+<p>For example, to change the symbol used for colour previews, set the
+<code>palettes.print_symbol</code> option.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>palettes.print_symbol <span class="op">=</span> <span class="st">"square"</span><span class="op">)</span></span>
+<span><span class="va">colour_vector</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[5]&gt;</span></span>
+<span><span class="co">#&gt; <span style="color: #AF0000;">■</span> #A00E00</span></span>
+<span><span class="co">#&gt; <span style="color: #D75F00;">■</span> #D04E00</span></span>
+<span><span class="co">#&gt; <span style="color: #FFD700;">■</span> #F6C200</span></span>
+<span><span class="co">#&gt; <span style="color: #00AFAF;">■</span> #0086A8</span></span>
+<span><span class="co">#&gt; <span style="color: #005F87;">■</span> #132B69</span></span></code></pre></div>
+<p>Set multiple options together for unique printing styles.</p>
 <ul>
 <li>
-<p>To mix colours in an additive space use <code>+</code>:</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/pal_colour.html">pal_colour</a></span><span class="op">(</span><span class="st">"blue"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; &lt;palettes_colour[1]&gt;</span></span>
-<span><span class="co">#&gt; <span style="color: #FF00FF;">•</span> #FF00FF</span></span></code></pre></div>
+<p>Print colour vectors compactly:</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span></span>
+<span>  palettes.print_symbol <span class="op">=</span> <span class="st">"circle_large"</span>,</span>
+<span>  palettes.print_hex <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  palettes.print_width <span class="op">=</span> <span class="fl">5</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">colour_palette</span></span>
+<span><span class="co">#&gt; &lt;palettes_palette[2]&gt;</span></span>
+<span><span class="co">#&gt; $egypt</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[4]&gt;</span></span>
+<span><span class="co">#&gt; <span style="color: #FF5F00;">⬤</span><span style="color: #0087AF;">⬤</span><span style="color: #5FD7AF;">⬤</span><span style="color: #FFD75F;">⬤</span></span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $java</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[5]&gt;</span></span>
+<span><span class="co">#&gt; <span style="color: #875F87;">⬤</span><span style="color: #D75F5F;">⬤</span><span style="color: #FF8700;">⬤</span><span style="color: #FFAFAF;">⬤</span><span style="color: #008787;">⬤</span></span></span></code></pre></div>
 </li>
-<li><p>Subtractive mixing with <code>-</code> will be supported in a
-future version.</p></li>
+<li>
+<p>Mimic the appearance of a character vector:</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span></span>
+<span>  palettes.print_symbol <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  palettes.print_sep <span class="op">=</span> <span class="st">", "</span>,</span>
+<span>  palettes.print_width <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  palettes.print_index <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">colour_vector</span></span>
+<span><span class="co">#&gt; &lt;palettes_colour[5]&gt;</span></span>
+<span><span class="co">#&gt; [1] #A00E00, #D04E00, #F6C200, #0086A8, #132B69</span></span></code></pre></div>
+</li>
 </ul>
+<p>Set any of these options in your <a href="https://rstats.wtf/r-startup.html#rprofile" class="external-link"><code>.Rprofile</code></a>
+dotfile to have them persist across R sessions on a global or
+per-project basis.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
