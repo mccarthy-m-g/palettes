@@ -1,0 +1,57 @@
+---
+title: "Packages made with palettes"
+---
+
+<!-- TODO: Add instructions like: https://github.com/quarto-dev/quarto-web/tree/main/docs/extensions/listings -->
+
+Colour palette packages are a nice way to distribute colour palettes while getting access to all the features of **palettes** for free. Below is a listing of colour palette packages made with palettes (please [let me know]() if you have a package you’d like to see added to the list).
+
+See the vignette on creating a colour palette package to learn how to develop your own colour palette package; `vignette("creating-packages")`.
+
+```{r, echo=FALSE}
+library(palettes)
+library(gt)
+library(fontawesome)
+
+palettes:::made_with_palettes |>
+  gt(id = "one") |>
+  cols_label(
+    package = md("**Package**"),
+    title = md("**Description**"),
+    authors = md("**Author**")
+  ) |>
+  fmt_url(
+    columns = gh_url,
+    label = fontawesome::fa("github"),
+    color = "#0d6efd",
+    show_underline = FALSE
+  ) |>
+  fmt_url(
+    columns = cran_url,
+    label = fontawesome::fa("r-project"),
+    color = "#0d6efd",
+    show_underline = FALSE
+  ) |>
+  sub_missing() |>
+  cols_merge(
+    columns = c(package, gh_url, cran_url),
+    pattern = "{2} \u2002 {3} \u2002 {1}"
+  ) |>
+  cols_width(
+    package ~ pct(25),
+    title ~ pct(40),
+    authors ~ pct(35)
+  ) |>
+  tab_options(
+    table.width = pct(100),
+    table.font.size = "100%"
+  ) |>
+  opt_css(
+    css = "
+    #one svg {
+      height: 1.25rem !important;
+      width: 1.25rem !important;
+    }
+    "
+  )
+```

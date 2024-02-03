@@ -1,3 +1,3 @@
 colour_names <- grDevices::colors()
 
-usethis::use_data(colour_names, overwrite = TRUE, internal = TRUE)
+saveRDS(colour_names, "data-raw/sysdata/colour_names.rds")

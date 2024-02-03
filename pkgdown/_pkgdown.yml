@@ -60,3 +60,8 @@ articles:
   navbar: Developer
   contents:
   - creating-packages
+
+- title: Community
+  navbar: Community
+  contents:
+  - articles/made-with-palettes
