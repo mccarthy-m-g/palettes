@@ -2,9 +2,7 @@
 title: "Packages made with palettes"
 ---
 
-<!-- TODO: Add instructions like: https://github.com/quarto-dev/quarto-web/tree/main/docs/extensions/listings -->
-
-Colour palette packages are a nice way to distribute colour palettes while getting access to all the features of **palettes** for free. Below is a listing of colour palette packages made with palettes (please [let me know]() if you have a package you’d like to see added to the list).
+Colour palette packages are a nice way to distribute colour palettes while getting access to all the features of **palettes** for free. Below is a listing of colour palette packages made with palettes (please [let me know](https://github.com/mccarthy-m-g/palettes/tree/main/data-raw) if you have a package you’d like to see added to the list).
 
 See the vignette on creating a colour palette package to learn how to develop your own colour palette package; `vignette("creating-packages")`.
 
