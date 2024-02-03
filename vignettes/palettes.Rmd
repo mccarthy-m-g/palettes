@@ -114,6 +114,20 @@ Colour palettes can be subset using `[`, `[[`, and `$`.
     names(colour_palette)
     ```
 
+<!--
+## Mixing
+
+Colour vectors can be mixed to create new colours.
+
+  - To mix colours in an additive space use `+`:
+
+    ```{r}
+    pal_colour("red") + pal_colour("blue")
+    ```
+    
+  - Subtractive mixing with `-` will be supported in a future version.
+-->
+
 ## Plotting
 
 `plot()` is a nice way to showcase colour vectors and colour palettes. The appearance of the plot depends on the input.
@@ -143,18 +157,6 @@ plot(colour_vector, n = 7, direction = -1, interpolate = "linear")
 ```
 
 All plots are ggplot2 objects and can be customized using any of the standard ggplot2 methods. See the ggplot2 [customizing FAQ](https://ggplot2.tidyverse.org/articles/faq-customising.html) for some common examples.
-
-## Mixing
-
-Colour vectors can be mixed to create new colours.
-
-  - To mix colours in an additive space use `+`:
-
-    ```{r}
-    pal_colour("red") + pal_colour("blue")
-    ```
-    
-  - Subtractive mixing with `-` will be supported in a future version.
 
 ## Printing
 
