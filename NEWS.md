@@ -1,4 +1,4 @@
-# palettes (development version)
+# palettes 0.2.0
 
 - Added a variety of global options to adjust the printing behaviour of colour vectors. See `help("palettes-options")` and `vignette("palettes")` for details and examples (#35).
 
