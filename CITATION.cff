@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: 'To cite package "palettes" in publications use:'
+type: software
+license: MIT
+title: 'palettes: Methods for Colour Vectors and Colour Palettes'
+abstract: 'Provides a comprehensive library for colour vectors and colour palettes
+  using a new family of colour classes (palettes_colour and palettes_palette) that
+  always print as hex codes with colour previews. Capabilities include: formatting,
+  casting and coercion, extraction and updating of components, plotting, colour mixing
+  arithmetic, and colour interpolation.'
+authors:
+- family-names: McCarthy
+  given-names: Michael
+repository: https://CRAN.R-project.org/package=palettes
+repository-code: https://github.com/mccarthy-m-g/palettes
+url: https://mccarthy-m-g.github.io/palettes/
+version: 0.1.1
+date-released: 2023-01-12
