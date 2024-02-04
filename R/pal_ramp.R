@@ -1,9 +1,10 @@
 #' Colour vector and colour palette interpolation
 #'
-#' Interpolate the set of colours in `palettes_palette` or `palettes_colour`
-#' objects to create new colour palettes.
+#' Interpolate the set of colours in [`palettes_palette`][pal_palette()] or
+#' [`palettes_colour`][pal_colour()] objects to create new colour palettes.
 #'
-#' @param palette An object of class `palettes_palette` or `palettes_colour`.
+#' @param palette An object of class [`palettes_palette`][pal_palette()] or
+#'   [`palettes_colour`][pal_colour()].
 #' @param n An integer specifying the number of colours to return.
 #' @param direction Sets the order of colours in the scale. If 1, the default,
 #'   colours are ordered from first to last. If -1, the order of colours is
@@ -18,9 +19,11 @@
 #' @return
 #' An object of the same type as `palette`. The output has the following properties:
 #'
-#' * For objects of class `palettes_colour`: A colour vector with `n` colours.
-#' * For objects of class `palettes_palette`: Colour palettes with `n` colours
-#'   in each palette.
+#' * For objects of class [`palettes_colour`][pal_colour()]: A colour vector
+#'   with `n` colours.
+#' * For objects of class [`palettes_palette`][pal_palette()]: Colour palettes
+#'   with `n` colours in each palette.
+#' @seealso [pal_colour()], [pal_palette()]
 #' @export
 #' @examples
 #' # The class returned after interpolation matches the input class.

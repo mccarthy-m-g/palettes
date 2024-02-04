@@ -6,7 +6,8 @@
 #' @details `pal_numeric` is a simple linear mapping from continuous numeric
 #'   data to an interpolated palette.
 #'
-#' @param palette An object of class `palettes_palette` or `palettes_colour`.
+#' @param palette An object of class [`palettes_colour`][pal_colour()] or
+#'   [`palettes_colour`][pal_colour()].
 #' @param domain The possible values that can be mapped.
 #'
 #'   For `pal_numeric` and `pal_bin`, this can be a simple numeric

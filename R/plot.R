@@ -1,20 +1,23 @@
 # TODO: Add accessibility check functions
 #' Plot colour vectors and colour palettes
 #'
-#' Plots a colour palette object.
+#' Plot colour vectors and colour palettes as swatches.
 #'
 #' @inheritParams pal_ramp
-#' @param x An object of class `palettes_palette` or `palettes_colour`.
+#' @param x An object of class [`palettes_palette`][pal_palette()] or
+#'   [`palettes_colour`][pal_colour()].
 #' @param ... Not used.
 #' @return
 #' A [ggplot2][ggplot2::ggplot2-package] object. The output has the following properties:
 #'
-#' * For objects of class `palettes_colour`: A plot of colour swatches.
-#' * For objects of class `palettes_palette` with one palette: A plot of colour
-#'   swatches with the palette name spanned across the swatches.
-#' * For objects of class `palettes_palette` with more than one palette: A
-#'   faceted plot of colour swatches with palette names as facet titles.
-#' @seealso `pal_ramp()`
+#' * For objects of class [`palettes_colour`][pal_colour()]: A plot of colour
+#'   swatches.
+#' * For objects of class [`palettes_palette`][pal_palette()] with one palette:
+#'   A plot of colour swatches with the palette name spanned across the swatches.
+#' * For objects of class [`palettes_palette`][pal_palette()] with more than one
+#'   palette: A faceted plot of colour swatches with palette names as facet
+#'   titles.
+#' @seealso [pal_colour()], [pal_palette()], [pal_ramp()]
 #' @export
 #' @examples
 #' # Objects of class `palettes_colour` are plotted as swatches.

@@ -10,7 +10,7 @@
 #' To change the symbol used for colour previews, set the `palettes.print_symbol`
 #' option to a symbol name listed in `list_colour_symbols()`.
 #' @return This function is called for its side effects and has no return value.
-#' @seealso `help("palettes-options")`, [cli::is_utf8_output()]
+#' @seealso [`help("palettes-options")`][palettes-options], [cli::is_utf8_output()]
 #' @export
 #'
 #' @examples

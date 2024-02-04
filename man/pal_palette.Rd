@@ -16,7 +16,7 @@ as_palette(x)
 \item{...}{\itemize{
 \item For \code{pal_palette()}: A named list of character vectors of any of the three
 kinds of R colour specifications, or a named list of colour vectors of
-class \code{palettes_colour}.
+class \code{\link[=pal_colour]{palettes_colour}}.
 }}
 
 \item{x}{\itemize{
@@ -34,8 +34,8 @@ This creates a list of colour vectors.
 Colours can be specified using either:
 \itemize{
 \item Hexadecimal strings of the form \code{"#RRGGBB"} or \code{"#RRGGBBAA"}
-\item Colour names from \code{grDevices::colors()}
-\item Positive integers \code{i} that index into \code{grDevices::palette()[i]}
+\item Colour names from \code{\link[grDevices:colors]{grDevices::colors()}}
+\item Positive integers \code{i} that index into \code{\link[grDevices:palette]{grDevices::palette()}}\verb{[i]}
 }
 }
 \examples{
@@ -51,5 +51,5 @@ x <- list(
 as_palette(x)
 }
 \seealso{
-\code{pal_colour()}
+\code{\link[=pal_colour]{pal_colour()}}
 }

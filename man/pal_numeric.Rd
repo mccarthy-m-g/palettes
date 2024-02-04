@@ -48,7 +48,8 @@ pal_factor(
 )
 }
 \arguments{
-\item{palette}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+\item{palette}{An object of class \code{\link[=pal_colour]{palettes_colour}} or
+\code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{domain}{The possible values that can be mapped.
 

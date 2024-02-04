@@ -11,7 +11,7 @@
 #' \item{\code{palettes.print_symbol}:}{
 #'
 #'   Character string setting the symbol used for colour previews. See
-#'   `list_colour_symbols()` for a list of symbol choices. Defaults to
+#'   [list_colour_symbols()] for a list of symbol choices. Defaults to
 #'   `"circle_small"`. Set to `FALSE` to disable printing symbols.
 #'
 #' }

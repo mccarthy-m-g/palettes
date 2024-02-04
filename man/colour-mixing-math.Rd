@@ -12,14 +12,15 @@
 \method{cumsum}{palettes_colour}(x)
 }
 \arguments{
-\item{...}{Colour vectors of class \code{palettes_colour}.}
+\item{...}{Colour vectors of class \code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{na.rm}{Whether to include missing values. Either \code{TRUE} or \code{FALSE}.}
 
-\item{x}{An object of class \code{palettes_colour}.}
+\item{x}{An object of class \code{\link[=pal_colour]{palettes_colour}}.}
 }
 \value{
-These functions return colour vectors of class \code{palettes_colour}:
+These functions return colour vectors of class
+\code{\link[=pal_colour]{palettes_colour}}:
 \itemize{
 \item \code{sum()} returns the sum of all the colours present in its arguments with
 additive colour mixing.

@@ -9,13 +9,14 @@
 \method{+}{palettes_colour}(e1, e2)
 }
 \arguments{
-\item{e1, e2}{Colour vectors of class \code{palettes_colour}.}
+\item{e1, e2}{Colour vectors of class \code{\link[=pal_colour]{palettes_colour}}.}
 }
 \value{
-The binary operators return colour vectors of class \code{palettes_colour} containing
-the result of the element by element operations. If involving a zero-length
-vector the result has length zero. Otherwise, the elements of shorter vectors
-are recycled as necessary. The \code{+} operator is for additive colour mixing.
+The binary operators return colour vectors of class
+\code{\link[=pal_colour]{palettes_colour}} containing the result of the element by
+element operations. If involving a zero-length vector the result has length
+zero. Otherwise, the elements of shorter vectors are recycled as necessary.
+The \code{+} operator is for additive colour mixing.
 }
 \description{
 These binary operators mix colour vectors with arithmetic operators.

@@ -24,5 +24,5 @@ option to a symbol name listed in \code{list_colour_symbols()}.
 list_colour_symbols()
 }
 \seealso{
-\code{help("palettes-options")}, \code{\link[cli:is_utf8_output]{cli::is_utf8_output()}}
+\code{\link[=palettes-options]{help("palettes-options")}}, \code{\link[cli:is_utf8_output]{cli::is_utf8_output()}}
 }

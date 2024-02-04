@@ -14,10 +14,10 @@ methods::setOldClass(c("palettes_colour", "vctrs_vctr"))
 #' @details
 #' Colours can be specified using either:
 #' - Hexadecimal strings of the form `"#RRGGBB"` or `"#RRGGBBAA"`
-#' - Colour names from `grDevices::colors()`
-#' - Positive integers `i` that index into `grDevices::palette()[i]`
+#' - Colour names from [grDevices::colors()]
+#' - Positive integers `i` that index into [grDevices::palette()]`[i]`
 #' @return An S3 vector of class `palettes_colour`.
-#' @seealso `pal_palette()`
+#' @seealso [pal_palette()]
 #' @export
 #' @examples
 #' pal_colour(c("darkred", "#0F7BA2"))

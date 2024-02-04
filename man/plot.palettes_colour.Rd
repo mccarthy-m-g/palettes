@@ -24,7 +24,8 @@
 )
 }
 \arguments{
-\item{x}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+\item{x}{An object of class \code{\link[=pal_palette]{palettes_palette}} or
+\code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{n}{An integer specifying the number of colours to return.}
 
@@ -46,15 +47,17 @@ reversed.}
 \value{
 A \link[ggplot2:ggplot2-package]{ggplot2} object. The output has the following properties:
 \itemize{
-\item For objects of class \code{palettes_colour}: A plot of colour swatches.
-\item For objects of class \code{palettes_palette} with one palette: A plot of colour
-swatches with the palette name spanned across the swatches.
-\item For objects of class \code{palettes_palette} with more than one palette: A
-faceted plot of colour swatches with palette names as facet titles.
+\item For objects of class \code{\link[=pal_colour]{palettes_colour}}: A plot of colour
+swatches.
+\item For objects of class \code{\link[=pal_palette]{palettes_palette}} with one palette:
+A plot of colour swatches with the palette name spanned across the swatches.
+\item For objects of class \code{\link[=pal_palette]{palettes_palette}} with more than one
+palette: A faceted plot of colour swatches with palette names as facet
+titles.
 }
 }
 \description{
-Plots a colour palette object.
+Plot colour vectors and colour palettes as swatches.
 }
 \examples{
 # Objects of class `palettes_colour` are plotted as swatches.
@@ -79,5 +82,5 @@ plot(y, n = 5)
 plot(z, n = 5)
 }
 \seealso{
-\code{pal_ramp()}
+\code{\link[=pal_colour]{pal_colour()}}, \code{\link[=pal_palette]{pal_palette()}}, \code{\link[=pal_ramp]{pal_ramp()}}
 }
