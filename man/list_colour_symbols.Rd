@@ -2,6 +2,7 @@
 % Please edit documentation in R/symbol.R
 \name{list_colour_symbols}
 \alias{list_colour_symbols}
+\alias{list_color_symbols}
 \title{Symbols to use in colour previews}
 \usage{
 list_colour_symbols()

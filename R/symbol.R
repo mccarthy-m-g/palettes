@@ -33,6 +33,11 @@ list_colour_symbols <- function() {
   )
 }
 
+#' @export
+#' @rdname list_colour_symbols
+#' @usage NULL
+list_color_symbols <- list_colour_symbols
+
 symbol_utf8 <- list(
   "circle_small" = "\u2022",
   "circle" = "\u25CF",
