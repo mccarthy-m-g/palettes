@@ -2,6 +2,8 @@
 
 - Added a variety of global options to adjust the printing behaviour of colour vectors. See `help("palettes-options")` and `vignette("palettes")` for details and examples.
 
+- Added a "Made with palettes" article to the pkgdown site showcasing colour palette packages made with palettes.
+
 - Improved error message for invalid colours to support singular and plural grammar (@olivroy, #32)
 
 # palettes 0.1.1
