@@ -2,11 +2,12 @@
 #'
 #' These functions mix colour vectors with math functions.
 #'
-#' @param x An object of class `palettes_colour`.
-#' @param ... Colour vectors of class `palettes_colour`.
+#' @param x An object of class [`palettes_colour`][pal_colour()].
+#' @param ... Colour vectors of class [`palettes_colour`][pal_colour()].
 #' @param na.rm	Whether to include missing values. Either `TRUE` or `FALSE`.
 #' @return
-#' These functions return colour vectors of class `palettes_colour`:
+#' These functions return colour vectors of class
+#' [`palettes_colour`][pal_colour()]:
 #' - `sum()` returns the sum of all the colours present in its arguments with
 #' additive colour mixing.
 #' - `cumsum()` returns a vector whose elements are the cumulative sums of the

@@ -2,6 +2,7 @@
 % Please edit documentation in R/symbol.R
 \name{list_colour_symbols}
 \alias{list_colour_symbols}
+\alias{list_color_symbols}
 \title{Symbols to use in colour previews}
 \usage{
 list_colour_symbols()
@@ -24,5 +25,5 @@ option to a symbol name listed in \code{list_colour_symbols()}.
 list_colour_symbols()
 }
 \seealso{
-\code{help("palettes-options")}, \code{\link[cli:is_utf8_output]{cli::is_utf8_output()}}
+\code{\link[=palettes-options]{help("palettes-options")}}, \code{\link[cli:is_utf8_output]{cli::is_utf8_output()}}
 }

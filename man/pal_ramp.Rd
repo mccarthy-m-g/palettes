@@ -31,7 +31,8 @@ pal_ramp(
 )
 }
 \arguments{
-\item{palette}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+\item{palette}{An object of class \code{\link[=pal_palette]{palettes_palette}} or
+\code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{n}{An integer specifying the number of colours to return.}
 
@@ -51,14 +52,15 @@ reversed.}
 \value{
 An object of the same type as \code{palette}. The output has the following properties:
 \itemize{
-\item For objects of class \code{palettes_colour}: A colour vector with \code{n} colours.
-\item For objects of class \code{palettes_palette}: Colour palettes with \code{n} colours
-in each palette.
+\item For objects of class \code{\link[=pal_colour]{palettes_colour}}: A colour vector
+with \code{n} colours.
+\item For objects of class \code{\link[=pal_palette]{palettes_palette}}: Colour palettes
+with \code{n} colours in each palette.
 }
 }
 \description{
-Interpolate the set of colours in \code{palettes_palette} or \code{palettes_colour}
-objects to create new colour palettes.
+Interpolate the set of colours in \code{\link[=pal_palette]{palettes_palette}} or
+\code{\link[=pal_colour]{palettes_colour}} objects to create new colour palettes.
 }
 \examples{
 # The class returned after interpolation matches the input class.
@@ -78,4 +80,7 @@ z <- pal_palette(
   Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 )
 pal_ramp(z, n = 5)
+}
+\seealso{
+\code{\link[=pal_colour]{pal_colour()}}, \code{\link[=pal_palette]{pal_palette()}}
 }

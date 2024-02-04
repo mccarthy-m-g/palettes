@@ -25,14 +25,15 @@ scale_colour_palette_b(palette, direction = 1, ...)
 scale_fill_palette_b(palette, direction = 1, ...)
 }
 \arguments{
-\item{palette}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+\item{palette}{An object of class \code{\link[=pal_palette]{palettes_palette}} or
+\code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{direction}{Sets the order of colours in the scale. If 1, the default,
 colours are ordered from first to last. If -1, the order of colours is
 reversed.}
 
-\item{...}{Other arguments passed on to \code{ggplot2::discrete_scale()},
-\code{ggplot2::continuous_scale()}, or \code{ggplot2::binned_scale()} to control name,
+\item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}},
+\code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}, or \code{\link[ggplot2:binned_scale]{ggplot2::binned_scale()}} to control name,
 limits, breaks, labels and so forth.}
 }
 \value{
@@ -40,7 +41,8 @@ A scale function that controls the mapping between data and colour or
 fill aesthetics in a \link[ggplot2:ggplot2-package]{ggplot2} plot.
 }
 \description{
-Colour scales from colour vectors and colour palettes
+Create discrete, continuous, and binned colour scales from colour vectors and
+colour palettes.
 }
 \examples{
 library(ggplot2)

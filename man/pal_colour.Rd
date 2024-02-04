@@ -40,8 +40,8 @@ printed, colours will be formatted as hexadecimal strings.
 Colours can be specified using either:
 \itemize{
 \item Hexadecimal strings of the form \code{"#RRGGBB"} or \code{"#RRGGBBAA"}
-\item Colour names from \code{grDevices::colors()}
-\item Positive integers \code{i} that index into \code{grDevices::palette()[i]}
+\item Colour names from \code{\link[grDevices:colors]{grDevices::colors()}}
+\item Positive integers \code{i} that index into \code{\link[grDevices:palette]{grDevices::palette()}}\verb{[i]}
 }
 }
 \examples{
@@ -53,5 +53,5 @@ is_colour(pal_colour("darkred"))
 as_colour("#0F7BA2")
 }
 \seealso{
-\code{pal_palette()}
+\code{\link[=pal_palette]{pal_palette()}}
 }

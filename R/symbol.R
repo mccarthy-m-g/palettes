@@ -10,7 +10,7 @@
 #' To change the symbol used for colour previews, set the `palettes.print_symbol`
 #' option to a symbol name listed in `list_colour_symbols()`.
 #' @return This function is called for its side effects and has no return value.
-#' @seealso `help("palettes-options")`, [cli::is_utf8_output()]
+#' @seealso [`help("palettes-options")`][palettes-options], [cli::is_utf8_output()]
 #' @export
 #'
 #' @examples
@@ -32,6 +32,11 @@ list_colour_symbols <- function() {
     sep = "\n"
   )
 }
+
+#' @export
+#' @rdname list_colour_symbols
+#' @usage NULL
+list_color_symbols <- list_colour_symbols
 
 symbol_utf8 <- list(
   "circle_small" = "\u2022",

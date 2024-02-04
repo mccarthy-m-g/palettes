@@ -1,17 +1,19 @@
 #' Cast colour vectors and colour palettes to tibbles
 #'
 #' `as_tibble()` turns an existing colour vector or colour palette into a
-#' so-called tibble, a data frame with class `tbl_df`.
+#' so-called [tibble][tibble::tibble-package], a data frame with class `tbl_df`.
 #'
-#' @param x An object of class `palettes_palette` or `palettes_colour`.
+#' @param x An object of class [`palettes_palette`][pal_palette()] or
+#'   [`palettes_colour`][pal_colour()].
 #' @param ... Not used.
 #' @return
 #' A [tibble][tibble::tibble-package]. The output has the following properties:
 #'
-#' * For objects of class `palettes_colour`: A tibble with column `colour`
-#'   containing the colour vector.
-#' * For objects of class `palettes_palette`: A tibble with columns `palette`
-#'   and `colour` containing palette names and colour vectors.
+#' * For objects of class [`palettes_colour`][pal_colour()]: A tibble with
+#'   column `colour` containing the colour vector.
+#' * For objects of class [`palettes_palette`][pal_palette()]: A tibble with
+#'   columns `palette` and `colour` containing palette names and colour vectors.
+#' @seealso [pal_colour()], [pal_palette()]
 #' @export
 #' @examples
 #' x <- pal_colour(c("#663171", "#EA7428", "#0C7156"))

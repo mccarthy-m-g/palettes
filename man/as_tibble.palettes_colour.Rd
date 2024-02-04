@@ -10,22 +10,23 @@
 \method{as_tibble}{palettes_palette}(x, ...)
 }
 \arguments{
-\item{x}{An object of class \code{palettes_palette} or \code{palettes_colour}.}
+\item{x}{An object of class \code{\link[=pal_palette]{palettes_palette}} or
+\code{\link[=pal_colour]{palettes_colour}}.}
 
 \item{...}{Not used.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}. The output has the following properties:
 \itemize{
-\item For objects of class \code{palettes_colour}: A tibble with column \code{colour}
-containing the colour vector.
-\item For objects of class \code{palettes_palette}: A tibble with columns \code{palette}
-and \code{colour} containing palette names and colour vectors.
+\item For objects of class \code{\link[=pal_colour]{palettes_colour}}: A tibble with
+column \code{colour} containing the colour vector.
+\item For objects of class \code{\link[=pal_palette]{palettes_palette}}: A tibble with
+columns \code{palette} and \code{colour} containing palette names and colour vectors.
 }
 }
 \description{
 \code{as_tibble()} turns an existing colour vector or colour palette into a
-so-called tibble, a data frame with class \code{tbl_df}.
+so-called \link[tibble:tibble-package]{tibble}, a data frame with class \code{tbl_df}.
 }
 \examples{
 x <- pal_colour(c("#663171", "#EA7428", "#0C7156"))
@@ -36,4 +37,7 @@ y <- pal_palette(
   Java  = c("#663171", "#CF3A36", "#EA7428", "#E2998A", "#0C7156")
 )
 as_tibble(y)
+}
+\seealso{
+\code{\link[=pal_colour]{pal_colour()}}, \code{\link[=pal_palette]{pal_palette()}}
 }
