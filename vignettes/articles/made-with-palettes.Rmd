@@ -6,27 +6,29 @@ Colour palette packages are a nice way to distribute colour palettes while getti
 
 See the vignette on creating a colour palette package to learn how to develop your own colour palette package; `vignette("creating-packages")`.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(palettes)
+library(dplyr)
 library(gt)
 library(fontawesome)
 
 palettes:::made_with_palettes |>
+  rename(description = title) |>
   gt(id = "one") |>
   cols_label(
     package = md("**Package**"),
-    title = md("**Description**"),
+    description = md("**Description**"),
     authors = md("**Author**")
   ) |>
   fmt_url(
     columns = gh_url,
-    label = fontawesome::fa("github"),
+    label = html(fontawesome::fa("github")),
     color = "#0d6efd",
     show_underline = FALSE
   ) |>
   fmt_url(
     columns = cran_url,
-    label = fontawesome::fa("r-project"),
+    label = html(fontawesome::fa("r-project")),
     color = "#0d6efd",
     show_underline = FALSE
   ) |>
@@ -35,20 +37,100 @@ palettes:::made_with_palettes |>
     columns = c(package, gh_url, cran_url),
     pattern = "{2} \u2002 {3} \u2002 {1}"
   ) |>
-  cols_width(
-    package ~ pct(25),
-    title ~ pct(40),
-    authors ~ pct(35)
-  ) |>
+  # cols_width(
+  #   package ~ pct(25),
+  #   title ~ pct(40),
+  #   authors ~ pct(35)
+  # ) |>
   tab_options(
     table.width = pct(100),
     table.font.size = "100%"
   ) |>
   opt_css(
     css = "
+    #one [id='<strong>Package</strong>'] {
+      width: 25%;
+    }
+    
+    #one [id='<strong>Description</strong>'] {
+      width: 50%;
+    }
+    
+    #one [id='<strong>Author</strong>'] {
+      width: 25%;
+    }
+    
     #one svg {
       height: 1.25rem !important;
       width: 1.25rem !important;
+      box-sizing: content-box;
+    }
+    
+    @media screen and (max-width: 768px) {
+
+      table th,
+      table td {
+        padding: .625em;
+      }
+      
+      #one table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      
+      #one table tr {
+        border-top-width: 2px;
+        border-top-style: solid !important;
+        border-bottom-width: 2px;
+        border-bottom-style: solid !important;
+        display: block;
+        margin-bottom: .625em;
+        padding: .35em;
+      }
+      
+      #one table td,
+      #one table svg {
+        display: inline-block;
+        width: calc(100% - 7rem - .625rem);
+        padding-left: 7rem !important;
+        text-indent: -7rem;
+        vertical-align: middle !important;
+        box-sizing: content-box;
+      }
+      
+      #one table td::before {
+        content: attr(headers);
+        float: left;
+        width: 7rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      
+      #one table td:last-child {
+        border-bottom-width: 0px !important;
+      }
+    
+      #one .gt_table,
+      #one .gt_col_headings,
+      #one .gt_table_body {
+        border-top-style: none !important;
+        border-bottom-style: none !important;
+      }
+    
+      #one .gt_row {
+        border-top-style: none !important;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #D3D3D3;
+        margin: 0px !important;
+      }
+
     }
     "
   )
