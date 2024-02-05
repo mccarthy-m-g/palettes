@@ -65,3 +65,10 @@ articles:
   navbar: Community
   contents:
   - articles/made-with-palettes
+
+news:
+  releases:
+  - text: "Version 0.2.0"
+    href: https://tidytales.ca/posts/2024-02-05_palettes-v0.2.0/
+  - text: "Version 0.1.0"
+    href: https://tidytales.ca/posts/2022-12-20_palettes/
