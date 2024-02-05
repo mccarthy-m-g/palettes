@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Using palettes with gt">
 <meta property="og:description" content="palettes">
@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">palettes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.2.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +58,20 @@
     <div class="dropdown-divider"></div>
     <h6 class="dropdown-header" data-toc-skip>Developer</h6>
     <a class="dropdown-item" href="../articles/creating-packages.html">Creating a colour palette package</a>
+    <div class="dropdown-divider"></div>
+    <h6 class="dropdown-header" data-toc-skip>Community</h6>
+    <a class="dropdown-item" href="../articles/made-with-palettes.html">Packages made with palettes</a>
   </div>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../news/index.html">Changelog</a>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-news">News</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-news">
+    <h6 class="dropdown-header" data-toc-skip>Releases</h6>
+    <a class="external-link dropdown-item" href="https://tidytales.ca/posts/2024-02-05_palettes-v0.2.0/">Version 0.2.0</a>
+    <a class="external-link dropdown-item" href="https://tidytales.ca/posts/2022-12-20_palettes/">Version 0.1.0</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="../news/index.html">Changelog</a>
+  </div>
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
@@ -100,7 +110,7 @@
 <strong>gt</strong>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mccarthy-m-g.github.io/palettes/">palettes</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/" class="external-link">gt</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com" class="external-link">gt</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org" class="external-link">scales</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
@@ -150,14 +160,26 @@ to Creating gt Tables</a> article. It looks like this.</p>
 <span></span>
 <span><span class="co"># Show the gt table</span></span>
 <span><span class="va">gt_tbl</span></span></code></pre></div>
-<div id="zdyiloroqe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="hjxyobgscf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hjxyobgscf table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#zdyiloroqe .gt_table {
+#hjxyobgscf thead, #hjxyobgscf tbody, #hjxyobgscf tfoot, #hjxyobgscf tr, #hjxyobgscf td, #hjxyobgscf th {
+  border-style: none;
+}
+
+#hjxyobgscf p {
+  margin: 0;
+  padding: 0;
+}
+
+#hjxyobgscf .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -180,24 +202,12 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-left-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#zdyiloroqe .gt_caption {
+#hjxyobgscf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zdyiloroqe .gt_title {
+#hjxyobgscf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -209,25 +219,37 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-bottom-width: 0;
 }
 
-#zdyiloroqe .gt_subtitle {
+#hjxyobgscf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#zdyiloroqe .gt_bottom_border {
+#hjxyobgscf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hjxyobgscf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_col_headings {
+#hjxyobgscf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -242,7 +264,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-right-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_col_heading {
+#hjxyobgscf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -262,7 +284,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   overflow-x: hidden;
 }
 
-#zdyiloroqe .gt_column_spanner_outer {
+#hjxyobgscf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,15 +296,15 @@ to Creating gt Tables</a> article. It looks like this.</p>
   padding-right: 4px;
 }
 
-#zdyiloroqe .gt_column_spanner_outer:first-child {
+#hjxyobgscf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zdyiloroqe .gt_column_spanner_outer:last-child {
+#hjxyobgscf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zdyiloroqe .gt_column_spanner {
+#hjxyobgscf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -294,7 +316,11 @@ to Creating gt Tables</a> article. It looks like this.</p>
   width: 100%;
 }
 
-#zdyiloroqe .gt_group_heading {
+#hjxyobgscf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hjxyobgscf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -320,7 +346,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   text-align: left;
 }
 
-#zdyiloroqe .gt_empty_group_heading {
+#hjxyobgscf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -335,15 +361,15 @@ to Creating gt Tables</a> article. It looks like this.</p>
   vertical-align: middle;
 }
 
-#zdyiloroqe .gt_from_md > :first-child {
+#hjxyobgscf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zdyiloroqe .gt_from_md > :last-child {
+#hjxyobgscf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zdyiloroqe .gt_row {
+#hjxyobgscf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -362,7 +388,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   overflow-x: hidden;
 }
 
-#zdyiloroqe .gt_stub {
+#hjxyobgscf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -375,7 +401,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   padding-right: 5px;
 }
 
-#zdyiloroqe .gt_stub_row_group {
+#hjxyobgscf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -389,11 +415,15 @@ to Creating gt Tables</a> article. It looks like this.</p>
   vertical-align: top;
 }
 
-#zdyiloroqe .gt_row_group_first td {
+#hjxyobgscf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zdyiloroqe .gt_summary_row {
+#hjxyobgscf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hjxyobgscf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -403,16 +433,16 @@ to Creating gt Tables</a> article. It looks like this.</p>
   padding-right: 5px;
 }
 
-#zdyiloroqe .gt_first_summary_row {
+#hjxyobgscf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_first_summary_row.thick {
+#hjxyobgscf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zdyiloroqe .gt_last_summary_row {
+#hjxyobgscf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,7 +452,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_grand_summary_row {
+#hjxyobgscf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -432,7 +462,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   padding-right: 5px;
 }
 
-#zdyiloroqe .gt_first_grand_summary_row {
+#hjxyobgscf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,11 +472,21 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-top-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_striped {
+#hjxyobgscf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hjxyobgscf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zdyiloroqe .gt_table_body {
+#hjxyobgscf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -455,7 +495,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_footnotes {
+#hjxyobgscf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -469,30 +509,8 @@ to Creating gt Tables</a> article. It looks like this.</p>
   border-right-color: #D3D3D3;
 }
 
-#zdyiloroqe .gt_footnote {
+#hjxyobgscf .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#zdyiloroqe .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#zdyiloroqe .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -500,78 +518,97 @@ to Creating gt Tables</a> article. It looks like this.</p>
   padding-right: 5px;
 }
 
-#zdyiloroqe .gt_left {
+#hjxyobgscf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hjxyobgscf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hjxyobgscf .gt_left {
   text-align: left;
 }
 
-#zdyiloroqe .gt_center {
+#hjxyobgscf .gt_center {
   text-align: center;
 }
 
-#zdyiloroqe .gt_right {
+#hjxyobgscf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zdyiloroqe .gt_font_normal {
+#hjxyobgscf .gt_font_normal {
   font-weight: normal;
 }
 
-#zdyiloroqe .gt_font_bold {
+#hjxyobgscf .gt_font_bold {
   font-weight: bold;
 }
 
-#zdyiloroqe .gt_font_italic {
+#hjxyobgscf .gt_font_italic {
   font-style: italic;
 }
 
-#zdyiloroqe .gt_super {
+#hjxyobgscf .gt_super {
   font-size: 65%;
 }
 
-#zdyiloroqe .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#hjxyobgscf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#zdyiloroqe .gt_asterisk {
+#hjxyobgscf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zdyiloroqe .gt_indent_1 {
+#hjxyobgscf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zdyiloroqe .gt_indent_2 {
+#hjxyobgscf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zdyiloroqe .gt_indent_3 {
+#hjxyobgscf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zdyiloroqe .gt_indent_4 {
+#hjxyobgscf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zdyiloroqe .gt_indent_5 {
+#hjxyobgscf .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="table gt_table">
-<thead class="gt_header">
-<tr>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_title gt_font_normal" style>New York Temperature Measurements</td>
     </tr>
-<tr>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Daily measurements in New York City (May 1-10, 1973)</td>
     </tr>
-</thead>
-<thead class="gt_col_headings">
-<tr>
+<tr class="gt_col_headings gt_spanner_row">
 <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Time">
         <span class="gt_column_spanner">Time</span>
       </th>
@@ -579,7 +616,7 @@ to Creating gt Tables</a> article. It looks like this.</p>
         <span class="gt_column_spanner">Measurement</span>
       </th>
     </tr>
-<tr>
+<tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Year">Year</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Month">Month</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Day">Day</th>
@@ -692,15 +729,30 @@ argument.</p>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/data_color.html" class="external-link">data_color</a></span><span class="op">(</span></span>
 <span>    columns <span class="op">=</span> <span class="va">Temp</span>,</span>
 <span>    colors  <span class="op">=</span> <span class="va">character_vector</span></span>
-<span>  <span class="op">)</span></span></code></pre></div>
-<div id="jikvufxref" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<span>  <span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Since gt v0.9.0, the `colors` argument has been deprecated.</span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">•</span> Please use the `palette` argument to define a color palette.</span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span></code></pre></div>
+<div id="prygjswvbg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#prygjswvbg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#jikvufxref .gt_table {
+#prygjswvbg thead, #prygjswvbg tbody, #prygjswvbg tfoot, #prygjswvbg tr, #prygjswvbg td, #prygjswvbg th {
+  border-style: none;
+}
+
+#prygjswvbg p {
+  margin: 0;
+  padding: 0;
+}
+
+#prygjswvbg .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -723,24 +775,12 @@ argument.</p>
   border-left-color: #D3D3D3;
 }
 
-#jikvufxref .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#jikvufxref .gt_caption {
+#prygjswvbg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jikvufxref .gt_title {
+#prygjswvbg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -752,25 +792,37 @@ argument.</p>
   border-bottom-width: 0;
 }
 
-#jikvufxref .gt_subtitle {
+#prygjswvbg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#jikvufxref .gt_bottom_border {
+#prygjswvbg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#prygjswvbg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jikvufxref .gt_col_headings {
+#prygjswvbg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -785,7 +837,7 @@ argument.</p>
   border-right-color: #D3D3D3;
 }
 
-#jikvufxref .gt_col_heading {
+#prygjswvbg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -805,7 +857,7 @@ argument.</p>
   overflow-x: hidden;
 }
 
-#jikvufxref .gt_column_spanner_outer {
+#prygjswvbg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -817,15 +869,15 @@ argument.</p>
   padding-right: 4px;
 }
 
-#jikvufxref .gt_column_spanner_outer:first-child {
+#prygjswvbg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jikvufxref .gt_column_spanner_outer:last-child {
+#prygjswvbg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jikvufxref .gt_column_spanner {
+#prygjswvbg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -837,7 +889,11 @@ argument.</p>
   width: 100%;
 }
 
-#jikvufxref .gt_group_heading {
+#prygjswvbg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#prygjswvbg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -863,7 +919,7 @@ argument.</p>
   text-align: left;
 }
 
-#jikvufxref .gt_empty_group_heading {
+#prygjswvbg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -878,15 +934,15 @@ argument.</p>
   vertical-align: middle;
 }
 
-#jikvufxref .gt_from_md > :first-child {
+#prygjswvbg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jikvufxref .gt_from_md > :last-child {
+#prygjswvbg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jikvufxref .gt_row {
+#prygjswvbg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -905,7 +961,7 @@ argument.</p>
   overflow-x: hidden;
 }
 
-#jikvufxref .gt_stub {
+#prygjswvbg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -918,7 +974,7 @@ argument.</p>
   padding-right: 5px;
 }
 
-#jikvufxref .gt_stub_row_group {
+#prygjswvbg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -932,11 +988,15 @@ argument.</p>
   vertical-align: top;
 }
 
-#jikvufxref .gt_row_group_first td {
+#prygjswvbg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jikvufxref .gt_summary_row {
+#prygjswvbg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#prygjswvbg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -946,16 +1006,16 @@ argument.</p>
   padding-right: 5px;
 }
 
-#jikvufxref .gt_first_summary_row {
+#prygjswvbg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jikvufxref .gt_first_summary_row.thick {
+#prygjswvbg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jikvufxref .gt_last_summary_row {
+#prygjswvbg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -965,7 +1025,7 @@ argument.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#jikvufxref .gt_grand_summary_row {
+#prygjswvbg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -975,7 +1035,7 @@ argument.</p>
   padding-right: 5px;
 }
 
-#jikvufxref .gt_first_grand_summary_row {
+#prygjswvbg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -985,11 +1045,21 @@ argument.</p>
   border-top-color: #D3D3D3;
 }
 
-#jikvufxref .gt_striped {
+#prygjswvbg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#prygjswvbg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jikvufxref .gt_table_body {
+#prygjswvbg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -998,7 +1068,7 @@ argument.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#jikvufxref .gt_footnotes {
+#prygjswvbg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1012,30 +1082,8 @@ argument.</p>
   border-right-color: #D3D3D3;
 }
 
-#jikvufxref .gt_footnote {
+#prygjswvbg .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jikvufxref .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#jikvufxref .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1043,78 +1091,97 @@ argument.</p>
   padding-right: 5px;
 }
 
-#jikvufxref .gt_left {
+#prygjswvbg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#prygjswvbg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#prygjswvbg .gt_left {
   text-align: left;
 }
 
-#jikvufxref .gt_center {
+#prygjswvbg .gt_center {
   text-align: center;
 }
 
-#jikvufxref .gt_right {
+#prygjswvbg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jikvufxref .gt_font_normal {
+#prygjswvbg .gt_font_normal {
   font-weight: normal;
 }
 
-#jikvufxref .gt_font_bold {
+#prygjswvbg .gt_font_bold {
   font-weight: bold;
 }
 
-#jikvufxref .gt_font_italic {
+#prygjswvbg .gt_font_italic {
   font-style: italic;
 }
 
-#jikvufxref .gt_super {
+#prygjswvbg .gt_super {
   font-size: 65%;
 }
 
-#jikvufxref .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#prygjswvbg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#jikvufxref .gt_asterisk {
+#prygjswvbg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jikvufxref .gt_indent_1 {
+#prygjswvbg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jikvufxref .gt_indent_2 {
+#prygjswvbg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jikvufxref .gt_indent_3 {
+#prygjswvbg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jikvufxref .gt_indent_4 {
+#prygjswvbg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jikvufxref .gt_indent_5 {
+#prygjswvbg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="table gt_table">
-<thead class="gt_header">
-<tr>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_title gt_font_normal" style>New York Temperature Measurements</td>
     </tr>
-<tr>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Daily measurements in New York City (May 1-10, 1973)</td>
     </tr>
-</thead>
-<thead class="gt_col_headings">
-<tr>
+<tr class="gt_col_headings gt_spanner_row">
 <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Time">
         <span class="gt_column_spanner">Time</span>
       </th>
@@ -1122,7 +1189,7 @@ argument.</p>
         <span class="gt_column_spanner">Measurement</span>
       </th>
     </tr>
-<tr>
+<tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Year">Year</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Month">Month</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Day">Day</th>
@@ -1200,15 +1267,30 @@ palettes.</p>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/data_color.html" class="external-link">data_color</a></span><span class="op">(</span></span>
 <span>    columns <span class="op">=</span> <span class="va">Temp</span>,</span>
 <span>    colors  <span class="op">=</span> <span class="fu"><a href="../reference/pal_numeric.html">pal_numeric</a></span><span class="op">(</span><span class="va">colour_vector</span>, domain <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code></pre></div>
-<div id="yppsgftkhh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<span>  <span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Since gt v0.9.0, the `colors` argument has been deprecated.</span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">•</span> Please use the `fn` argument instead.</span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span></code></pre></div>
+<div id="hopqytddlg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hopqytddlg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#yppsgftkhh .gt_table {
+#hopqytddlg thead, #hopqytddlg tbody, #hopqytddlg tfoot, #hopqytddlg tr, #hopqytddlg td, #hopqytddlg th {
+  border-style: none;
+}
+
+#hopqytddlg p {
+  margin: 0;
+  padding: 0;
+}
+
+#hopqytddlg .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -1231,24 +1313,12 @@ palettes.</p>
   border-left-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#yppsgftkhh .gt_caption {
+#hopqytddlg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yppsgftkhh .gt_title {
+#hopqytddlg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1260,25 +1330,37 @@ palettes.</p>
   border-bottom-width: 0;
 }
 
-#yppsgftkhh .gt_subtitle {
+#hopqytddlg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#yppsgftkhh .gt_bottom_border {
+#hopqytddlg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hopqytddlg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_col_headings {
+#hopqytddlg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1293,7 +1375,7 @@ palettes.</p>
   border-right-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_col_heading {
+#hopqytddlg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1313,7 +1395,7 @@ palettes.</p>
   overflow-x: hidden;
 }
 
-#yppsgftkhh .gt_column_spanner_outer {
+#hopqytddlg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1325,15 +1407,15 @@ palettes.</p>
   padding-right: 4px;
 }
 
-#yppsgftkhh .gt_column_spanner_outer:first-child {
+#hopqytddlg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yppsgftkhh .gt_column_spanner_outer:last-child {
+#hopqytddlg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yppsgftkhh .gt_column_spanner {
+#hopqytddlg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1345,7 +1427,11 @@ palettes.</p>
   width: 100%;
 }
 
-#yppsgftkhh .gt_group_heading {
+#hopqytddlg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hopqytddlg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1371,7 +1457,7 @@ palettes.</p>
   text-align: left;
 }
 
-#yppsgftkhh .gt_empty_group_heading {
+#hopqytddlg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1386,15 +1472,15 @@ palettes.</p>
   vertical-align: middle;
 }
 
-#yppsgftkhh .gt_from_md > :first-child {
+#hopqytddlg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yppsgftkhh .gt_from_md > :last-child {
+#hopqytddlg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yppsgftkhh .gt_row {
+#hopqytddlg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1413,7 +1499,7 @@ palettes.</p>
   overflow-x: hidden;
 }
 
-#yppsgftkhh .gt_stub {
+#hopqytddlg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1426,7 +1512,7 @@ palettes.</p>
   padding-right: 5px;
 }
 
-#yppsgftkhh .gt_stub_row_group {
+#hopqytddlg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1440,11 +1526,15 @@ palettes.</p>
   vertical-align: top;
 }
 
-#yppsgftkhh .gt_row_group_first td {
+#hopqytddlg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yppsgftkhh .gt_summary_row {
+#hopqytddlg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hopqytddlg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1454,16 +1544,16 @@ palettes.</p>
   padding-right: 5px;
 }
 
-#yppsgftkhh .gt_first_summary_row {
+#hopqytddlg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_first_summary_row.thick {
+#hopqytddlg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yppsgftkhh .gt_last_summary_row {
+#hopqytddlg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1473,7 +1563,7 @@ palettes.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_grand_summary_row {
+#hopqytddlg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1483,7 +1573,7 @@ palettes.</p>
   padding-right: 5px;
 }
 
-#yppsgftkhh .gt_first_grand_summary_row {
+#hopqytddlg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1493,11 +1583,21 @@ palettes.</p>
   border-top-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_striped {
+#hopqytddlg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hopqytddlg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yppsgftkhh .gt_table_body {
+#hopqytddlg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1506,7 +1606,7 @@ palettes.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_footnotes {
+#hopqytddlg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1520,30 +1620,8 @@ palettes.</p>
   border-right-color: #D3D3D3;
 }
 
-#yppsgftkhh .gt_footnote {
+#hopqytddlg .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#yppsgftkhh .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#yppsgftkhh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1551,78 +1629,97 @@ palettes.</p>
   padding-right: 5px;
 }
 
-#yppsgftkhh .gt_left {
+#hopqytddlg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hopqytddlg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hopqytddlg .gt_left {
   text-align: left;
 }
 
-#yppsgftkhh .gt_center {
+#hopqytddlg .gt_center {
   text-align: center;
 }
 
-#yppsgftkhh .gt_right {
+#hopqytddlg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yppsgftkhh .gt_font_normal {
+#hopqytddlg .gt_font_normal {
   font-weight: normal;
 }
 
-#yppsgftkhh .gt_font_bold {
+#hopqytddlg .gt_font_bold {
   font-weight: bold;
 }
 
-#yppsgftkhh .gt_font_italic {
+#hopqytddlg .gt_font_italic {
   font-style: italic;
 }
 
-#yppsgftkhh .gt_super {
+#hopqytddlg .gt_super {
   font-size: 65%;
 }
 
-#yppsgftkhh .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#hopqytddlg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#yppsgftkhh .gt_asterisk {
+#hopqytddlg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yppsgftkhh .gt_indent_1 {
+#hopqytddlg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yppsgftkhh .gt_indent_2 {
+#hopqytddlg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yppsgftkhh .gt_indent_3 {
+#hopqytddlg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yppsgftkhh .gt_indent_4 {
+#hopqytddlg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yppsgftkhh .gt_indent_5 {
+#hopqytddlg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="table gt_table">
-<thead class="gt_header">
-<tr>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_title gt_font_normal" style>New York Temperature Measurements</td>
     </tr>
-<tr>
+<tr class="gt_heading">
 <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Daily measurements in New York City (May 1-10, 1973)</td>
     </tr>
-</thead>
-<thead class="gt_col_headings">
-<tr>
+<tr class="gt_col_headings gt_spanner_row">
 <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Time">
         <span class="gt_column_spanner">Time</span>
       </th>
@@ -1630,7 +1727,7 @@ palettes.</p>
         <span class="gt_column_spanner">Measurement</span>
       </th>
     </tr>
-<tr>
+<tr class="gt_col_headings">
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Year">Year</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Month">Month</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Day">Day</th>
