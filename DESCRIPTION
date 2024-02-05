@@ -1,6 +1,6 @@
 Package: palettes
 Title: Methods for Colour Vectors and Colour Palettes
-Version: 0.2.0
+Version: 0.2.0.9000
 Authors@R: 
     person(given = "Michael",
            family = "McCarthy",
