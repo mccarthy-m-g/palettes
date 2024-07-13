@@ -27,7 +27,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">palettes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.2.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.2.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -721,11 +721,8 @@ argument.</p>
 <code class="sourceCode R"><span><span class="va">gt_tbl</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/data_color.html" class="external-link">data_color</a></span><span class="op">(</span></span>
 <span>    columns <span class="op">=</span> <span class="va">Temp</span>,</span>
-<span>    colors  <span class="op">=</span> <span class="va">character_vector</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: Since gt v0.9.0, the `colors` argument has been deprecated.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">•</span> Please use the `palette` argument to define a color palette.</span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span></code></pre></div>
+<span>    palette <span class="op">=</span> <span class="va">character_vector</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
 <div id="eexombwkke" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#eexombwkke table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1268,11 +1265,8 @@ palettes.</p>
 <code class="sourceCode R"><span><span class="va">gt_tbl</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/data_color.html" class="external-link">data_color</a></span><span class="op">(</span></span>
 <span>    columns <span class="op">=</span> <span class="va">Temp</span>,</span>
-<span>    colors  <span class="op">=</span> <span class="fu"><a href="../reference/pal_numeric.html">pal_numeric</a></span><span class="op">(</span><span class="va">colour_vector</span>, domain <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: Since gt v0.9.0, the `colors` argument has been deprecated.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">•</span> Please use the `fn` argument instead.</span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span></code></pre></div>
+<span>    fn <span class="op">=</span> <span class="fu"><a href="../reference/pal_numeric.html">pal_numeric</a></span><span class="op">(</span><span class="va">colour_vector</span>, domain <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
 <div id="ulbfdpbcyv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#ulbfdpbcyv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
