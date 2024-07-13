@@ -10,7 +10,7 @@
 |collate  |en_CA.UTF-8                                                                 |
 |ctype    |en_CA.UTF-8                                                                 |
 |tz       |America/Vancouver                                                           |
-|date     |2024-02-04                                                                  |
+|date     |2024-07-13                                                                  |
 |rstudio  |2021.09.2+382 Ghost Orchid (desktop)                                        |
 |pandoc   |2.14.0.3 @ /Applications/RStudio.app/Contents/MacOS/pandoc/ (via rmarkdown) |
 
@@ -18,22 +18,22 @@
 
 |package      |old   |new        |Δ  |
 |:------------|:-----|:----------|:--|
-|palettes     |0.1.1 |0.1.1.9000 |*  |
+|palettes     |0.2.0 |0.2.0.9000 |*  |
 |cli          |3.6.2 |3.6.2      |   |
 |colorspace   |2.1-0 |2.1-0      |   |
 |fansi        |1.0.6 |1.0.6      |   |
 |farver       |2.1.1 |2.1.1      |   |
-|ggplot2      |3.4.4 |3.4.4      |   |
+|ggplot2      |3.5.1 |3.5.1      |   |
 |glue         |1.6.2 |1.6.2      |   |
-|gtable       |0.3.4 |0.3.4      |   |
+|gtable       |0.3.5 |0.3.5      |   |
 |isoband      |0.2.7 |0.2.7      |   |
 |labeling     |0.4.3 |0.4.3      |   |
 |lifecycle    |1.0.4 |1.0.4      |   |
 |magrittr     |2.0.3 |2.0.3      |   |
-|munsell      |0.5.0 |0.5.0      |   |
+|munsell      |0.5.1 |0.5.1      |   |
 |pillar       |1.9.0 |1.9.0      |   |
 |pkgconfig    |2.0.3 |2.0.3      |   |
-|prismatic    |1.1.1 |1.1.1      |   |
+|prismatic    |1.1.2 |1.1.2      |   |
 |purrr        |1.0.2 |1.0.2      |   |
 |R6           |2.5.1 |2.5.1      |   |
 |RColorBrewer |1.1-3 |1.1-3      |   |
