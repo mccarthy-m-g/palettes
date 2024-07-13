@@ -1,16 +1,15 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: 3.1.11
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
-  made-with-palettes: made-with-palettes.html
   biscale: biscale.html
   compatibility: compatibility.html
   creating-packages: creating-packages.html
   ggplot2: ggplot2.html
   gt: gt.html
+  articles/made-with-palettes: made-with-palettes.html
   palettes: palettes.html
-last_built: 2024-02-05T17:44Z
+last_built: 2024-07-13T20:20Z
 urls:
   reference: https://mccarthy-m-g.github.io/palettes/reference
   article: https://mccarthy-m-g.github.io/palettes/articles
-
