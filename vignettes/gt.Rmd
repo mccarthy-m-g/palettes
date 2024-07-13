@@ -92,7 +92,7 @@ Here we pass the character vector directly to the `colors` argument.
 gt_tbl %>% 
   data_color(
     columns = Temp,
-    colors  = character_vector
+    palette = character_vector
   )
 ```
 
@@ -102,7 +102,7 @@ But this works equally well with the colour mapping functions from palettes.
 gt_tbl %>% 
   data_color(
     columns = Temp,
-    colors  = pal_numeric(colour_vector, domain = NULL)
+    fn = pal_numeric(colour_vector, domain = NULL)
   )
 ```
 
