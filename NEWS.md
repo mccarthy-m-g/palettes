@@ -1,4 +1,6 @@
-# palettes (development version)
+# palettes 0.2.1
+
+This is a small patch release that applies some internal fixes for the `scale_()` functions, due to a breaking change in ggplot2 v3.5.0 that deprecated the `scale_name` argument in `ggplot2::continuous_scale()`, `ggplot2::discrete_scale()` and `ggplot2::binned_scale()`. The "gt" vignette has also been updated to reflect changes to the `gt::data_color()` function in gt v0.9.0.
 
 # palettes 0.2.0
 

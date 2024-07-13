@@ -1,6 +1,6 @@
 Package: palettes
 Title: Methods for Colour Vectors and Colour Palettes
-Version: 0.2.0.9000
+Version: 0.2.1
 Authors@R: 
     person(given = "Michael",
            family = "McCarthy",
@@ -36,7 +36,7 @@ Suggests:
     knitr (>= 1.22),
     rmarkdown (>= 2.20),
     colorspace,
-    gt,
+    gt (>= 0.9.0),
     biscale,
     sf,
     patchwork,
