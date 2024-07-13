@@ -11,7 +11,7 @@ coverage](https://codecov.io/gh/mccarthy-m-g/palettes/branch/main/graph/badge.sv
 [![CRAN
 status](https://www.r-pkg.org/badges/version/palettes)](https://CRAN.R-project.org/package=palettes)
 [![CRAN
-downloads](http://cranlogs.r-pkg.org/badges/grand-total/palettes)](https://cran.r-project.org/package=palettes)
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/palettes)](https://cran.r-project.org/package=palettes)
 <!-- badges: end -->
 
 palettes is an R package for working with colour vectors and colour
