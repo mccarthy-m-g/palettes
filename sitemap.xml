@@ -1,105 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/biscale.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/compatibility.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/creating-packages.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/gt.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/made-with-palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/articles/palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/as_tibble.palettes_colour.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/colour-mixing-arithmetic.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/colour-mixing-math.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/list_colour_symbols.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/met_palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/nord_palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_colour.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_numeric.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_palette.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pal_ramp.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-options.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-package.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-rlang.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-vctrs.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/plot.palettes_colour.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/pnw_palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/reexports.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html</loc>
-  </url>
-  <url>
-    <loc>https://mccarthy-m-g.github.io/palettes/reference/viridis_palettes.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mccarthy-m-g.github.io/palettes/404.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/LICENSE-text.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/LICENSE.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/biscale.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/compatibility.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/creating-packages.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/ggplot2.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/gt.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/index.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/made-with-palettes.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/articles/palettes.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/authors.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/index.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/news/index.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/as_tibble.palettes_colour.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/colour-mixing-arithmetic.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/colour-mixing-math.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/index.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/list_colour_symbols.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/met_palettes.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/nord_palettes.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/pal_colour.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/pal_numeric.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/pal_palette.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/pal_ramp.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-options.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-package.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-rlang.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/palettes-vctrs.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/plot.palettes_colour.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/pnw_palettes.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/reexports.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/scale_colour_palette_d.html</loc></url>
+<url><loc>https://mccarthy-m-g.github.io/palettes/reference/viridis_palettes.html</loc></url>
 </urlset>
+
