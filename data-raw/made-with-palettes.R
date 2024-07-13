@@ -3,11 +3,15 @@ library(purrr)
 library(gh)
 library(desc)
 library(readr)
+library(knitr)
 
 # Please add new entries in alphabetical order, according to the package name.
 made_with_palettes <- tibble::tribble(
   ~package, ~gh_owner, ~gh_repo,
+  "AnVILplot", "fhdsl", "AnVILplot",
+  "CCMHr", "CCMH-PSU", "CCMHr",
   "hutchplot", "fhdsl", "hutchplot",
+  "icampcolors", "jcunha2023", "icampcolors",
   "palettes", "mccarthy-m-g", "palettes",
   "warwickplots", "Warwick-Stats-Resources", "warwickplots"
 )
@@ -31,10 +35,10 @@ made_with_palettes <- made_with_palettes |>
     pkg_description = list(desc(text = pkg_description)),
     # Get and format fields from DESCRIPTION
     title = pkg_description$get("Title"),
-    authors = format(
+    authors = combine_words(format(
       pkg_description$get_author("aut"),
       include = c("given", "family")
-    ),
+    )),
     # Get URLs
     # url = pkg_description$get_field("URL", default = NA),
     gh_url = paste0("https://github.com/", gh_owner, "/", gh_repo, ""),
