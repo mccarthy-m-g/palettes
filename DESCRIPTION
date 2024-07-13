@@ -26,7 +26,7 @@ Imports:
     purrr,
     prismatic,
     farver (>= 2.0.3),
-    ggplot2,
+    ggplot2 (>= 3.5.0),
     scales,
     tibble
 Suggests:

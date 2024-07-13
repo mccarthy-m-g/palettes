@@ -67,7 +67,6 @@ scale_palette_d <- function(aesthetics, palette, direction = 1, ...) {
 
   ggplot2::discrete_scale(
     aesthetics = aesthetics,
-    scale_name = names(palette),
     palette = scales::manual_pal(
       get_palette_colours(palette, n = NULL, direction)
     ),
@@ -80,7 +79,6 @@ scale_palette_c <- function(aesthetics, palette, direction = 1, ...) {
 
   ggplot2::continuous_scale(
     aesthetics = aesthetics,
-    scale_name = names(palette),
     palette = scales::gradient_n_pal(
       get_palette_colours(palette, n = 256, direction)
     ),
@@ -94,7 +92,6 @@ scale_palette_b <- function(aesthetics, palette, direction = 1, ...) {
 
   ggplot2::binned_scale(
     aesthetics = aesthetics,
-    scale_name = names(palette),
     palette = scales::gradient_n_pal(
       get_palette_colours(palette, n = 256, direction)
     ),
