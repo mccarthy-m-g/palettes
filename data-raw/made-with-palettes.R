@@ -35,10 +35,10 @@ made_with_palettes <- made_with_palettes |>
     pkg_description = list(desc(text = pkg_description)),
     # Get and format fields from DESCRIPTION
     title = pkg_description$get("Title"),
-    authors = combine_words(format(
+    authors = as.character(combine_words(format(
       pkg_description$get_author("aut"),
       include = c("given", "family")
-    )),
+    ))),
     # Get URLs
     # url = pkg_description$get_field("URL", default = NA),
     gh_url = paste0("https://github.com/", gh_owner, "/", gh_repo, ""),
