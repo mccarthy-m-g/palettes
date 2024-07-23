@@ -10,6 +10,8 @@ made_with_palettes <- tibble::tribble(
   ~package, ~gh_owner, ~gh_repo,
   "AnVILplot", "fhdsl", "AnVILplot",
   "CCMHr", "CCMH-PSU", "CCMHr",
+  "cubepalette", "zerogetsamgow", "cubepalette",
+  "dohactheme", "zerogetsamgow", "dohactheme",
   "hutchplot", "fhdsl", "hutchplot",
   "icampcolors", "jcunha2023", "icampcolors",
   "palettes", "mccarthy-m-g", "palettes",
