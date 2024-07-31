@@ -10,6 +10,8 @@
 coverage](https://codecov.io/gh/mccarthy-m-g/palettes/branch/main/graph/badge.svg)](https://app.codecov.io/gh/mccarthy-m-g/palettes?branch=main)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/palettes)](https://CRAN.R-project.org/package=palettes)
+[![R-universe
+status](https://mccarthy-m-g.r-universe.dev/badges/palettes)](https://mccarthy-m-g.r-universe.dev/palettes)
 [![CRAN
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/palettes)](https://cran.r-project.org/package=palettes)
 <!-- badges: end -->
