@@ -36,7 +36,10 @@ reference:
 - title: Included palettes
   desc:
   contents:
+  - carto_palettes
+  - performance_palettes
   - met_palettes
+  - penguin_palettes
   - nord_palettes
   - pnw_palettes
   - viridis_palettes
