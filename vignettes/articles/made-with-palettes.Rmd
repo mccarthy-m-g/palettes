@@ -13,15 +13,16 @@ library(gt)
 library(fontawesome)
 
 palettes:::made_with_palettes |>
-  rename(description = title) |>
+  rename(description = title, links = gh_url) |>
   gt(id = "one") |>
   cols_label(
     package = md("**Package**"),
+    links = md("**Links**"),
     description = md("**Description**"),
     authors = md("**Author**")
   ) |>
   fmt_url(
-    columns = gh_url,
+    columns = links,
     label = html(fontawesome::fa("github")),
     color = "#0d6efd",
     show_underline = FALSE
@@ -34,30 +35,42 @@ palettes:::made_with_palettes |>
   ) |>
   sub_missing() |>
   cols_merge(
-    columns = c(package, gh_url, cran_url),
-    pattern = "{2} \u2002 {3} \u2002 {1}"
+    columns = c(links, cran_url),
+    pattern = "{1} \u2006 {2}"
   ) |>
   # cols_width(
   #   package ~ pct(25),
   #   title ~ pct(40),
   #   authors ~ pct(35)
   # ) |>
+  tab_style(
+    style = cell_text(whitespace = "nowrap"),
+    locations = cells_body(columns = links)
+  ) |>
   tab_options(
     table.width = pct(100),
     table.font.size = "100%"
   ) |>
   opt_css(
     css = "
+    table {
+      hyphens: none !important;
+    }
+    
     #one [id='<strong>Package</strong>'] {
-      width: 25%;
+      width: 20%;
     }
     
     #one [id='<strong>Description</strong>'] {
-      width: 50%;
+      width: 40%;
     }
     
     #one [id='<strong>Author</strong>'] {
-      width: 25%;
+      width: 20%;
+    }
+    
+    #one [id='<strong>Links</strong>'] {
+      width: 20%;
     }
     
     #one svg {

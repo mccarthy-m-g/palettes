@@ -74,6 +74,10 @@ plot_colour <- function(
 
   x <- pal_ramp(x, n, direction, space, interpolate)
   x <- tibble::as_tibble(x)
+  # The order of palettes in pal_palette() objects should be preserved.
+  if ("palette" %in% colnames(x)) {
+    x$palette <- factor(x$palette, levels = unique(x$palette))
+  }
   # When the same colour is repeated in a pal_colour() or pal_palette() object
   # it needs a unique position identifier in order to be plotted in the same
   # order as it appears in the vector.
