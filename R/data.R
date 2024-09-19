@@ -1,3 +1,60 @@
+#' Cartography palettes
+#'
+#' Discrete, sequential, and diverging palettes created by cartographers.
+#'
+#' @source <https://github.com/CartoDB/CartoColor/>
+#' @seealso [pal_palette()], [pal_colour()]
+#' @name carto_palettes
+#' @aliases discrete_palettes, sequential_palettes, diverging_palettes
+#' @examples
+#' # Get all palettes by name.
+#' names(discrete_palettes)
+#' names(sequential_palettes)
+#' names(diverging_palettes)
+#'
+#' # Plot all palettes.
+#' plot(discrete_palettes)
+#' plot(sequential_palettes)
+#' plot(diverging_palettes)
+NULL
+
+#' @rdname carto_palettes
+#' @format ## `discrete_palettes`
+#' An object of class `palettes_palette` with `r vec_size(discrete_palettes)`
+#' colour palettes. Use `names(discrete_palettes)` to return all palette names.
+"discrete_palettes"
+
+#' @rdname carto_palettes
+#' @format ## `sequential_palettes`
+#' An object of class `palettes_palette` with `r vec_size(sequential_palettes)`
+#' colour palettes. Use `names(sequential_palettes)` to return all palette names.
+"sequential_palettes"
+
+#' @rdname carto_palettes
+#' @format ## `diverging_palettes`
+#' An object of class `palettes_palette` with `r vec_size(diverging_palettes)`
+#' colour palettes. Use `names(diverging_palettes)` to return all palette names.
+"diverging_palettes"
+
+#' Performance palettes
+#'
+#' A colourblind accessible palette for visualizing performance.
+#'
+#' @format ## `performance_palettes`
+#' An object of class `palettes_palette` with `r vec_size(performance_palettes)`
+#' colour palettes. All colours in each palette are distinguishable with
+#' deuteranopia, protanopia, and tritanopia. Use `names(performance_palettes)`
+#' to return all palette names.
+#' @source <https://github.com/easystats/performance/>
+#' @seealso [pal_palette()], [pal_colour()]
+#' @examples
+#' # Get all palettes by name.
+#' names(performance_palettes)
+#'
+#' # Plot all palettes.
+#' plot(performance_palettes)
+"performance_palettes"
+
 #' Metropolitan Museum of Art palettes
 #'
 #' Palettes inspired by works at the Metropolitan Museum of Art in New York.
@@ -24,6 +81,24 @@
 #' in each palette are distinguishable with deuteranopia, protanopia, and
 #' tritanopia. Use `names(met_palettes_a11y)` to return all palette names.
 "met_palettes_a11y"
+
+#' Palmer penguins palettes
+#'
+#' Palettes inspired by the Palmer penguins.
+#'
+#' @format ## `penguin_palettes`
+#' An object of class `palettes_palette` with `r vec_size(penguin_palettes)`
+#' colour palettes. Use `names(penguin_palettes)` to return all palette names.
+#' @source <https://github.com/allisonhorst/palmerpenguins/>
+#' @author [Allison Horst](https://github.com/allisonhorst)
+#' @seealso [pal_palette()], [pal_colour()]
+#' @examples
+#' # Get all palettes by name.
+#' names(penguin_palettes)
+#'
+#' # Plot all palettes.
+#' plot(penguin_palettes)
+"penguin_palettes"
 
 #' Nord palettes
 #'
