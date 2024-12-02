@@ -13,3 +13,7 @@ is_valid_colour <- function(x) {
   is_valid <- is_named_colour | is_hex_colour | is_na_colour
   is_valid
 }
+
+str_or_hex <- function(x) {
+  startsWith(x, "#")
+}
