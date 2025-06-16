@@ -41,14 +41,14 @@ scale_fill_palette_d <- function(palette, direction = 1, ...) {
 
 #' @export
 #' @rdname scale_colour_palette_d
-scale_colour_palette_c <- function(palette, direction = 1, ...) {
-  scale_palette_c(aesthetics = "colour", palette, direction, ...)
+scale_colour_palette_c <- function(palette, direction = 1, ..., na.value = NA) {
+  scale_palette_c(aesthetics = "colour", palette, direction, ..., na.value = na.value)
 }
 
 #' @export
 #' @rdname scale_colour_palette_d
-scale_fill_palette_c <- function(palette, direction = 1, ...) {
-  scale_palette_c(aesthetics = "fill", palette, direction, ...)
+scale_fill_palette_c <- function(palette, direction = 1, ..., na.value = NA) {
+  scale_palette_c(aesthetics = "fill", palette, direction, ..., na.value = na.value)
 }
 
 #' @export

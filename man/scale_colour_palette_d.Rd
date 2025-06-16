@@ -16,9 +16,9 @@ scale_colour_palette_d(palette, direction = 1, ...)
 
 scale_fill_palette_d(palette, direction = 1, ...)
 
-scale_colour_palette_c(palette, direction = 1, ...)
+scale_colour_palette_c(palette, direction = 1, ..., na.value = NA)
 
-scale_fill_palette_c(palette, direction = 1, ...)
+scale_fill_palette_c(palette, direction = 1, ..., na.value = NA)
 
 scale_colour_palette_b(palette, direction = 1, ...)
 
