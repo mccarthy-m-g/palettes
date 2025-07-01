@@ -1,4 +1,4 @@
-# palettes (development version)
+# palettes 0.2.2
 
 - Included five new colour palette sets with the package: Cartography palettes (`discrete_palettes`, `sequential_palettes`, `diverging_palettes`), Performance palettes (`performance_palettes`), and Palmer penguins palettes (`penguin_palettes`).
 
