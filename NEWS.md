@@ -1,8 +1,10 @@
-# palettes (development version)
+# palettes 0.2.2
 
 - Included five new colour palette sets with the package: Cartography palettes (`discrete_palettes`, `sequential_palettes`, `diverging_palettes`), Performance palettes (`performance_palettes`), and Palmer penguins palettes (`penguin_palettes`).
 
 - When plotting colour palettes with `plot()`, the order of facets now matches the order of palettes in `pal_palette()` objects.
+
+- Added a new `na.value` argument to `scale_colour_palette_c()` and `scale_fill_palette_c()` for compatibility with ggplot2 4.0.0 (@teunbrand, #47).
 
 # palettes 0.2.1
 
