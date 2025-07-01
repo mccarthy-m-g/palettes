@@ -7,6 +7,7 @@
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()],
 #'   [ggplot2::continuous_scale()], or [ggplot2::binned_scale()] to control name,
 #'   limits, breaks, labels and so forth.
+#' @param na.value Missing values will be replaced with this value.
 #' @return A scale function that controls the mapping between data and colour or
 #'   fill aesthetics in a [ggplot2][ggplot2::ggplot2-package] plot.
 #' @export
@@ -41,14 +42,14 @@ scale_fill_palette_d <- function(palette, direction = 1, ...) {
 
 #' @export
 #' @rdname scale_colour_palette_d
-scale_colour_palette_c <- function(palette, direction = 1, ...) {
-  scale_palette_c(aesthetics = "colour", palette, direction, ...)
+scale_colour_palette_c <- function(palette, direction = 1, ..., na.value = NA) {
+  scale_palette_c(aesthetics = "colour", palette, direction, ..., na.value = na.value)
 }
 
 #' @export
 #' @rdname scale_colour_palette_d
-scale_fill_palette_c <- function(palette, direction = 1, ...) {
-  scale_palette_c(aesthetics = "fill", palette, direction, ...)
+scale_fill_palette_c <- function(palette, direction = 1, ..., na.value = NA) {
+  scale_palette_c(aesthetics = "fill", palette, direction, ..., na.value = na.value)
 }
 
 #' @export

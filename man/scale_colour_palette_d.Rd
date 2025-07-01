@@ -16,9 +16,9 @@ scale_colour_palette_d(palette, direction = 1, ...)
 
 scale_fill_palette_d(palette, direction = 1, ...)
 
-scale_colour_palette_c(palette, direction = 1, ...)
+scale_colour_palette_c(palette, direction = 1, ..., na.value = NA)
 
-scale_fill_palette_c(palette, direction = 1, ...)
+scale_fill_palette_c(palette, direction = 1, ..., na.value = NA)
 
 scale_colour_palette_b(palette, direction = 1, ...)
 
@@ -35,6 +35,8 @@ reversed.}
 \item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}},
 \code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}, or \code{\link[ggplot2:binned_scale]{ggplot2::binned_scale()}} to control name,
 limits, breaks, labels and so forth.}
+
+\item{na.value}{Missing values will be replaced with this value.}
 }
 \value{
 A scale function that controls the mapping between data and colour or
