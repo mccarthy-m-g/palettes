@@ -14,7 +14,10 @@ made_with_palettes <- tibble::tribble(
   "dohactheme", "zerogetsamgow", "dohactheme",
   "hutchplot", "fhdsl", "hutchplot",
   "icampcolors", "jcunha2023", "icampcolors",
+  "iddoPal", "lu-harr", "iddoPal",
   "palettes", "mccarthy-m-g", "palettes",
+  "vagotheme", "zerogetsamgow", "vagotheme",
+  "vpstheme", "zerogetsamgow","vpstheme",
   "warwickplots", "Warwick-Stats-Resources", "warwickplots"
 )
 
